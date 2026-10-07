@@ -16,3 +16,7 @@ public/og.jpg
 # Build and tooling output
 tsconfig.tsbuildinfo
 .claude/
+
+# Compiled output must never sit next to the TypeScript source
+server/*.js
+api/*.js
