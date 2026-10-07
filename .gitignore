@@ -1,0 +1,18 @@
+node_modules
+dist
+*.local
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Not published: old site, personal source photo, third-party photos
+legacy/
+myphoto/
+public/img/*
+!public/img/sayan-*.webp
+public/og.jpg
+
+# Build and tooling output
+tsconfig.tsbuildinfo
+.claude/

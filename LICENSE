@@ -1,0 +1,61 @@
+Pujo by Metro 2026 — Proprietary Source-Available Licence
+
+Copyright (c) 2026 Sayan Banerjee. All rights reserved.
+
+This repository is published so that it can be read and reviewed. It is NOT
+open source and is NOT free to reuse.
+
+1. WHAT YOU MAY DO
+
+   You may view the source code in this repository, and you may fork it on
+   GitHub solely for the purpose of viewing it, as GitHub's Terms of Service
+   require. That is all.
+
+2. WHAT YOU MAY NOT DO
+
+   Without the prior written permission of Sayan Banerjee, you may not:
+
+   a. copy, reproduce, or reuse any part of the source code, design, layout,
+      text, data compilation, or other original content in this repository,
+      in whole or in part, in any project, commercial or not;
+   b. modify, adapt, translate, or create derivative works based on it;
+   c. build, deploy, host, or publicly run the application, or any website or
+      app that is a copy or close imitation of it;
+   d. distribute, sublicense, sell, rent, or publish it, or any part of it,
+      in any form, including as a template, starter kit, tutorial, or course
+      material;
+   e. use it, or the dataset compiled in it, to train, fine-tune, or evaluate
+      a machine-learning model, or to populate a competing database or
+      product;
+   f. remove or alter this notice, the copyright notice, or the credit to the
+      author.
+
+3. PERMISSION
+
+   To ask for permission or a commercial licence, contact the author through
+   his GitHub profile: https://github.com/Sayan024
+
+4. THIRD-PARTY MATERIAL
+
+   This licence covers only material created by the author. It does not cover,
+   and the author claims no rights in:
+
+   - names, logos, photographs, videos and posts belonging to puja
+     committees, creators or other third parties, including content that is
+     linked to from the application (such as Instagram reels), which remain
+     the property of their owners;
+   - the open-source libraries the project depends on, which are used under
+     their own licences (see package.json);
+   - factual information about pandals, Metro stations and dates.
+
+5. NO WARRANTY
+
+   THE SOFTWARE AND DATA ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED. Distances, themes, timings and travel advice may be
+   wrong or out of date. The author is not liable for any loss or damage
+   arising from their use.
+
+6. TERMINATION
+
+   Any use that breaches this licence ends the permission in section 1
+   immediately.
