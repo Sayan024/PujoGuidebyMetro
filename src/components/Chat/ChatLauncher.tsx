@@ -14,6 +14,8 @@ export function ChatLauncher() {
   const { pathname } = useLocation();
   // On the full-screen map the bottom corners hold map controls and the pandal card.
   const onMap = pathname === '/map';
+  // The feedback page has its own form, and the button would sit over its fields.
+  if (pathname === '/feedback') return null;
 
   return (
     <>

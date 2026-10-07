@@ -36,6 +36,7 @@ export function Footer() {
                 ['/themes', '2026 Theme Gallery'],
                 ['/favorites', 'My Puja List & day planner'],
                 ['/about', 'About this guide'],
+                ['/feedback', 'Send feedback'],
               ].map(([to, label]) => (
                 <li key={to}>
                   <Link to={to} className="text-ink/85 underline-offset-4 hover:text-gold-bright hover:underline">

@@ -17,6 +17,7 @@ const FavoritesPage = lazy(() => import('@/pages/Favorites'));
 const PandalDetail = lazy(() => import('@/pages/PandalDetail'));
 const StationDetail = lazy(() => import('@/pages/StationDetail'));
 const About = lazy(() => import('@/pages/About'));
+const FeedbackPage = lazy(() => import('@/pages/Feedback'));
 const NotFound = lazy(() => import('@/pages/About').then((m) => ({ default: m.NotFound })));
 
 function ScrollManager() {
@@ -52,6 +53,7 @@ function Shell() {
               <Route path="/pandal/:id" element={<PandalDetail />} />
               <Route path="/station/:id" element={<StationDetail />} />
               <Route path="/about" element={<About />} />
+              <Route path="/feedback" element={<FeedbackPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

@@ -245,7 +245,10 @@ export default function ChatPanel({ onClose }: { onClose: () => void }) {
         <p className="mt-2 px-1 text-[10.5px] leading-snug text-muted">
           {last?.role === 'assistant' && !busy && !last.error
             ? 'AI can be wrong. Check the pandal page before you travel.'
-            : 'Themes and timings change; the assistant only knows what this guide lists.'}
+            : 'Themes and timings change; the assistant only knows what this guide lists.'}{' '}
+          <Link to="/feedback" onClick={onNavigate} className="font-semibold text-gold-bright underline-offset-4 hover:underline">
+            Send feedback
+          </Link>
         </p>
       </form>
     </motion.div>

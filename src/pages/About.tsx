@@ -104,6 +104,13 @@ export default function About() {
                 Pujo by Metro 2026 is created entirely by Sayan Banerjee — the idea, the pandal list and the site you are
                 reading.
               </p>
+              <p className="mt-4 text-sm text-muted">
+                Spotted a mistake or have an idea?{' '}
+                <Link to="/feedback" className="font-semibold text-gold-bright underline-offset-4 hover:underline">
+                  Send feedback
+                </Link>
+                .
+              </p>
               <p lang="bn" className="mt-4 font-bn text-base text-gold">
                 শুভ শারদীয়া — ঠাকুর দেখা শুভ হোক।
               </p>

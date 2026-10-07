@@ -11,5 +11,5 @@
     "noEmit": true,
     "types": []
   },
-  "include": ["./**/*.ts", "../server/**/*.ts"]
+  "include": ["./**/*.ts", "../server/**/*.ts", "../src/data/feedback.ts"]
 }

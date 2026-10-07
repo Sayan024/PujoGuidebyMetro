@@ -38,6 +38,7 @@
 | Pandal | /pandal/<pandal id> | One pandal |
 | Station | /station/<station id> | One Metro station and the pandals near it |
 | About | /about | Method, caveats and Instagram sources |
+| Feedback | /feedback | A form that sends the visitor's rating and comments to the guide's creator |
 
 Explorer filters: Within 1 km · Traditional · Theme 2026 · VIP Pass · Petpujo (good food nearby) · Popular (popularity 85 or more) · Open Now. Sort orders: distance, popularity, walking time, station.
 
