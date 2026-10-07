@@ -3,14 +3,18 @@
 // handleChat the same way). Set OPENROUTER_API_KEY in the host's environment.
 import { handleChat } from '../server/chat';
 
+// Read through globalThis so this file needs no Node type definitions.
+const env: Record<string, string | undefined> =
+  (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env ?? {};
+
 let cached: Promise<string> | undefined;
 
 export default {
   async fetch(request: Request): Promise<Response> {
     const origin = new URL(request.url).origin;
     return handleChat(request, {
-      apiKey: process.env.OPENROUTER_API_KEY,
-      model: process.env.OPENROUTER_MODEL,
+      apiKey: env.OPENROUTER_API_KEY,
+      model: env.OPENROUTER_MODEL,
       clientId: request.headers.get('x-forwarded-for')?.split(',')[0].trim(),
       // The dataset is a static file of the same deployment.
       loadContext: () =>
