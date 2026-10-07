@@ -22,15 +22,11 @@ This source is published **for viewing only**. It is not open source.
 
 You may **not** copy, reuse, modify, redistribute, deploy or imitate the code, design or data, and you may not use them to train machine-learning models. See [LICENSE](LICENSE) for the full terms. For permission or a licence, contact the author through his [GitHub profile](https://github.com/Sayan024).
 
-## What is not in this repository
+## Third-party content
 
-To respect third-party rights and keep personal material private, the repository leaves out:
+The pandal photographs in  were gathered from public sources and belong to their photographers. They are **not** covered by this licence, and no rights in them are claimed or granted. Instagram reels shown in the app are linked, not copied, and belong to their creators.
 
-- pandal photographs (they belong to their photographers and are not covered by this licence);
-- the earlier static version of the site;
-- environment files and API keys.
-
-Instagram reels shown in the app are linked, not copied, and belong to their creators.
+Environment files and API keys are never committed.
 
 ## Disclaimer
 
