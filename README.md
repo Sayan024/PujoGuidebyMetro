@@ -6,7 +6,7 @@ Created entirely by **[Sayan Banerjee](https://github.com/Sayan024)**.
 
 ## What it is
 
-- **225 pandals** across **39 Metro stations** on five lines, each with walking distance and time.
+- **258 pandals** (including Kolkata major pandals, Howrah & Liluah, and traditional community paras) across **39 Metro stations** on five lines, each with walking distance, exact Trishul coordinates, and verified car/bike parking.
 - A line → station → pandal **explorer** with instant search, filters and sorting.
 - A **Pujo map**: street map, schematic network map and a 3D overview.
 - A **theme gallery**, the 2026 **puja calendar** and a day-by-day **travel advisory**.
