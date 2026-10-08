@@ -204,15 +204,18 @@ export function Hero() {
             <span className="h-3 w-px bg-hair" aria-hidden="true" /> Durga Puja 2026
           </motion.p>
 
-          <h1 id="hero-title" className="display mt-5 text-[#fff4e6]">
+          <h1 id="hero-title" className="display mt-4 text-[#fff4e6]">
+            <span className="block text-xs font-bold uppercase tracking-[0.24em] text-gold-light/90 mb-1">
+              PUJO BY METRO PRESENTS
+            </span>
             <RevealLine
-              text="PUJO BY METRO"
+              text="Pujo Porikroma"
               delay={base + 0.25}
-              className="block text-[clamp(2.5rem,min(7vw,11.5vh),8rem)] drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]"
+              className="block text-[clamp(2.3rem,min(6.5vw,10.5vh),7rem)] drop-shadow-[0_6px_30px_rgba(0,0,0,0.6)]"
             />
             <span className="block overflow-hidden">
               <motion.span
-                className="gold-text block text-[clamp(4.6rem,min(12.5vw,20vh),14rem)] leading-[0.86]"
+                className="gold-text block text-[clamp(4.2rem,min(11vw,18vh),12rem)] leading-[0.86]"
                 initial={{ y: '100%', opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.1, delay: base + 0.5, ease: EASE }}
@@ -225,8 +228,11 @@ export function Hero() {
           <motion.p {...fade(0.75)} className="mt-4 font-display text-[clamp(1.1rem,1.9vw,1.75rem)] italic text-gold-bright">
             <span aria-hidden="true">🚇</span> Meeting Thakur in the Metro <span aria-hidden="true">🪷</span>
           </motion.p>
-          <motion.p {...fade(0.85)} className="mt-3 max-w-[34rem] text-[15px] text-[#eadbd3] md:text-base">
-            Discover {TOTAL_PANDALS}+ Durga Puja pandals and Bonedi Bari celebrations near Kolkata Metro stations.
+          <motion.p {...fade(0.85)} className="mt-2 text-xs uppercase tracking-widest font-semibold text-gold-light/80">
+            Your Metro-powered Durga Puja journey across Kolkata & Howrah
+          </motion.p>
+          <motion.p {...fade(0.9)} className="mt-2.5 max-w-[34rem] text-[15px] text-[#eadbd3] md:text-base">
+            Discover {TOTAL_PANDALS}+ Durga Puja pandals and Bonedi Bari celebrations across Kolkata and Howrah, organized by distance, walking time, themes, and verified car/bike parking.
           </motion.p>
 
           <motion.div {...fade(1)} className="mt-7 flex flex-wrap items-center justify-center gap-3">

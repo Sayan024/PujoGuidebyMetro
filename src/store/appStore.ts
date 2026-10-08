@@ -4,13 +4,21 @@ import type { MetroLineId } from '@/data/types';
 
 export type ThemeMode = 'dark' | 'light';
 export type LineFilter = MetroLineId | 'all';
-export type FilterKey = 'within1km' | 'traditional' | 'theme2026' | 'vip' | 'petpujo' | 'popular' | 'openNow';
+export type FilterKey = 'within1km' | 'traditional' | 'theme2026' | 'vip' | 'petpujo' | 'popular' | 'openNow' | 'howrahLiluah';
 export type SortKey = 'distance' | 'popularity' | 'walking' | 'station';
 
 export interface Toast {
   id: number;
   message: string;
   tone: 'save' | 'remove' | 'info';
+}
+
+export interface FeedbackPrefill {
+  pandal?: string;
+  station?: string;
+  line?: string;
+  type?: string;
+  incorrectField?: string;
 }
 
 interface AppState {
@@ -33,6 +41,10 @@ interface AppState {
   searchOpen: boolean;
   toasts: Toast[];
 
+  // Parking & Feedback Modals
+  parkingModalPandalId: string | null;
+  feedbackModal: { open: boolean } & FeedbackPrefill;
+
   setTheme: (t: ThemeMode) => void;
   toggleTheme: () => void;
   toggleFavorite: (id: string, name?: string) => void;
@@ -51,6 +63,10 @@ interface AppState {
   setSearchOpen: (open: boolean) => void;
   pushToast: (message: string, tone?: Toast['tone']) => void;
   dismissToast: (id: number) => void;
+
+  setParkingModalPandalId: (id: string | null) => void;
+  openFeedbackModal: (prefill?: FeedbackPrefill) => void;
+  closeFeedbackModal: () => void;
 }
 
 let toastId = 0;
@@ -72,6 +88,9 @@ export const useAppStore = create<AppState>()(
       selectedPandalId: null,
       searchOpen: false,
       toasts: [],
+
+      parkingModalPandalId: null,
+      feedbackModal: { open: false },
 
       setTheme: (theme) => set({ theme }),
       toggleTheme: () => set({ theme: get().theme === 'dark' ? 'light' : 'dark' }),
@@ -113,6 +132,10 @@ export const useAppStore = create<AppState>()(
         setTimeout(() => get().dismissToast(id), 2800);
       },
       dismissToast: (id) => set({ toasts: get().toasts.filter((t) => t.id !== id) }),
+
+      setParkingModalPandalId: (parkingModalPandalId) => set({ parkingModalPandalId }),
+      openFeedbackModal: (prefill) => set({ feedbackModal: { open: true, ...prefill } }),
+      closeFeedbackModal: () => set({ feedbackModal: { open: false } }),
     }),
     {
       name: 'pujo-by-metro',

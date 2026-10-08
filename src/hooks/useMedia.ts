@@ -72,7 +72,7 @@ export function useCan3D() {
 export function usePageTitle(title?: string) {
   useEffect(() => {
     document.title = title
-      ? `${title} · Pujo by Metro 2026`
-      : 'Pujo by Metro 2026 | Kolkata Durga Puja Pandal Guide';
+      ? `${title} · Pujo Porikroma by Metro 2026`
+      : 'Pujo Porikroma by Metro 2026 | Kolkata Durga Puja Pandal Guide';
   }, [title]);
 }

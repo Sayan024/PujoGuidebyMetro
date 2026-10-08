@@ -1,5 +1,6 @@
 import type { Feature, FeatureCollection, LineString, Point, Polygon } from 'geojson';
 import { PANDALS } from '@/data';
+import { PARKING_SPOTS } from '@/data/parking';
 import { METRO_LINES, STATION_LIST, STATIONS } from '@/data/metroLines';
 
 /** Area covered by the Metro network, with a small margin. */
@@ -59,6 +60,23 @@ export const pandalsGeoJSON: FeatureCollection<Point> = {
       color: METRO_LINES.find((l) => l.id === p.line)!.color,
     },
     geometry: { type: 'Point', coordinates: [p.longitude, p.latitude] },
+  })),
+};
+
+export const parkingGeoJSON: FeatureCollection<Point> = {
+  type: 'FeatureCollection',
+  features: PARKING_SPOTS.map((s) => ({
+    type: 'Feature',
+    properties: {
+      id: s.id,
+      name: s.name,
+      type: s.type,
+      paid: s.paid,
+      price: s.price,
+      walkingMinutes: s.walkingMinutes,
+      availability: s.availability,
+    },
+    geometry: { type: 'Point', coordinates: [s.longitude, s.latitude] },
   })),
 };
 

@@ -139,11 +139,14 @@ export function Navbar() {
             scrolled ? 'glass shadow-[var(--shadow)]' : 'border-transparent bg-transparent',
           )}
         >
-          <Link to="/" className="group flex shrink-0 items-center gap-3" aria-label="Pujo by Metro 2026, home">
+          <Link to="/" className="group flex shrink-0 items-center gap-2.5" aria-label="Pujo Porikroma by Metro 2026, home">
             <DurgaEyes className="h-[22px] text-gold-bright transition-transform duration-500 group-hover:scale-110" />
-            <span className="font-display text-[17px] font-bold tracking-wide">
-              PUJO BY METRO <span className="text-gold-bright">2026</span>
-            </span>
+            <div className="flex flex-col text-left leading-tight">
+              <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-muted">Pujo by Metro</span>
+              <span className="font-display text-[15px] md:text-[16.5px] font-bold tracking-wide text-ink">
+                Pujo Porikroma <span className="text-gold-bright">2026</span>
+              </span>
+            </div>
           </Link>
 
           <ul className="mx-auto hidden items-center lg:flex">
@@ -228,7 +231,15 @@ export function Navbar() {
               transition={{ type: 'spring', stiffness: 320, damping: 34 }}
             >
               <div className="flex items-center justify-between">
-                <DurgaEyes className="h-6 text-gold-bright" />
+                <div className="flex items-center gap-2">
+                  <DurgaEyes className="h-6 text-gold-bright" />
+                  <div className="flex flex-col text-left leading-none">
+                    <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-muted">Pujo by Metro</span>
+                    <span className="font-display text-sm font-bold text-ink">
+                      Pujo Porikroma <span className="text-gold-bright">2026</span>
+                    </span>
+                  </div>
+                </div>
                 <button className="icon-btn" onClick={() => setDrawer(false)} aria-label="Close menu" autoFocus>
                   <X className="size-5" />
                 </button>

@@ -1,17 +1,22 @@
-import { ArrowRight, Maximize2 } from 'lucide-react';
+import { ArrowRight, Download, Maximize2, MessageSquareHeart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Explorer } from '@/components/Explorer/Explorer';
 import { MyPujaListSection } from '@/components/Favorites/MyPujaList';
 import { Hero } from '@/components/Hero/Hero';
+import { MahalayaMorning } from '@/components/Mahalaya/MahalayaMorning';
 import NetworkMap from '@/components/MetroMap/NetworkMap';
 import { PujoMap } from '@/components/MetroMap/PujoMap';
 import { MetroDiscovery } from '@/components/MetroSelector/MetroDiscovery';
 import { PujaCalendar } from '@/components/PujaCalendar/PujaCalendar';
-import { ThemeGallery } from '@/components/ThemeGallery/ThemeGallery';
 import { TravelAdvisory } from '@/components/TravelAdvisory/TravelAdvisory';
+import { TravelDecisionEngine } from '@/components/TravelOptions/TravelDecisionEngine';
+import { HooghlyDiscovery } from '@/components/Hooghly/HooghlyDiscovery';
+import { ThemeGallery } from '@/components/ThemeGallery/ThemeGallery';
 import { Reveal, SectionHeading } from '@/components/ui/primitives';
 import { TOTAL_PANDALS } from '@/data';
 import { useIsDesktop, useNearViewport, usePageTitle } from '@/hooks/useMedia';
+import { useAppStore } from '@/store/appStore';
+import { downloadFeedbackCsv, getQueuedFeedback } from '@/data/feedbackStore';
 
 function MapChapter() {
   const desktop = useIsDesktop();
@@ -21,13 +26,13 @@ function MapChapter() {
     <section id="map" aria-labelledby="map-title" className="pt-24 md:pt-36">
       <div className="shell flex flex-wrap items-end justify-between gap-6">
         <SectionHeading
-          eyebrow="Interactive map"
+          eyebrow="Interactive Trishul Map"
           title={
             <span id="map-title">
-              Pujo <em className="font-medium text-gold">map</em>
+              Pujo Porikroma <em className="font-medium text-gold">map</em>
             </span>
           }
-          lead={`All ${TOTAL_PANDALS} pandals against the Metro network. Tap a station for its one-kilometre walking radius.`}
+          lead={`All ${TOTAL_PANDALS} pandals marked with sacred Durga Trishul markers alongside verified car & bike parking hubs.`}
         />
         <Reveal delay={0.1}>
           <Link to="/map" className="btn btn-ghost">
@@ -55,17 +60,81 @@ function MapChapter() {
   );
 }
 
+function FeedbackChapter() {
+  const openFeedback = useAppStore((s) => s.openFeedbackModal);
+  const queueCount = getQueuedFeedback().length;
+
+  return (
+    <section id="feedback-section" aria-labelledby="feedback-title" className="shell pt-24 md:pt-36">
+      <div className="rounded-md border border-hair bg-gradient-to-br from-[#241014] via-surface to-[#160a0d] p-8 md:p-12">
+        <div className="flex flex-wrap items-center justify-between gap-6">
+          <div className="max-w-xl">
+            <p className="eyebrow flex items-center gap-2">
+              <MessageSquareHeart className="size-4 text-gold-bright" /> Continuous Improvement
+            </p>
+            <h3 id="feedback-title" className="font-display mt-2 text-2xl font-bold text-ink sm:text-3xl">
+              Found a changed route, parking bay or new 2026 theme?
+            </h3>
+            <p className="mt-2 text-sm text-muted">
+              Help us maintain 100% ground-accurate data for Kolkata & Howrah. Feedback is instantly saved to our local queue and synced to organizers.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              onClick={() => openFeedback()}
+              className="btn btn-primary"
+            >
+              <MessageSquareHeart className="size-4" /> Share Feedback / Report Info
+            </button>
+            <button
+              type="button"
+              onClick={downloadFeedbackCsv}
+              className="btn btn-ghost"
+              title="Download local feedback entries"
+            >
+              <Download className="size-4" /> Export CSV ({queueCount})
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   usePageTitle();
   return (
     <>
+      {/* 1. Hero */}
       <Hero />
+
+      {/* 2. Puja Timings & Calendar */}
       <PujaCalendar />
+
+      {/* 3. Mahalaya Morning Countdown & Audio Experience */}
+      <MahalayaMorning />
+
+      {/* 4. Travel Advisory */}
       <TravelAdvisory />
+
+      {/* 5. Metro Line Discovery */}
       <MetroDiscovery />
+
+      {/* 6. Travel Options Engine (Metro vs Car vs Bike) */}
+      <TravelDecisionEngine />
+
+      {/* 7. Pandal Explorer Preview */}
       <Explorer preview />
+
+      {/* 8. Puja Across the Hooghly (Howrah, Shibpur, Liluah, Belur, Santragachi, Bally) */}
+      <HooghlyDiscovery />
+
+      {/* 9. Interactive Trishul Map */}
       <MapChapter />
 
+      {/* 10. 2026 Theme Gallery */}
       <section id="themes" aria-labelledby="themes-title" className="shell pt-24 md:pt-36">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
@@ -88,7 +157,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 11. My Puja List */}
       <MyPujaListSection />
+
+      {/* 12. Community Feedback & Reporting */}
+      <FeedbackChapter />
     </>
   );
 }

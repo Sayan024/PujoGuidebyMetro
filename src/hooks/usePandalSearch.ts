@@ -9,7 +9,18 @@ import { useAppStore, type FilterKey, type LineFilter, type SortKey } from '@/st
 const HAYSTACK = new Map<string, string>(
   PANDALS.map((p) => [
     p.id,
-    [p.name, p.station, STATIONS[p.stationId]?.area, p.theme, p.category, p.artist, p.description, p.tags.join(' '), `${p.line} line`]
+    [
+      p.name,
+      p.station,
+      p.locality,
+      STATIONS[p.stationId]?.area,
+      p.theme,
+      p.category,
+      p.artist,
+      p.description,
+      p.tags.join(' '),
+      `${p.line} line`,
+    ]
       .filter(Boolean)
       .join(' ')
       .toLowerCase(),
@@ -24,6 +35,13 @@ const PREDICATES: Record<FilterKey, (p: Pandal, now: Date) => boolean> = {
   petpujo: (p) => p.petpujo,
   popular: (p) => p.popularity >= 85,
   openNow: (p, now) => isOpenNow(p, now),
+  howrahLiluah: (p) =>
+    Boolean(
+      (p.locality && /howrah|liluah|shibpur|santragachi|belur|bally/i.test(p.locality)) ||
+        p.stationId === 'howrah' ||
+        p.stationId === 'howrah-maidan' ||
+        p.tags.some((t) => /howrah|liluah|shibpur|santragachi|belur|bally/i.test(t)),
+    ),
 };
 
 const SORTERS: Record<SortKey, (a: Pandal, b: Pandal) => number> = {

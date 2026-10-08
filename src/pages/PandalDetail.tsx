@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowLeft, ArrowUpRight, Clock, DoorOpen, Hourglass, Play, Footprints, MapPin, MapPinned, Navigation, Palette, SearchX, Sparkles, TrainFront } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Car, Clock, DoorOpen, Flag, Hourglass, Play, Footprints, MapPin, MapPinned, Navigation, Palette, SearchX, ShieldCheck, Sparkles, TrainFront } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { InstagramLink, PandalCard, SaveButton } from '@/components/PandalCard/PandalCard';
@@ -10,6 +10,7 @@ import { reelsOf } from '@/data/instagram';
 import { themeIdOf } from '@/data/themes';
 import { usePageTitle } from '@/hooks/useMedia';
 import { formatKm, isFestivalOn, isOpenNow, summaryOf } from '@/lib/utils';
+import { useAppStore } from '@/store/appStore';
 
 function Fact({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
   return (
@@ -188,6 +189,52 @@ export default function PandalDetail() {
               <SaveButton pandal={p} variant="label" className="h-11" />
             </div>
             <InstagramLink pandal={p} variant="handle" />
+          </div>
+
+          {/* Parking Discovery Card */}
+          <div className="mt-6 rounded-sm border border-hair-soft bg-surface/80 p-4">
+            <div className="flex items-center justify-between">
+              <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted">
+                <Car className="size-3.5 text-gold" /> Parking Near Pandal
+              </span>
+              <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
+                {p.parking && p.parking.length > 0 ? 'Verified' : 'Public Bays'}
+              </span>
+            </div>
+            <p className="mt-2 text-xs text-muted leading-relaxed">
+              {p.parking && p.parking.length > 0
+                ? `${p.parking.length} verified car/bike bays identified nearby.`
+                : 'Check municipal bays or ride Kolkata Metro to avoid evening road diversions.'}
+            </p>
+            <button
+              type="button"
+              onClick={() => useAppStore.getState().setParkingModalPandalId(p.id)}
+              className="btn btn-sm btn-ghost mt-3 w-full justify-center text-xs text-gold-light"
+            >
+              <Car className="size-3.5" /> View Parking & Drop-offs
+            </button>
+          </div>
+
+          {/* Verification & Report Correction */}
+          <div className="mt-5 flex items-center justify-between border-t border-hair-soft pt-4 text-xs text-muted">
+            <span className="flex items-center gap-1 text-[11px]">
+              <ShieldCheck className="size-3.5 text-emerald-400" />
+              {p.verificationStatus === 'verified' ? 'Verified 2026' : 'Community Data'}
+            </span>
+            <button
+              type="button"
+              onClick={() => {
+                useAppStore.getState().openFeedbackModal({
+                  pandal: p.name,
+                  station: p.station,
+                  line: p.line,
+                  type: 'Incorrect information on pandal',
+                });
+              }}
+              className="inline-flex items-center gap-1 font-semibold text-gold-light hover:underline"
+            >
+              <Flag className="size-3" /> Report incorrect info
+            </button>
           </div>
         </aside>
       </div>

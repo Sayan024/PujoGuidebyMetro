@@ -2,8 +2,10 @@ import { animate, useMotionValue, useReducedMotion } from 'motion/react';
 import { Minus, Plus, Scan } from 'lucide-react';
 import { useEffect, useMemo, useRef } from 'react';
 import { PANDALS, stationPandals } from '@/data';
+import { PARKING_SPOTS } from '@/data/parking';
 import { METRO_LINES, STATION_LIST, STATIONS } from '@/data/metroLines';
 import { HOOGHLY, project, SVG_H, SVG_W, UNITS_PER_KM } from '@/lib/geo';
+import { TrishulMarker, ParkingMarker } from '@/components/ui/TrishulMarker';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/appStore';
 
@@ -149,32 +151,47 @@ export default function NetworkMap() {
           );
         })}
 
-        {/* Pandals */}
+        {/* Pandals with Durga Trishul Markers */}
         <g>
           {PANDAL_POINTS.map(({ p, xy }) => {
             if (line !== 'all' && p.line !== line) return null;
             const near = p.stationId === stationId;
-            const r = (near ? 4.6 : p.popularity >= 85 ? 3.4 : 2.4) * k;
             return (
-              <circle
+              <TrishulMarker
                 key={p.id}
-                cx={xy[0]}
-                cy={xy[1]}
-                r={r}
-                fill="var(--gold-bright)"
-                stroke={`var(--${p.line}-line)`}
-                strokeWidth={0.9 * k}
-                opacity={focused && !near ? 0.3 : 0.92}
-                tabIndex={near ? 0 : -1}
-                role="button"
-                aria-label={`${p.name}, near ${p.station}`}
-                className="cursor-pointer outline-none transition-[r] hover:brightness-125 focus-visible:stroke-[var(--cream)]"
+                x={xy[0]}
+                y={xy[1]}
+                scale={k * (near ? 1.3 : p.popularity >= 85 ? 1.15 : 0.95)}
+                selected={p.id === selectedPandalId}
+                highlighted={near || p.popularity >= 85}
+                color={near ? 'var(--gold-bright)' : `var(--${p.line}-line)`}
+                title={`${p.name}, near ${p.station}`}
                 onClick={() => selectPandal(p.id)}
                 onKeyDown={(e) => e.key === 'Enter' && selectPandal(p.id)}
               />
             );
           })}
         </g>
+
+        {/* Nearby Parking Markers when station is selected or focused */}
+        {focused && (
+          <g>
+            {PARKING_SPOTS.map((spot) => {
+              const xy = project(spot.latitude, spot.longitude);
+              return (
+                <ParkingMarker
+                  key={spot.id}
+                  x={xy[0]}
+                  y={xy[1]}
+                  type={spot.type === 'both' ? 'car' : spot.type}
+                  scale={k * 1.1}
+                  title={`${spot.name} (${spot.type})`}
+                  onClick={() => useAppStore.getState().setParkingModalPandalId(selectedPandalId || null)}
+                />
+              );
+            })}
+          </g>
+        )}
 
         {/* Stations */}
         {STATION_POINTS.map(({ s, xy }) => {

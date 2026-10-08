@@ -76,12 +76,20 @@ export function IntroLoader() {
               <DurgaEyes className="h-14 text-gold-bright" />
             </motion.div>
             <motion.p
-              className="display mt-7 text-4xl text-[#fff4e6] md:text-5xl"
+              className="mt-6 text-[11px] font-bold uppercase tracking-[0.26em] text-gold"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.35, duration: 0.35 }}
+            >
+              PUJO BY METRO
+            </motion.p>
+            <motion.p
+              className="display mt-1 text-4xl text-[#fff4e6] md:text-5xl"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45, duration: 0.45 }}
             >
-              PUJO BY METRO
+              Pujo Porikroma
             </motion.p>
             <motion.p
               className="display gold-text mt-1 text-5xl md:text-6xl"
@@ -90,6 +98,14 @@ export function IntroLoader() {
               transition={{ delay: 0.7, duration: 0.4 }}
             >
               2026
+            </motion.p>
+            <motion.p
+              className="font-display mt-2 text-xs italic text-gold-light/80"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.85, duration: 0.4 }}
+            >
+              Meeting Thakur in the Metro
             </motion.p>
           </div>
         </motion.div>

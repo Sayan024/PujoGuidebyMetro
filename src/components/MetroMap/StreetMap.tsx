@@ -4,8 +4,10 @@ import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { useEffect, useRef } from 'react';
 import { PANDAL_BY_ID } from '@/data';
+import { PARKING_SPOTS } from '@/data/parking';
 import { STATIONS } from '@/data/metroLines';
-import { circlePolygon, KOLKATA_CENTER, linesGeoJSON, pandalsGeoJSON, stationsGeoJSON } from '@/lib/geo';
+import { circlePolygon, KOLKATA_CENTER, linesGeoJSON, pandalsGeoJSON, parkingGeoJSON, stationsGeoJSON } from '@/lib/geo';
+import { getParkingSvgString, getTrishulSvgString } from '@/components/ui/TrishulMarker';
 import { useAppStore } from '@/store/appStore';
 
 // MapLibre 6 ships its worker as a separate module; hand it the bundled URL.
@@ -16,6 +18,21 @@ const STYLES = {
   light: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
 };
 const EMPTY: FeatureCollection = { type: 'FeatureCollection', features: [] };
+
+function loadSvgImage(map: MlMap, id: string, svg: string) {
+  if (map.hasImage(id)) return;
+  const img = new Image(40, 40);
+  img.onload = () => {
+    if (!map.hasImage(id)) {
+      try {
+        map.addImage(id, img);
+      } catch {
+        /* image add handled gracefully */
+      }
+    }
+  };
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+}
 
 /**
  * The real navigation map. If the style or tiles cannot be loaded it reports
@@ -40,6 +57,10 @@ export default function StreetMap({ interactiveScroll, onUnavailable }: { intera
     const { line, stationId, selectedPandalId } = live.current;
     const lineFilter = line === 'all' ? null : (['==', ['get', 'line'], line] as FilterSpecification);
     map.setFilter('pandals', lineFilter);
+    if (map.getLayer('pandals-trishul')) map.setFilter('pandals-trishul', lineFilter);
+    if (map.getLayer('pandal-selected-trishul')) {
+      map.setFilter('pandal-selected-trishul', ['==', ['get', 'id'], selectedPandalId ?? '']);
+    }
     map.setPaintProperty('lines', 'line-opacity', line === 'all' ? 0.95 : ['case', ['==', ['get', 'id'], line], 1, 0.2]);
     map.setPaintProperty('lines-glow', 'line-opacity', line === 'all' ? 0.22 : ['case', ['==', ['get', 'id'], line], 0.35, 0.04]);
     map.setFilter('pandal-selected', ['==', ['get', 'id'], selectedPandalId ?? '']);
@@ -98,9 +119,16 @@ export default function StreetMap({ interactiveScroll, onUnavailable }: { intera
         'text-font'
       ] ?? ['Open Sans Regular'];
 
+      // Load Durga Trishul & Parking SVG Images into MapLibre
+      loadSvgImage(map, 'trishul-marker', getTrishulSvgString(false));
+      loadSvgImage(map, 'trishul-selected', getTrishulSvgString(true));
+      loadSvgImage(map, 'parking-car-icon', getParkingSvgString('car'));
+      loadSvgImage(map, 'parking-bike-icon', getParkingSvgString('bike'));
+
       map.addSource('lines', { type: 'geojson', data: linesGeoJSON });
       map.addSource('stations', { type: 'geojson', data: stationsGeoJSON });
       map.addSource('pandals', { type: 'geojson', data: pandalsGeoJSON });
+      map.addSource('parking', { type: 'geojson', data: parkingGeoJSON });
       map.addSource('radius', { type: 'geojson', data: EMPTY });
 
       map.addLayer({ id: 'radius-fill', type: 'fill', source: 'radius', paint: { 'fill-color': '#DDAA44', 'fill-opacity': 0.09 } });
@@ -128,25 +156,68 @@ export default function StreetMap({ interactiveScroll, onUnavailable }: { intera
         id: 'pandals',
         type: 'circle',
         source: 'pandals',
+        maxzoom: 12,
         paint: {
-          'circle-radius': ['interpolate', ['linear'], ['zoom'], 10, ['case', ['>=', ['get', 'popularity'], 85], 3.2, 2.2], 15, ['case', ['>=', ['get', 'popularity'], 85], 9, 7]],
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 10, ['case', ['>=', ['get', 'popularity'], 85], 3.2, 2.2], 12, ['case', ['>=', ['get', 'popularity'], 85], 5, 3.5]],
           'circle-color': dark ? '#FFD66B' : '#C4182B',
           'circle-stroke-color': ['get', 'color'],
-          'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 10, 1, 15, 2.5],
+          'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 10, 1, 12, 1.8],
         },
       });
+
+      // Trishul markers on zoom >= 11.5
+      map.addLayer({
+        id: 'pandals-trishul',
+        type: 'symbol',
+        source: 'pandals',
+        minzoom: 11.5,
+        layout: {
+          'icon-image': 'trishul-marker',
+          'icon-size': ['interpolate', ['linear'], ['zoom'], 11.5, 0.45, 14, 0.7, 16, 0.95],
+          'icon-allow-overlap': true,
+        },
+      });
+
+      // Selected Pandal Trishul Highlight
+      map.addLayer({
+        id: 'pandal-selected-trishul',
+        type: 'symbol',
+        source: 'pandals',
+        filter: ['==', ['get', 'id'], ''],
+        layout: {
+          'icon-image': 'trishul-selected',
+          'icon-size': ['interpolate', ['linear'], ['zoom'], 10, 0.75, 16, 1.25],
+          'icon-allow-overlap': true,
+        },
+      });
+
+      // Parking markers
+      map.addLayer({
+        id: 'parking-markers',
+        type: 'symbol',
+        source: 'parking',
+        minzoom: 12.4,
+        layout: {
+          'icon-image': ['case', ['==', ['get', 'type'], 'bike'], 'parking-bike-icon', 'parking-car-icon'],
+          'icon-size': ['interpolate', ['linear'], ['zoom'], 12.4, 0.55, 15, 0.85],
+          'icon-allow-overlap': true,
+        },
+      });
+
       map.addLayer({
         id: 'pandal-selected',
         type: 'circle',
         source: 'pandals',
         filter: ['==', ['get', 'id'], ''],
         paint: {
-          'circle-radius': 13,
+          'circle-radius': 14,
           'circle-color': '#E52D3F',
           'circle-stroke-color': '#FFF4E6',
           'circle-stroke-width': 3,
+          'circle-opacity': 0.4,
         },
       });
+
       map.addLayer({
         id: 'stations',
         type: 'circle',
@@ -187,17 +258,26 @@ export default function StreetMap({ interactiveScroll, onUnavailable }: { intera
       sync(map);
     });
 
-    for (const layer of ['pandals', 'stations']) {
+    for (const layer of ['pandals', 'pandals-trishul', 'stations', 'parking-markers']) {
       map.on('mouseenter', layer, () => (map.getCanvas().style.cursor = 'pointer'));
       map.on('mouseleave', layer, () => (map.getCanvas().style.cursor = ''));
     }
-    map.on('click', 'pandals', (e) => {
+    const selectPandalFromEvent = (e: { features?: { properties?: Record<string, unknown> }[] }) => {
       const id = e.features?.[0]?.properties?.id as string | undefined;
       if (id) useAppStore.getState().selectPandal(id);
+    };
+    map.on('click', 'pandals', selectPandalFromEvent);
+    map.on('click', 'pandals-trishul', selectPandalFromEvent);
+    map.on('click', 'parking-markers', (e) => {
+      const id = e.features?.[0]?.properties?.id as string | undefined;
+      const spot = PARKING_SPOTS.find(s => s.id === id);
+      if (spot) {
+        useAppStore.getState().setParkingModalPandalId(live.current.selectedPandalId || 'howrah-nabagopal-sporting');
+      }
     });
     map.on('click', 'stations', (e) => {
       // A pandal sitting on top of the station marker wins the click.
-      if (map.queryRenderedFeatures(e.point, { layers: ['pandals'] }).length) return;
+      if (map.queryRenderedFeatures(e.point, { layers: ['pandals', 'pandals-trishul'] }).length) return;
       const id = e.features?.[0]?.properties?.id as string | undefined;
       if (id) useAppStore.getState().setStation(id);
     });
@@ -236,17 +316,14 @@ export default function StreetMap({ interactiveScroll, onUnavailable }: { intera
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const p = selectedPandalId ? PANDAL_BY_ID.get(selectedPandalId) : null;
-    const st = stationId ? STATIONS[stationId] : null;
-    if (p) map.flyTo({ center: [p.longitude, p.latitude], zoom: Math.max(map.getZoom(), 14.6), duration: reduce ? 0 : 1100 });
-    else if (st) map.flyTo({ center: [st.lng, st.lat], zoom: 13.9, duration: reduce ? 0 : 1300 });
+    if (selectedPandalId) {
+      const p = PANDAL_BY_ID.get(selectedPandalId);
+      if (p) map.flyTo({ center: [p.longitude, p.latitude], zoom: Math.max(map.getZoom(), 14.2), essential: true });
+    } else if (stationId) {
+      const st = STATIONS[stationId];
+      if (st) map.flyTo({ center: [st.lng, st.lat], zoom: 13.6, essential: true });
+    }
   }, [stationId, selectedPandalId]);
 
-  // MapLibre sets position: relative on its container, so sizing is done by a wrapper.
-  return (
-    <div className="absolute inset-0">
-      <div ref={container} style={{ width: '100%', height: '100%' }} role="application" aria-label="Street map of Kolkata Metro lines and pandals" />
-    </div>
-  );
+  return <div ref={container} className="relative size-full overflow-hidden" tabIndex={-1} aria-label="Interactive map" />;
 }

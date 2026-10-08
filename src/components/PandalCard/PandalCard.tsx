@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'motion/react';
-import { ArrowUpRight, Footprints, Heart, MapPin, MapPinned, TrainFront } from 'lucide-react';
+import { ArrowUpRight, Car, Footprints, Heart, MapPin, MapPinned, TrainFront } from 'lucide-react';
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { InstagramGlyph } from '@/components/ui/Motifs';
@@ -163,23 +163,45 @@ function PandalCardImpl({ pandal: p, priority }: { pandal: Pandal; priority?: bo
             </div>
           </dl>
 
-          {p.tags.length > 0 && (
-            <ul className="mt-3 hidden flex-wrap gap-1.5 sm:flex" aria-label="Tags">
-              {p.tags.slice(0, 4).map((t) => (
-                <li key={t} className="tag">
-                  {t}
-                </li>
-              ))}
-            </ul>
-          )}
+          <ul className="mt-3 hidden flex-wrap gap-1.5 sm:flex" aria-label="Tags">
+            {p.locality && (
+              <li className="tag border-gold/40 text-gold-light">
+                📍 {p.locality}
+              </li>
+            )}
+            {p.parking && p.parking.length > 0 && (
+              <li className="tag border-emerald-800/40 bg-emerald-950/40 text-emerald-300">
+                🚗 Parking
+              </li>
+            )}
+            {p.tags.slice(0, 3).map((t) => (
+              <li key={t} className="tag">
+                {t}
+              </li>
+            ))}
+          </ul>
 
           <div className="relative z-10 mt-auto flex items-center gap-2 pt-3.5 sm:pt-5">
             <Link to={`/pandal/${p.id}`} className="btn btn-sm btn-primary flex-1 max-sm:hidden">
               View details <ArrowUpRight className="size-3.5" aria-hidden="true" />
             </Link>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                useAppStore.getState().setParkingModalPandalId(p.id);
+              }}
+              className="btn btn-sm btn-ghost max-sm:h-[34px] max-sm:px-2.5 text-xs text-gold-light"
+              aria-label={`Parking near ${p.name}`}
+              title="Parking bays and drop-off points"
+            >
+              <Car className="size-3.5 text-gold" aria-hidden="true" />
+              <span>Parking</span>
+            </button>
             <Link
               to={`/map?pandal=${p.id}`}
-              className="btn btn-sm btn-ghost max-sm:h-[34px] max-sm:px-3"
+              className="btn btn-sm btn-ghost max-sm:h-[34px] max-sm:px-2.5"
               aria-label={`View ${p.name} on the map`}
             >
               <MapPinned className="size-3.5" aria-hidden="true" />

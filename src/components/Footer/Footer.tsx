@@ -16,15 +16,20 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
             <DurgaEyes className="h-8 text-gold-bright" />
-            <p className="display mt-6 text-[clamp(2.2rem,4.5vw,4rem)]">
-              Pujo by Metro <span className="gold-text gold-text-auto">2026</span>
+            <div className="mt-6">
+              <span className="block text-[11px] font-bold uppercase tracking-[0.24em] text-muted">PUJO BY METRO</span>
+              <p className="display mt-1 text-[clamp(2rem,4vw,3.6rem)]">
+                Pujo Porikroma <span className="gold-text gold-text-auto">2026</span>
+              </p>
+            </div>
+            <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-gold-light">
+              Meeting Thakur in the Metro
             </p>
-            <p lang="bn" className="mt-3 flex items-center gap-2 font-bn text-lg text-gold">
+            <p lang="bn" className="mt-2 flex items-center gap-2 font-bn text-base text-gold">
               <Lotus className="h-4" /> মেট্রোয় ঠাকুর দেখা
             </p>
-            <p className="mt-5 max-w-sm text-sm text-muted">
-              A guide to {TOTAL_PANDALS} Durga Puja pandals and Bonedi Bari celebrations, organised by the Kolkata
-              Metro station you walk from.
+            <p className="mt-4 max-w-sm text-sm text-muted">
+              Your Metro-powered Durga Puja journey across Kolkata & Howrah. Discovering {TOTAL_PANDALS} pandals, Bonedi Bari celebrations, and verified car/bike parking.
             </p>
           </div>
 

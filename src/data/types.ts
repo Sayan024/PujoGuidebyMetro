@@ -33,6 +33,27 @@ export type ThemeCategory =
 /** 24h: open round the clock · day: morning to late night · ritual: ritual hours only */
 export type OpenHours = '24h' | 'day' | 'ritual';
 
+export type VerificationStatus = 'verified' | 'needs_verification' | 'reported_issue';
+
+export interface ParkingSpot {
+  id: string;
+  name: string;
+  type: 'car' | 'bike' | 'both';
+  distanceKm: number;
+  walkingMinutes: number;
+  capacity?: string;
+  availability?: 'available' | 'limited' | 'unknown';
+  paid?: boolean;
+  price?: string;
+  openingHours?: string;
+  address: string;
+  latitude: number;
+  longitude: number;
+  source?: string;
+  verifiedAt?: string;
+  isDropOff?: boolean;
+}
+
 export interface Pandal {
   id: string;
   name: string;
@@ -64,4 +85,13 @@ export interface Pandal {
   theme2026: boolean;
   vip: boolean;
   petpujo: boolean;
+
+  /** Locality (e.g. Howrah, Liluah, Shibpur, Santragachi, Belur, Bally, North Kolkata) */
+  locality?: string;
+  /** Associated car/bike parking spots nearby */
+  parking?: ParkingSpot[];
+  /** Data provenance and verification */
+  source?: string;
+  verifiedAt?: string;
+  verificationStatus?: VerificationStatus;
 }
