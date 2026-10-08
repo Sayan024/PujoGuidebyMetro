@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Reveal, SectionHeading, SmartImage } from '@/components/ui/primitives';
 import { Diya, InstagramGlyph } from '@/components/ui/Motifs';
+import { DHAK_CREDIT } from '@/data/credits';
 import { committeeAccounts, creditedSources, instagramUrl, PUJO_GUIDES } from '@/data/instagram';
 import { BONEDI_COUNT, PANDAL_BY_ID, STATIONS_WITH_PANDALS, TOTAL_PANDALS } from '@/data';
 import { usePageTitle } from '@/hooks/useMedia';
@@ -178,8 +179,16 @@ export default function About() {
 
             <h3 className="mt-8 font-display text-xl font-semibold">Sound</h3>
             <p className="mt-3 max-w-xl text-sm text-muted">
-              The soft dhak in the background is a short festive rhythm from a video by TrainzHub. It belongs to its owner and
-              is not covered by this guide’s licence. Use the speaker button to mute it; your choice is remembered.
+              The soft dhak in the background is a short festive rhythm from the YouTube video{' '}
+              <a href={DHAK_CREDIT.videoUrl} target="_blank" rel="noreferrer" className="font-semibold text-gold-bright underline-offset-4 hover:underline">
+                “{DHAK_CREDIT.videoTitle}”
+              </a>{' '}
+              by{' '}
+              <a href={DHAK_CREDIT.channelUrl} target="_blank" rel="noreferrer" className="font-semibold text-gold-bright underline-offset-4 hover:underline">
+                {DHAK_CREDIT.channel}
+              </a>
+              , used with credit. It belongs to its creator and is not covered by this guide’s licence. Use the speaker button to
+              mute it; your choice is remembered.
             </p>
           </Reveal>
         </div>

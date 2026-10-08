@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Alpana, DurgaEyes, InstagramGlyph, Lotus } from '@/components/ui/Motifs';
+import { DHAK_CREDIT } from '@/data/credits';
 import { instagramUrl, PUJO_GUIDES } from '@/data/instagram';
 import { TOTAL_PANDALS } from '@/data';
 import { METRO_LINES } from '@/data/metroLines';
@@ -118,6 +119,13 @@ export function Footer() {
             </Link>
             <span aria-hidden="true">·</span>
             <span>© 2026 Pujo by Metro. An independent guide, not affiliated with Metro Railway Kolkata.</span>
+            <span aria-hidden="true">·</span>
+            <span>
+              Dhak:{' '}
+              <a href={DHAK_CREDIT.videoUrl} target="_blank" rel="noreferrer" className="font-semibold text-ink/85 underline-offset-4 hover:text-gold-bright hover:underline">
+                {DHAK_CREDIT.channel} on YouTube
+              </a>
+            </span>
           </span>
           <span lang="bn" className="font-bn text-sm text-gold">
             শুভ শারদীয়া ১৪৩৩
