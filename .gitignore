@@ -13,6 +13,7 @@ Eng_map.jpg
 public/img/*
 !public/img/sayan-*.webp
 !public/img/kolkata-police-puja-map*
+!public/img/mahalaya-vintage-radio*
 public/og.jpg
 
 # Build and tooling output
