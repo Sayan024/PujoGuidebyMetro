@@ -10,7 +10,6 @@ import { MetroDiscovery } from '@/components/MetroSelector/MetroDiscovery';
 import { PujaCalendar } from '@/components/PujaCalendar/PujaCalendar';
 import { TravelAdvisory } from '@/components/TravelAdvisory/TravelAdvisory';
 import { TravelDecisionEngine } from '@/components/TravelOptions/TravelDecisionEngine';
-import { HooghlyDiscovery } from '@/components/Hooghly/HooghlyDiscovery';
 import { ThemeGallery } from '@/components/ThemeGallery/ThemeGallery';
 import { Reveal, SectionHeading } from '@/components/ui/primitives';
 import { TOTAL_PANDALS } from '@/data';
@@ -128,10 +127,7 @@ export default function Home() {
       {/* 7. Pandal Explorer Preview */}
       <Explorer preview />
 
-      {/* 8. Puja Across the Hooghly (Howrah, Shibpur, Liluah, Belur, Santragachi, Bally) */}
-      <HooghlyDiscovery />
-
-      {/* 9. Interactive Trishul Map */}
+      {/* 8. Interactive Trishul Map */}
       <MapChapter />
 
       {/* 10. 2026 Theme Gallery */}
