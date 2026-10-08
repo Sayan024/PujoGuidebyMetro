@@ -20,7 +20,7 @@ function DayPanel({ day, active, onActivate }: { day: PujaDay; active: boolean; 
   return (
     <li
       className={cn(
-        'group relative min-w-0 overflow-hidden border-t-2 transition-[flex-grow,border-color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
+        'group relative min-w-0 overflow-hidden rounded-[20px] border-t-2 transition-[flex-grow,border-color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
         active ? 'grow-[3.4] border-gold-bright' : 'grow border-hair',
       )}
       style={{ flexBasis: 0 }}
@@ -153,7 +153,7 @@ export function PujaCalendar() {
             {PUJA_DAYS.map((d) => {
               const when = countdown(d);
               return (
-                <li key={d.id} className="relative h-[400px] w-[80vw] max-w-[360px] shrink-0 snap-center overflow-hidden border-t-2 border-gold">
+                <li key={d.id} className="relative h-[400px] w-[80vw] max-w-[360px] shrink-0 snap-center overflow-hidden rounded-[22px] border-t-2 border-gold">
                   <SmartImage name={d.image} alt="" sizes="80vw" className="absolute inset-0" imgClassName="!opacity-80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#120909] via-[#120909]/75 to-[#120909]/10" />
                   <div className="absolute inset-x-5 top-4 flex items-start justify-between">

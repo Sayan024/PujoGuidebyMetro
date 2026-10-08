@@ -31,7 +31,7 @@ export function ItineraryStats({ className }: { className?: string }) {
     { icon: <Clock className="size-4" />, value: <><Counter value={hours} decimals={1} /><small className="ml-1 text-[0.45em] font-sans font-bold uppercase tracking-widest">hrs</small></>, label: 'estimated exploration' },
   ];
   return (
-    <dl className={cn('grid grid-cols-2 gap-px overflow-hidden border border-hair bg-hair lg:grid-cols-4', className)}>
+    <dl className={cn('grid grid-cols-2 gap-px overflow-hidden rounded-[22px] border border-hair bg-hair lg:grid-cols-4', className)}>
       {stats.map((s) => (
         <div key={s.label} className="bg-surface px-5 py-5 md:px-7 md:py-7">
           <dd className="display flex items-baseline text-[clamp(2.4rem,4.4vw,4.2rem)] text-gold-bright">{s.value}</dd>

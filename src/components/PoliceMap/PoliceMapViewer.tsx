@@ -216,6 +216,7 @@ export function PoliceMapViewer({
 
   return (
     <div
+      data-theme="dark"
       className={cn(
         'relative isolate flex flex-col overflow-hidden bg-[#12070a] select-none text-ink',
         className,

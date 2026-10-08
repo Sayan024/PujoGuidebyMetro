@@ -133,7 +133,7 @@ export function MahalayaMorning() {
       />
 
       {/* Main Vintage Atmospheric Card */}
-      <div className="relative mt-10 overflow-hidden rounded-2xl border border-gold/30 bg-[#160807] shadow-[0_30px_90px_rgba(0,0,0,0.85)]">
+      <div data-theme="dark" className="relative mt-10 overflow-hidden rounded-[22px] border border-gold/30 bg-[#160807] shadow-[0_30px_90px_rgba(0,0,0,0.85)]">
         {/* Subtle Decorative Arch / Jharokha Motif Background */}
         <div
           aria-hidden="true"

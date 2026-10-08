@@ -65,7 +65,7 @@ function FeedbackChapter() {
 
   return (
     <section id="feedback-section" aria-labelledby="feedback-title" className="shell pt-24 md:pt-36">
-      <div className="rounded-md border border-hair bg-gradient-to-br from-[#241014] via-surface to-[#160a0d] p-8 md:p-12">
+      <div className="rounded-[22px] border border-hair bg-gradient-to-br from-surface-2 via-surface to-surface p-8 shadow-[var(--shadow)] md:p-12">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <div className="max-w-xl">
             <p className="eyebrow flex items-center gap-2">

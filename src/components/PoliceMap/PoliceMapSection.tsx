@@ -43,7 +43,7 @@ export function PoliceMapSection() {
 
       <div className="mt-10 md:mt-14 grid gap-8 lg:grid-cols-[1.1fr_1fr] items-center">
         {/* Left: Interactive Preview Frame */}
-        <Reveal className="group relative overflow-hidden rounded-md border border-hair bg-[#140609] p-3 shadow-2xl">
+        <Reveal data-theme="dark" className="group relative overflow-hidden rounded-[22px] border border-hair bg-[#140609] p-3 shadow-2xl">
           <div
             onClick={openPoliceMap}
             className="relative cursor-pointer overflow-hidden rounded border border-hair-soft bg-[#0a0305]"
@@ -138,7 +138,7 @@ export function PoliceMapSection() {
           </div>
 
           {/* Quick Helplines Box */}
-          <div className="flex flex-wrap items-center justify-between gap-4 rounded-md border border-hair-soft bg-[#1c080e]/60 p-4 text-xs">
+          <div className="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-hair bg-surface-2 p-4 text-xs">
             <div className="flex items-center gap-2 text-red font-semibold">
               <PhoneCall className="size-4" />
               <span>Traffic Police Helpline:</span>

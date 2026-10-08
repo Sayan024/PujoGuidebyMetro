@@ -33,7 +33,7 @@ export function TravelAdvisory() {
   return (
     <section aria-labelledby="advisory-title" className="shell pt-16 md:pt-24">
       <Reveal
-        className="relative overflow-hidden border border-hair"
+        className="relative overflow-hidden rounded-[22px] border border-hair shadow-[var(--shadow)]"
         style={{
           background:
             'linear-gradient(110deg, color-mix(in srgb, var(--red) 20%, var(--surface)) 0%, var(--surface) 46%, color-mix(in srgb, var(--gold) 10%, var(--surface)) 100%)',
@@ -127,7 +127,7 @@ export function TravelAdvisory() {
             </Indicator>
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-hair-soft bg-[#18080d]/60 px-6 py-3.5 md:px-10">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-hair bg-surface-2/70 px-6 py-3.5 md:px-10">
           <p className="flex items-center gap-2 text-xs text-muted">
             <span className="size-2 rounded-full bg-red animate-pulse" />
             <span>Kolkata Police Traffic Restriction: No vehicular entry 3:00 PM – 4:00 AM on festival days.</span>

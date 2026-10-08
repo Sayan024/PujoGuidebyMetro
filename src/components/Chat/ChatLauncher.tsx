@@ -33,7 +33,7 @@ export function ChatLauncher() {
             aria-haspopup="dialog"
             className={cn(
               'fixed right-4 z-[55] flex h-[52px] items-center gap-2.5 rounded-full border border-[#ffd66b]/60 bg-gradient-to-br from-[#e52d3f] to-[#701525] pl-4 pr-5 text-[#fff4e6] shadow-[0_14px_34px_-10px_rgba(229,45,63,0.8)] lg:right-6',
-              onMap ? 'top-[136px] lg:top-[100px]' : 'bottom-[calc(78px+env(safe-area-inset-bottom))] lg:bottom-6',
+              onMap ? 'top-[136px] lg:top-[100px]' : 'bottom-[calc(100px+env(safe-area-inset-bottom))] lg:bottom-6',
             )}
           >
             <MessageCircle className="size-5" aria-hidden="true" />

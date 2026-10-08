@@ -29,7 +29,7 @@ export function MetroSelector({ className, layoutId = 'line-tab' }: { className?
             aria-checked={on}
             onClick={() => setLine(o.id)}
             className={cn(
-              'relative flex h-[52px] shrink-0 items-center gap-3 overflow-hidden rounded-sm border px-4 text-left transition-colors sm:min-w-[132px] sm:flex-1',
+              'relative flex h-[52px] shrink-0 items-center gap-3 overflow-hidden rounded-2xl border px-4 text-left transition-colors sm:min-w-[132px] sm:flex-1',
               on ? 'border-transparent text-white' : 'border-hair-soft text-muted hover:border-hair hover:text-ink',
             )}
           >

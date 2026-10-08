@@ -23,7 +23,7 @@ export function ThemeGallery({ activeId }: { activeId?: string }) {
                 to={`/themes?theme=${t.id}`}
                 aria-current={active ? 'true' : undefined}
                 className={cn(
-                  'group relative block h-[250px] overflow-hidden border outline-offset-4 transition-[border-color,box-shadow] duration-500 sm:h-[320px] lg:h-[380px]',
+                  'group relative block h-[250px] overflow-hidden rounded-[22px] border outline-offset-4 transition-[border-color,box-shadow] duration-500 sm:h-[320px] lg:h-[380px]',
                   active ? 'border-gold-bright shadow-[var(--glow)]' : 'border-hair-soft hover:border-gold/70',
                 )}
               >

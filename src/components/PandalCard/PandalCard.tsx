@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'motion/react';
-import { ArrowUpRight, Car, Footprints, Heart, MapPin, MapPinned, TrainFront } from 'lucide-react';
+import { ArrowRight, Car, Footprints, Heart, MapPin, MapPinned } from 'lucide-react';
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { InstagramGlyph } from '@/components/ui/Motifs';
@@ -109,48 +109,65 @@ function PandalCardImpl({ pandal: p, priority }: { pandal: Pandal; priority?: bo
     >
       <motion.div
         style={tilt ? { rotateX, rotateY, transformStyle: 'preserve-3d' } : undefined}
-        className="panel relative flex h-full overflow-hidden transition-[border-color,box-shadow,translate] duration-300 group-hover:-translate-y-1 group-hover:border-gold/70 group-hover:shadow-[var(--glow)] sm:flex-col"
+        className="panel relative flex h-full overflow-hidden !rounded-[22px] transition-[border-color,box-shadow,translate] duration-300 group-hover:-translate-y-1 group-hover:border-gold/60 group-hover:shadow-[var(--glow)] sm:flex-col"
       >
-        {/* Image */}
-        <Link
-          to={`/pandal/${p.id}`}
-          tabIndex={-1}
-          aria-hidden="true"
-          className="relative block w-[34%] shrink-0 overflow-hidden sm:aspect-[4/3] sm:w-full"
-        >
-          <PandalCover
+        {/* Photograph, with the name laid over it */}
+        <div className="relative w-[34%] shrink-0 overflow-hidden sm:aspect-[4/3] sm:w-full">
+          <Link to={`/pandal/${p.id}`} tabIndex={-1} aria-hidden="true" className="absolute inset-0">
+            <PandalCover
+              pandal={p}
+              eager={priority}
+              className="absolute inset-0"
+              imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-110"
+            />
+          </Link>
+          <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#120909]/90 via-[#120909]/25 to-transparent" />
+
+          <LineBadge line={p.line} className="absolute left-3 top-3 !h-[26px] !rounded-full !px-3 font-mono !text-[10px] !font-normal max-sm:hidden" />
+          <SaveButton
             pandal={p}
-            eager={priority}
-            className="absolute inset-0"
-            imgClassName="transition-transform duration-[900ms] ease-out group-hover:scale-110"
+            className="absolute right-3 top-3 !size-9 !border-white/25 !bg-black/45 !text-white backdrop-blur hover:!border-white/60 max-sm:hidden"
           />
-          <span className="absolute inset-0 bg-gradient-to-t from-[#120909]/85 via-transparent to-transparent" />
-          <LineBadge line={p.line} className="absolute left-2.5 top-2.5 max-sm:hidden" />
-          {p.popularity >= 85 && (
-            <span className="absolute right-2.5 top-2.5 rounded-sm bg-[#120909]/75 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#ffd66b] backdrop-blur max-sm:hidden">
-              Popular
-            </span>
-          )}
-          <span className="absolute inset-x-3 bottom-2.5 hidden items-center gap-1.5 text-xs font-semibold text-[#fff4e6] sm:flex">
-            <TrainFront className="size-3.5" style={{ color: `var(--${p.line}-line)` }} aria-hidden="true" />
-            {p.station}
-          </span>
-        </Link>
+
+          <div className="pointer-events-none absolute inset-x-4 bottom-3.5 hidden text-[#fff6e5] sm:block">
+            {p.popularity >= 85 && (
+              <span className="mb-2 inline-flex items-center rounded-md bg-[#ffb800] px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.08em] text-[#2c1210]">
+                Popular
+              </span>
+            )}
+            <h3 className="font-display text-[1.28rem] font-bold leading-[1.18] drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
+              <Link
+                to={`/pandal/${p.id}`}
+                className="pointer-events-auto line-clamp-2 outline-none after:absolute after:inset-0 after:content-['']"
+              >
+                {p.name}
+              </Link>
+            </h3>
+          </div>
+        </div>
+        {/* Line-coloured rule under the photograph */}
+        <span aria-hidden="true" className="hidden h-[3px] w-full sm:block" style={{ background: `var(--${p.line}-line)` }} />
 
         {/* Body */}
         <div className="flex min-w-0 flex-1 flex-col p-3.5 sm:p-5">
-          <p className="mb-1 flex items-center gap-1.5 text-[11px] font-semibold text-muted sm:hidden">
-            <span className="size-2 rounded-full" style={{ background: `var(--${p.line}-line)` }} aria-hidden="true" />
-            {p.station}
-          </p>
-          <h3 className="font-display text-[1.15rem] font-semibold leading-tight sm:text-[1.4rem]">
-            <Link to={`/pandal/${p.id}`} className="outline-none after:absolute after:inset-0 after:content-[''] sm:after:hidden">
+          <h3 className="font-display text-[1.05rem] font-bold leading-tight sm:hidden">
+            <Link to={`/pandal/${p.id}`} className="outline-none after:absolute after:inset-0 after:content-['']">
               {p.name}
             </Link>
           </h3>
-          <p className={cn('mt-1 line-clamp-1 text-[13px]', p.theme ? 'italic text-gold' : 'text-muted')}>{themeLabel(p)}</p>
 
-          <dl className="mt-3 flex items-center gap-4 text-[13px] sm:mt-4 sm:gap-5">
+          <p className="mt-1.5 flex min-w-0 items-center gap-1.5 text-[12.5px] sm:mt-0 sm:text-[13px]">
+            <MapPin className="size-3.5 shrink-0 text-red" aria-hidden="true" />
+            <span className="min-w-0 truncate text-muted">{p.locality ?? 'Near the station'}</span>
+            <span aria-hidden="true" className="text-muted">·</span>
+            <span className="shrink-0 font-bold" style={{ color: `var(--${p.line}-line)` }}>
+              {p.station}
+            </span>
+          </p>
+
+          <p className={cn('mt-1.5 line-clamp-1 text-[13px]', p.theme ? 'font-display italic text-gold' : 'text-muted')}>{themeLabel(p)}</p>
+
+          <dl className="mt-3 flex items-center gap-4 text-[13px] sm:gap-5">
             <div className="flex items-center gap-1.5">
               <MapPin className="size-3.5 text-gold" aria-hidden="true" />
               <dt className="sr-only">Distance from station</dt>
@@ -164,16 +181,7 @@ function PandalCardImpl({ pandal: p, priority }: { pandal: Pandal; priority?: bo
           </dl>
 
           <ul className="mt-3 hidden flex-wrap gap-1.5 sm:flex" aria-label="Tags">
-            {p.locality && (
-              <li className="tag border-gold/40 text-gold-light">
-                📍 {p.locality}
-              </li>
-            )}
-            {p.parking && p.parking.length > 0 && (
-              <li className="tag border-emerald-800/40 bg-emerald-950/40 text-emerald-300">
-                🚗 Parking
-              </li>
-            )}
+            {p.parking && p.parking.length > 0 && <li className="tag">Parking</li>}
             {p.tags.slice(0, 3).map((t) => (
               <li key={t} className="tag">
                 {t}
@@ -181,10 +189,7 @@ function PandalCardImpl({ pandal: p, priority }: { pandal: Pandal; priority?: bo
             ))}
           </ul>
 
-          <div className="relative z-10 mt-auto flex items-center gap-2 pt-3.5 sm:pt-5">
-            <Link to={`/pandal/${p.id}`} className="btn btn-sm btn-primary flex-1 max-sm:hidden">
-              View details <ArrowUpRight className="size-3.5" aria-hidden="true" />
-            </Link>
+          <div className="relative z-10 mt-auto flex items-center gap-2 border-t border-hair pt-3.5 sm:mt-4 sm:pt-4">
             <button
               type="button"
               onClick={(e) => {
@@ -192,23 +197,29 @@ function PandalCardImpl({ pandal: p, priority }: { pandal: Pandal; priority?: bo
                 e.stopPropagation();
                 useAppStore.getState().setParkingModalPandalId(p.id);
               }}
-              className="btn btn-sm btn-ghost max-sm:h-[34px] max-sm:px-2.5 text-xs text-gold-light"
+              className="btn btn-sm btn-ghost !size-[34px] shrink-0 !rounded-full !px-0 sm:!size-[38px]"
               aria-label={`Parking near ${p.name}`}
               title="Parking bays and drop-off points"
             >
               <Car className="size-3.5 text-gold" aria-hidden="true" />
-              <span>Parking</span>
             </button>
             <Link
               to={`/map?pandal=${p.id}`}
-              className="btn btn-sm btn-ghost max-sm:h-[34px] max-sm:px-2.5"
+              className="btn btn-sm btn-ghost !size-[34px] shrink-0 !rounded-full !px-0 sm:!size-[38px]"
               aria-label={`View ${p.name} on the map`}
+              title="View on the map"
             >
               <MapPinned className="size-3.5" aria-hidden="true" />
-              <span>Map</span>
             </Link>
             <InstagramLink pandal={p} className="max-sm:size-[34px]" />
-            <SaveButton pandal={p} className="max-sm:size-[34px]" />
+            <SaveButton pandal={p} className="sm:hidden max-sm:size-[34px]" />
+            <Link
+              to={`/pandal/${p.id}`}
+              className="ml-auto inline-flex items-center gap-1 font-display text-[14px] font-bold text-red hover:underline max-sm:hidden"
+              aria-label={`Explore ${p.name}`}
+            >
+              Explore <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </motion.div>

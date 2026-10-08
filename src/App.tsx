@@ -9,6 +9,7 @@ import { ErrorBoundary, IntroLoader, PageSkeleton, Toaster } from '@/components/
 import { ParkingModal } from '@/components/Parking/ParkingModal';
 import { FeedbackModal } from '@/components/Feedback/FeedbackModal';
 import { PoliceMapModal } from '@/components/PoliceMap/PoliceMapModal';
+import { PageOrnament } from '@/components/ui/PageOrnament';
 import { SoundToggle } from '@/components/ui/SoundToggle';
 import { useBackgroundSound } from '@/lib/sound';
 import { useThemeSync } from '@/hooks/useTheme';
@@ -45,6 +46,7 @@ function Shell() {
 
   return (
     <>
+      <PageOrnament />
       <ScrollManager />
       <Navbar />
       <main id="main" tabIndex={-1} className="outline-none">
@@ -68,7 +70,7 @@ function Shell() {
       {!fullBleed && <Footer />}
       {/* On phones the header has no room for it, so it floats (not over the map or the form). */}
       {pathname !== '/map' && pathname !== '/feedback' && (
-        <SoundToggle className="glass fixed bottom-[calc(78px+env(safe-area-inset-bottom))] left-4 z-[55] sm:hidden" />
+        <SoundToggle className="glass fixed bottom-[calc(100px+env(safe-area-inset-bottom))] left-4 z-[55] sm:hidden" />
       )}
       <ChatLauncher />
       <SearchDialog />

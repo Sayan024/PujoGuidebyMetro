@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll, useSpring } from 'motion/react';
 import { Compass, Heart, Home, Map as MapIcon, Menu, Moon, Search, Shield, Sun, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { DurgaEyes, Lotus } from '@/components/ui/Motifs';
 import { SoundToggle } from '@/components/ui/SoundToggle';
@@ -134,55 +134,55 @@ export function Navbar() {
       >
         <nav
           aria-label="Primary"
-          className={cn(
-            'relative mx-auto flex h-[60px] max-w-[1720px] items-center gap-3 rounded-md border px-3 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-500 md:px-5',
-            scrolled ? 'glass shadow-[var(--shadow)]' : 'border-transparent bg-transparent',
-          )}
+          className="nav-pill relative mx-auto flex h-[62px] max-w-[1480px] items-center gap-3 px-4 md:px-6"
         >
           <Link to="/" className="group flex shrink-0 items-center gap-2.5" aria-label="Pujo Porikroma by Metro 2026, home">
             <DurgaEyes className="h-[22px] text-gold-bright transition-transform duration-500 group-hover:scale-110" />
             <div className="flex flex-col text-left leading-tight">
-              <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-muted">Pujo by Metro</span>
-              <span className="font-display text-[15px] md:text-[16.5px] font-bold tracking-wide text-ink">
-                Pujo Porikroma <span className="text-gold-bright">2026</span>
+              <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted">Pujo by Metro</span>
+              <span className="font-display text-[15px] font-bold text-ink md:text-[16.5px]">
+                Pujo Porikroma <em className="text-gold-bright">2026</em>
               </span>
             </div>
           </Link>
 
-          <ul className="mx-auto hidden items-center lg:flex">
-            {LINKS.map((l) => (
-              <li key={l.to}>
-                <NavLink
-                  to={l.to}
-                  aria-current={active === l.to ? 'page' : undefined}
-                  className={cn(
-                    'relative block px-3.5 py-2 text-[12.5px] font-semibold tracking-wide transition-colors xl:px-4',
-                    active === l.to ? 'text-gold-bright' : 'text-ink/75 hover:text-ink',
-                  )}
-                >
-                  {l.label}
-                  {active === l.to && (
-                    <motion.span
-                      layoutId="nav-indicator"
-                      className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-transparent via-gold-bright to-transparent"
-                      transition={{ type: 'spring', stiffness: 380, damping: 32 }}
-                    />
-                  )}
-                </NavLink>
-              </li>
+          <ul className="mx-auto hidden items-center xl:flex">
+            {LINKS.map((l, i) => (
+              <Fragment key={l.to}>
+                {i > 0 && <li aria-hidden="true" className="mx-0.5 size-[5px] rotate-45 bg-gold/55" />}
+                <li>
+                  <NavLink
+                    to={l.to}
+                    aria-current={active === l.to ? 'page' : undefined}
+                    className={cn(
+                      'relative isolate block whitespace-nowrap rounded-full px-3 py-2 font-display text-[11.5px] font-bold uppercase tracking-[0.12em] transition-colors 2xl:px-4 2xl:text-[12.5px]',
+                      active === l.to ? 'text-white' : 'text-ink hover:text-red',
+                    )}
+                  >
+                    {active === l.to && (
+                      <motion.span
+                        layoutId="nav-indicator"
+                        className="absolute inset-0 -z-10 rounded-full bg-gradient-to-b from-[#e3112f] to-[#b00220] shadow-[inset_0_0_0_2px_#ffb800,0_4px_12px_-4px_rgba(217,4,41,0.6)]"
+                        transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                      />
+                    )}
+                    {l.label}
+                  </NavLink>
+                </li>
+              </Fragment>
             ))}
           </ul>
 
-          <div className="ml-auto flex items-center gap-2 lg:ml-0">
+          <div className="ml-auto flex items-center gap-2 xl:ml-0">
             <button
               type="button"
               onClick={() => openSearch(true)}
-              className="icon-btn xl:inline-flex xl:w-auto xl:items-center xl:gap-2.5 xl:px-3.5"
+              className="icon-btn 2xl:inline-flex 2xl:w-auto 2xl:items-center 2xl:gap-2.5 2xl:px-3.5"
               aria-label="Search pandals and stations"
             >
               <Search className="size-[18px]" />
-              <span className="hidden text-xs font-medium text-muted xl:inline">Search</span>
-              <kbd className="hidden rounded-sm border border-hair-soft px-1.5 text-[10px] text-muted xl:inline">Ctrl K</kbd>
+              <span className="hidden text-xs font-medium text-muted 2xl:inline">Search</span>
+              <kbd className="hidden rounded-md border border-hair-soft px-1.5 font-mono text-[10px] text-muted 2xl:inline">Ctrl K</kbd>
             </button>
             <SoundToggle className="hidden sm:inline-grid" />
             <ThemeToggle className="hidden sm:inline-grid" />
@@ -192,15 +192,15 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => useAppStore.getState().openPoliceMapModal()}
-              className="btn btn-sm btn-ghost hidden xl:inline-flex items-center gap-1.5 !px-2.5 text-xs text-gold-bright"
+              className="btn btn-sm btn-ghost hidden !rounded-full xl:inline-flex items-center gap-1.5 !px-2.5 text-xs text-gold-bright"
               title="Official Kolkata Police Traffic & Route Map"
             >
               <Shield className="size-3.5 text-red" />
-              <span>Police Map</span>
+              <span className="hidden 2xl:inline">Police Map</span>
             </button>
             <button
               type="button"
-              className="icon-btn lg:hidden"
+              className="icon-btn xl:hidden"
               onClick={() => setDrawer(true)}
               aria-label="Open menu"
               aria-expanded={drawer}
@@ -226,7 +226,7 @@ export function Navbar() {
             role="dialog"
             aria-modal="true"
             aria-label="Menu"
-            className="fixed inset-0 z-[80] lg:hidden"
+            className="fixed inset-0 z-[80] xl:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -309,43 +309,54 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Mobile tab bar */}
+      {/* Mobile tab bar: a floating pill with a raised Map button */}
       <nav
         aria-label="Quick navigation"
-        className="glass fixed inset-x-0 bottom-0 z-50 grid grid-cols-4 border-x-0 border-b-0 pb-[env(safe-area-inset-bottom)] lg:hidden"
+        className="nav-pill fixed inset-x-3 bottom-[calc(12px+env(safe-area-inset-bottom))] z-50 grid h-[64px] grid-cols-5 items-center px-1.5 lg:hidden"
       >
         {[
           { to: '/', label: 'Home', Icon: Home },
           { to: '/explore', label: 'Explore', Icon: Compass },
           { to: '/map', label: 'Map', Icon: MapIcon },
           { to: '/favorites', label: 'Saved', Icon: Heart },
-        ].map(({ to, label, Icon }) => {
+        ].map(({ to, label, Icon }, i) => {
           const on = to === '/' ? pathname === '/' : pathname.startsWith(to) || (to === '/explore' && /^\/(pandal|station)/.test(pathname));
-          return (
+          const isMap = to === '/map';
+          const link = (
             <Link
               key={to}
               to={to}
               aria-current={on ? 'page' : undefined}
               className={cn(
-                'relative flex h-[62px] flex-col items-center justify-center gap-1 text-[10px] font-bold uppercase tracking-[0.14em]',
-                on ? 'text-gold-bright' : 'text-muted',
+                'relative flex flex-col items-center justify-center gap-0.5 font-display text-[9.5px] font-bold uppercase tracking-[0.1em]',
+                isMap
+                  ? '-mt-8 size-[66px] justify-self-center rounded-full border-[3px] border-[#ffb800] bg-gradient-to-b from-[#e3112f] to-[#a8021c] text-white shadow-[0_10px_24px_-6px_rgba(217,4,41,0.7)] ring-4 ring-[var(--surface)]'
+                  : on
+                    ? 'h-[50px] justify-self-center rounded-full bg-gradient-to-b from-[#e3112f] to-[#b00220] px-3 text-white shadow-[inset_0_0_0_2px_#ffb800]'
+                    : 'h-[50px] text-ink/80',
               )}
             >
-              {on && (
-                <motion.span
-                  layoutId="tab-indicator"
-                  className="absolute top-0 h-0.5 w-10 rounded-full bg-gold-bright"
-                  transition={{ type: 'spring', stiffness: 400, damping: 32 }}
-                />
-              )}
               <span className="relative">
-                <Icon className="size-5" aria-hidden="true" />
+                <Icon className={isMap ? 'size-6' : 'size-[19px]'} aria-hidden="true" />
                 {to === '/favorites' && <SavedDot />}
               </span>
               {label}
             </Link>
           );
+          // The raised Map button sits in the middle of the five slots; More takes the last.
+          return i === 2 ? <Fragment key={to}>{link}</Fragment> : link;
         })}
+        <button
+          type="button"
+          onClick={() => setDrawer(true)}
+          aria-label="More: open the full menu"
+          aria-expanded={drawer}
+          aria-controls="mobile-drawer"
+          className="flex h-[50px] flex-col items-center justify-center gap-0.5 font-display text-[9.5px] font-bold uppercase tracking-[0.1em] text-ink/80"
+        >
+          <Menu className="size-[19px]" aria-hidden="true" />
+          More
+        </button>
       </nav>
     </>
   );

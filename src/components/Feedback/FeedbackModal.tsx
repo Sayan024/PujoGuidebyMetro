@@ -76,7 +76,7 @@ export function FeedbackModal() {
           initial={{ opacity: 0, scale: 0.95, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 15 }}
-          className="relative z-10 w-full max-w-lg overflow-hidden rounded-md border border-hair bg-[#1c0c10] p-6 shadow-2xl sm:p-8"
+          data-theme="dark" className="relative z-10 w-full max-w-lg overflow-hidden rounded-[22px] border border-hair bg-[#1c0c10] p-6 shadow-2xl sm:p-8"
         >
           {/* Header */}
           <div className="flex items-start justify-between border-b border-hair-soft pb-4">

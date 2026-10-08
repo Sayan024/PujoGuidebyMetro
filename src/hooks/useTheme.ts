@@ -8,7 +8,7 @@ export function useThemeSync() {
     document.documentElement.dataset.theme = theme;
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', theme === 'dark' ? '#120909' : '#fff4e6');
+      ?.setAttribute('content', theme === 'dark' ? '#120909' : '#fff6e5');
   }, [theme]);
 }
 

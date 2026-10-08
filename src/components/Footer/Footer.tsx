@@ -10,7 +10,7 @@ import { useAppStore } from '@/store/appStore';
 export function Footer() {
   const setLine = useAppStore((s) => s.setLine);
   return (
-    <footer className="relative mt-28 overflow-hidden border-t border-hair pb-[calc(84px+env(safe-area-inset-bottom))] md:mt-40 lg:pb-0">
+    <footer data-theme="dark" className="relative mt-28 overflow-hidden border-t border-hair bg-bg pb-[calc(108px+env(safe-area-inset-bottom))] md:mt-40 lg:pb-0">
       <Alpana className="pointer-events-none absolute -left-52 -top-40 size-[620px] text-gold opacity-[0.06]" />
       <div className="shell relative py-14 md:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">

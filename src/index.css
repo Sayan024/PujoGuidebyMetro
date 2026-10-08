@@ -19,6 +19,8 @@
   --glass: rgba(28, 13, 17, 0.66);
   --shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
   --glow: 0 0 0 1px rgba(221, 170, 68, 0.55), 0 18px 50px -18px rgba(221, 170, 68, 0.35);
+  --nav-ring: rgba(221, 170, 68, 0.6);
+  --gold-line: rgba(221, 170, 68, 0.35);
 
   --blue-line: #2563eb;
   --green-line: #10b981;
@@ -28,22 +30,25 @@
   color-scheme: dark;
 }
 
+/* Parchment: warm cream paper, deep maroon ink, vermilion and gold. */
 [data-theme='light'] {
-  --background: #fff4e6;
-  --surface: #fffaf3;
-  --surface-light: #f7e4cd;
-  --gold: #8f6210;
-  --gold-bright: #b07a12;
-  --red: #c4182b;
-  --maroon: #701525;
-  --muted: #7b5a62;
+  --background: #fff6e5;
+  --surface: #fffdf8;
+  --surface-light: #fbeed6;
+  --gold: #9a5a06;
+  --gold-bright: #a65608;
+  --red: #d90429;
+  --maroon: #7a0a1b;
+  --muted: #6e5a52;
 
-  --ink: #3a0a14;
-  --hair: rgba(112, 21, 37, 0.22);
-  --hair-soft: rgba(112, 21, 37, 0.1);
-  --glass: rgba(255, 250, 243, 0.78);
-  --shadow: 0 24px 50px -28px rgba(112, 21, 37, 0.45);
-  --glow: 0 0 0 1px rgba(143, 98, 16, 0.6), 0 18px 44px -20px rgba(143, 98, 16, 0.45);
+  --ink: #2c1210;
+  --hair: #ead5a0;
+  --hair-soft: rgba(44, 18, 16, 0.11);
+  --glass: rgba(255, 251, 241, 0.9);
+  --shadow: 0 4px 24px -4px rgba(44, 18, 16, 0.12);
+  --glow: 0 0 0 1px #e5c880, 0 14px 36px -12px rgba(184, 98, 11, 0.35);
+  --nav-ring: #3a1412;
+  --gold-line: #e5c880;
   color-scheme: light;
 }
 
@@ -59,9 +64,10 @@
   --color-muted: var(--muted);
   --color-hair: var(--hair);
   --color-hair-soft: var(--hair-soft);
-  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Manrope', 'Inter', system-ui, sans-serif;
-  --font-bn: 'Noto Serif Bengali', 'Playfair Display', serif;
+  --font-display: 'Merriweather', Georgia, serif;
+  --font-sans: 'Figtree', system-ui, sans-serif;
+  --font-mono: 'Fragment Mono', ui-monospace, monospace;
+  --font-bn: 'Noto Serif Bengali', 'Merriweather', serif;
   --breakpoint-3xl: 1800px;
 }
 
@@ -100,7 +106,9 @@ body::before {
   pointer-events: none;
 }
 [data-theme='light'] body::before {
-  opacity: 0.3;
+  background:
+    radial-gradient(90vw 60vh at 50% -12%, #fffdf6, transparent 70%),
+    radial-gradient(55vw 45vh at 100% 100%, rgba(229, 200, 128, 0.28), transparent 70%);
 }
 /* Film grain */
 .grain::after {
@@ -141,6 +149,30 @@ img {
   margin-inline: auto;
   padding-inline: clamp(16px, 4vw, 72px);
 }
+/* The floating pill: a heavy ring, a hairline of gold inside it, and paper within. */
+.nav-pill {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  border: 3px solid var(--nav-ring);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 0 0 2px var(--surface),
+    inset 0 0 0 3px var(--gold-line),
+    var(--shadow);
+}
+/* Faint alpana line-art fixed to the page edges. */
+.page-ornament {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  color: var(--gold);
+}
+[data-theme='light'] .page-ornament {
+  color: #c79a3b;
+}
 .glass {
   background: var(--glass);
   -webkit-backdrop-filter: blur(18px) saturate(150%);
@@ -150,20 +182,32 @@ img {
 .panel {
   background: linear-gradient(160deg, var(--surface-light), var(--surface) 55%);
   border: 1px solid var(--hair-soft);
+  border-radius: 20px;
   box-shadow: var(--shadow);
 }
+[data-theme='light'] .panel {
+  background: var(--surface);
+  border-color: var(--hair);
+}
 .eyebrow {
+  font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.3em;
+  font-weight: 400;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
 }
 .display {
   font-family: var(--font-display);
   font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+}
+/* The italic accent word in a heading: amber on parchment. */
+.display em,
+.font-display em {
+  font-style: italic;
+  font-weight: 700;
 }
 .gold-text {
   background-image: linear-gradient(100deg, #b9812a 0%, #ffd66b 28%, #fff3c9 46%, #ddaa44 62%, #b9812a 100%);
@@ -174,7 +218,10 @@ img {
   animation: shimmer 7s ease-in-out infinite;
 }
 [data-theme='light'] .gold-text-auto {
-  background-image: linear-gradient(100deg, #7a4f08 0%, #b07a12 30%, #d9a531 48%, #8f6210 66%, #7a4f08 100%);
+  background-image: none;
+  -webkit-text-fill-color: var(--gold-bright);
+  color: var(--gold-bright);
+  animation: none;
 }
 @keyframes shimmer {
   0%,
@@ -197,7 +244,7 @@ img {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 12px;
   border: 1px solid transparent;
   white-space: nowrap;
   transition:
@@ -208,8 +255,8 @@ img {
 }
 .btn-primary {
   color: #fff4e6;
-  background: linear-gradient(135deg, #e52d3f, #8e1626);
-  border-color: rgba(255, 214, 107, 0.55);
+  background: linear-gradient(180deg, #e3112f, #c20322);
+  border-color: rgba(255, 184, 0, 0.7);
   box-shadow:
     0 14px 34px -14px rgba(229, 45, 63, 0.75),
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
@@ -224,6 +271,9 @@ img {
   color: var(--ink);
   border-color: var(--hair);
   background: color-mix(in srgb, var(--surface) 55%, transparent);
+}
+[data-theme='light'] .btn-ghost {
+  background: var(--surface);
 }
 .btn-ghost:hover {
   border-color: var(--gold);
@@ -241,7 +291,7 @@ img {
   place-items: center;
   width: 42px;
   height: 42px;
-  border-radius: 4px;
+  border-radius: 999px;
   border: 1px solid var(--hair-soft);
   color: var(--ink);
   transition:
@@ -280,18 +330,30 @@ img {
   background: linear-gradient(135deg, #ffd66b, #ddaa44);
   border-color: #ffd66b;
 }
+[data-theme='light'] .chip {
+  background: var(--surface);
+  border-color: var(--hair);
+  color: var(--ink);
+}
+[data-theme='light'] .chip[aria-pressed='true'] {
+  color: #fff6e5;
+  background: var(--ink);
+  border-color: var(--ink);
+}
 .tag {
   display: inline-flex;
   align-items: center;
   height: 22px;
-  padding-inline: 8px;
+  padding-inline: 9px;
+  font-family: var(--font-mono);
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--gold);
-  border: 1px solid var(--hair);
-  border-radius: 2px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  border: 1px solid transparent;
+  border-radius: 8px;
 }
 .skeleton {
   background: linear-gradient(100deg, var(--surface) 30%, var(--surface-light) 50%, var(--surface) 70%);

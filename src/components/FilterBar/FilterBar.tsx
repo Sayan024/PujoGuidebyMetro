@@ -56,7 +56,7 @@ export function FilterBar() {
         <select
           value={sort}
           onChange={(e) => setSort(e.target.value as SortKey)}
-          className="h-[38px] rounded-sm border border-hair bg-surface px-3 text-[13px] font-semibold normal-case tracking-normal text-ink outline-none focus:border-gold-bright"
+          className="h-[38px] rounded-xl border border-hair bg-surface px-3 text-[13px] font-semibold normal-case tracking-normal text-ink outline-none focus:border-gold-bright"
         >
           {SORTS.map((s) => (
             <option key={s.id} value={s.id}>

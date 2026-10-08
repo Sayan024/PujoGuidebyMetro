@@ -77,7 +77,7 @@ let toastId = 0;
 export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
-      theme: 'dark',
+      theme: 'light',
       favorites: [],
       planSkipped: [],
       planStartMinutes: 10 * 60,
@@ -145,7 +145,12 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: 'pujo-by-metro',
-      version: 1,
+      version: 2,
+      // v2 made the parchment look the default; keep favourites but let everyone see it once.
+      migrate: (persisted, version) => {
+        const s = (persisted ?? {}) as Record<string, unknown>;
+        return version < 2 ? { ...s, theme: 'light' } : s;
+      },
       partialize: (s) => ({
         theme: s.theme,
         favorites: s.favorites,

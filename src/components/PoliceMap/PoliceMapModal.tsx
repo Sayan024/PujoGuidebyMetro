@@ -55,7 +55,7 @@ export function PoliceMapModal() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 16 }}
           transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10 flex h-full max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-md border border-hair bg-[#140608] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)]"
+          data-theme="dark" className="relative z-10 flex h-full max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-[22px] border border-hair bg-[#140608] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)]"
         >
           {/* Header */}
           <div className="flex items-center justify-between border-b border-hair-soft bg-[#1c080d] px-4 py-3">

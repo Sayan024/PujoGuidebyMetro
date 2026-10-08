@@ -91,7 +91,7 @@ export function ParkingModal() {
           initial={{ opacity: 0, scale: 0.95, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 15 }}
-          className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-md border border-hair bg-[#1a0a0e] shadow-2xl"
+          data-theme="dark" className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-[22px] border border-hair bg-[#1a0a0e] shadow-2xl"
         >
           {/* Header */}
           <div className="flex items-start justify-between border-b border-hair-soft p-5 sm:p-6">
