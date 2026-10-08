@@ -1,12 +1,14 @@
-import { PANDALS as BASE_PANDALS } from './pandals';
-import { HOWRAH_PANDALS } from './howrahPandals';
-import { getParkingForPandal } from './parking';
-import { METRO_LINES } from './metroLines';
-import type { MetroLineId, Pandal } from './types';
+import { PANDALS as BASE_PANDALS } from './pandals.ts';
+import { HOWRAH_PANDALS } from './howrahPandals.ts';
+import { COMMUNITY_PARAS } from './communityParas.ts';
+import { getParkingForPandal } from './parking.ts';
+import { METRO_LINES } from './metroLines.ts';
+import type { MetroLineId, Pandal } from './types.ts';
 
-export * from './types';
-export * from './parking';
-export * from './howrahPandals';
+export * from './types.ts';
+export * from './parking.ts';
+export * from './howrahPandals.ts';
+export * from './communityParas.ts';
 
 export const PANDALS: Pandal[] = [
   ...BASE_PANDALS.map((p) => {
@@ -21,6 +23,7 @@ export const PANDALS: Pandal[] = [
     };
   }),
   ...HOWRAH_PANDALS,
+  ...COMMUNITY_PARAS,
 ];
 
 export const PANDAL_BY_ID = new Map<string, Pandal>(PANDALS.map((p) => [p.id, p]));
@@ -48,3 +51,5 @@ export const HOWRAH_PANDALS_COUNT = PANDALS.filter(
     p.stationId === 'howrah' ||
     p.stationId === 'howrah-maidan',
 ).length;
+export const COMMUNITY_PARAS_COUNT = COMMUNITY_PARAS.length;
+

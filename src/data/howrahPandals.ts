@@ -1,5 +1,5 @@
-import type { Pandal } from './types';
-import { getParkingForPandal } from './parking';
+import type { Pandal } from './types.ts';
+import { getParkingForPandal } from './parking.ts';
 
 export const HOWRAH_PANDALS: Pandal[] = [
   {

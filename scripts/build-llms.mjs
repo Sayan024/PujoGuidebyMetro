@@ -4,7 +4,7 @@
 // Run with: npm run build:llms   (also runs as part of npm run build:data)
 import fs from 'node:fs';
 import path from 'node:path';
-import { PANDALS } from '../src/data/pandals.ts';
+import { PANDALS } from '../src/data/index.ts';
 import { METRO_LINES, STATIONS } from '../src/data/metroLines.ts';
 import { PUJA_DAYS } from '../src/data/pujaDates.ts';
 import { INSTAGRAM, PUJO_GUIDES, REELS } from '../src/data/instagram.ts';

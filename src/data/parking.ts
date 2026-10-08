@@ -285,6 +285,91 @@ export const PARKING_SPOTS: ParkingSpot[] = [
     source: 'Kolkata Police',
     verifiedAt: 'October 2026',
   },
+  {
+    id: 'phoolbagan-subhas-sarobar',
+    name: 'Subhas Sarobar & Salt Lake Stadium Gate 3 Parking Bay',
+    type: 'both',
+    distanceKm: 0.45,
+    walkingMinutes: 6,
+    capacity: '220 cars / 380 bikes',
+    availability: 'available',
+    paid: true,
+    price: '₹20/hr (car), ₹10/hr (bike)',
+    openingHours: '24 Hours',
+    address: 'EM Bypass / Phoolbagan Connector, Subhas Sarobar Park, Beleghata',
+    latitude: 22.5685,
+    longitude: 88.3985,
+    source: 'KMDA & Kolkata Police Traffic Guard',
+    verifiedAt: 'October 2026',
+  },
+  {
+    id: 'behala-tram-depot-bay',
+    name: 'Behala Tram Depot Municipal Parking Bay',
+    type: 'both',
+    distanceKm: 0.4,
+    walkingMinutes: 5,
+    capacity: '160 cars / 300 bikes',
+    availability: 'available',
+    paid: true,
+    price: '₹20/hr (car), ₹10/hr (bike)',
+    openingHours: '24 Hours',
+    address: 'Diamond Harbour Road, Behala Chowrasta / Taratala',
+    latitude: 22.4995,
+    longitude: 88.3185,
+    source: 'Kolkata Police South West Traffic Guard',
+    verifiedAt: 'October 2026',
+  },
+  {
+    id: 'park-circus-maidan-bay',
+    name: 'Park Circus Maidan Authorized Parking Lot',
+    type: 'both',
+    distanceKm: 0.25,
+    walkingMinutes: 3,
+    capacity: '250 cars / 400 bikes',
+    availability: 'available',
+    paid: true,
+    price: '₹30/hr (car), ₹15/hr (bike)',
+    openingHours: '24 Hours',
+    address: 'Park Circus Maidan (Opposite Don Bosco School / 7-Point)',
+    latitude: 22.5418,
+    longitude: 88.3668,
+    source: 'KMC & Kolkata Traffic Police',
+    verifiedAt: 'October 2026',
+  },
+  {
+    id: 'dakshineswar-skywalk-bay',
+    name: 'Dakshineswar Temple Skywalk & Metro Parking Complex',
+    type: 'both',
+    distanceKm: 0.35,
+    walkingMinutes: 5,
+    capacity: '320 cars / 550 bikes',
+    availability: 'available',
+    paid: true,
+    price: '₹20/hr (car), ₹10/hr (bike)',
+    openingHours: '24 Hours',
+    address: 'PWD Road near Dakshineswar Metro Station Gate 1',
+    latitude: 22.6552,
+    longitude: 88.3585,
+    source: 'Barrackpore Police Commissionerate & KMDA',
+    verifiedAt: 'October 2026',
+  },
+  {
+    id: 'girish-park-manicktala-bay',
+    name: 'Girish Park & Manicktala Crossing Municipal Bay',
+    type: 'both',
+    distanceKm: 0.4,
+    walkingMinutes: 5,
+    capacity: '120 cars / 220 bikes',
+    availability: 'limited',
+    paid: true,
+    price: '₹20/hr (car), ₹10/hr (bike)',
+    openingHours: '24 Hours',
+    address: 'Ramdulal Sarkar Street / Manicktala Main Road Crossing',
+    latitude: 22.5855,
+    longitude: 88.3685,
+    source: 'Kolkata Police North Traffic Guard',
+    verifiedAt: 'October 2026',
+  },
 ];
 
 const PARKING_BY_ID = new Map<string, ParkingSpot>(PARKING_SPOTS.map((s) => [s.id, s]));
@@ -306,6 +391,7 @@ export function getParkingForPandal(pandalId: string, stationId?: string): Parki
     'bally-sarbojanin': ['bally-ghat-roadside-bay'],
     'baje-shibpur-sammilani': ['shibpur-mandirtala-ground'],
     'ramkrishnapur-byayam-samity': ['howrah-maidan-kmda'],
+    'ramkrishnapur-sarbojanin-howrah': ['howrah-maidan-kmda'],
 
     // Kolkata major pandals
     'sreebhumi-sporting-club': ['sreebhumi-vip-service-lane'],
@@ -324,6 +410,28 @@ export function getParkingForPandal(pandalId: string, stationId?: string): Parki
     'ballygunge-cultural-association': ['gariahat-multilevel-parking'],
     'fd-block-salt-lake': ['salt-lake-central-park-mega'],
     'bj-block-salt-lake': ['salt-lake-central-park-mega'],
+
+    // Community Paras & Neighborhood gems
+    'shyampukur-sanghatirtha': ['shyambazar-town-school'],
+    'chotushkone-park-kalighat': ['rashbehari-kalighat-kmda'],
+    '64-pally-manoharpukur': ['rashbehari-kalighat-kmda'],
+    'ariadaha-jubak-sangha': ['dakshineswar-skywalk-bay'],
+    'alpha-athletic-association': ['girish-park-manicktala-bay'],
+    'adi-lake-pally-kalighat': ['rashbehari-kalighat-kmda', 'gariahat-multilevel-parking'],
+    'debdaru-fatak-behala': ['behala-tram-depot-bay'],
+    'hartaki-bagan-sarbojanin': ['girish-park-manicktala-bay'],
+    'beleghata-sarbojanin-phoolbagan': ['phoolbagan-subhas-sarobar'],
+    'behala-29-palli': ['behala-tram-depot-bay', 'suruchi-new-alipore-station'],
+    'nirvik-sangha-baguiati': ['salt-lake-central-park-mega'],
+    'keshtopur-prafulla-kanan': ['salt-lake-central-park-mega'],
+    'sobhabazar-burtolla': ['ahiritola-ferry-ghat', 'shyambazar-town-school'],
+    'ajeyo-sanhati-haridevpur': ['rashbehari-kalighat-kmda'],
+    'tekiapara-sarbojanin-maniktala': ['girish-park-manicktala-bay'],
+    'jorabagan-chhatra-sanghaati': ['ahiritola-ferry-ghat'],
+    'udayan-sangha-entally': ['college-square-medical-college'],
+    'boral-sukanta-sangha': ['gariahat-multilevel-parking'],
+    'beliaghata-nabamilan': ['phoolbagan-subhas-sarobar'],
+    'uddipani-park-circus': ['park-circus-maidan-bay'],
   };
 
   const spotIds = customMapping[pandalId];
@@ -341,8 +449,20 @@ export function getParkingForPandal(pandalId: string, stationId?: string): Parki
   if (stationId === 'kalighat' || stationId === 'jatin-das-park') {
     return [PARKING_BY_ID.get('rashbehari-kalighat-kmda')!].filter(Boolean);
   }
-  if (stationId === 'central-park' || stationId === 'city-centre') {
+  if (stationId === 'central-park' || stationId === 'city-centre' || stationId === 'karunamoyee') {
     return [PARKING_BY_ID.get('salt-lake-central-park-mega')!].filter(Boolean);
+  }
+  if (stationId === 'phoolbagan' || stationId === 'salt-lake-stadium') {
+    return [PARKING_BY_ID.get('phoolbagan-subhas-sarobar')!].filter(Boolean);
+  }
+  if (stationId === 'taratala' || stationId === 'behala-bazar' || stationId === 'behala-chowrasta') {
+    return [PARKING_BY_ID.get('behala-tram-depot-bay')!].filter(Boolean);
+  }
+  if (stationId === 'dakshineswar' || stationId === 'baranagar') {
+    return [PARKING_BY_ID.get('dakshineswar-skywalk-bay')!].filter(Boolean);
+  }
+  if (stationId === 'girish-park' || stationId === 'mahatma-gandhi-road') {
+    return [PARKING_BY_ID.get('girish-park-manicktala-bay')!].filter(Boolean);
   }
 
   return [];
