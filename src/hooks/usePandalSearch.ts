@@ -42,6 +42,11 @@ const PREDICATES: Record<FilterKey, (p: Pandal, now: Date) => boolean> = {
         p.stationId === 'howrah-maidan' ||
         p.tags.some((t) => /howrah|liluah|shibpur|santragachi|belur|bally/i.test(t)),
     ),
+  communityParas: (p) =>
+    Boolean(
+      (p.source && /Forum for Durgotsab|durgapujakolkata/i.test(p.source)) ||
+        p.tags.some((t) => /ffd|community-para|neighbourhood/i.test(t)),
+    ),
 };
 
 const SORTERS: Record<SortKey, (a: Pandal, b: Pandal) => number> = {

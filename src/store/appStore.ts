@@ -4,7 +4,7 @@ import type { MetroLineId } from '@/data/types';
 
 export type ThemeMode = 'dark' | 'light';
 export type LineFilter = MetroLineId | 'all';
-export type FilterKey = 'within1km' | 'traditional' | 'theme2026' | 'vip' | 'petpujo' | 'popular' | 'openNow' | 'howrahLiluah';
+export type FilterKey = 'within1km' | 'traditional' | 'theme2026' | 'vip' | 'petpujo' | 'popular' | 'openNow' | 'howrahLiluah' | 'communityParas';
 export type SortKey = 'distance' | 'popularity' | 'walking' | 'station';
 
 export interface Toast {

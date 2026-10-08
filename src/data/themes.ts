@@ -1,4 +1,4 @@
-import { PANDALS } from './pandals';
+import { PANDALS } from './index.ts';
 import type { ThemeCategory } from './types';
 
 export interface ThemeInfo {

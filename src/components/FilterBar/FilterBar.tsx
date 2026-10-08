@@ -1,10 +1,11 @@
 import { motion } from 'motion/react';
-import { ArrowDownUp, Clock, Crown, Flame, Footprints, Landmark, MapPin, Sparkles, UtensilsCrossed } from 'lucide-react';
+import { ArrowDownUp, Clock, Crown, Flame, Footprints, Landmark, MapPin, Sparkles, Users, UtensilsCrossed } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { useAppStore, type FilterKey, type SortKey } from '@/store/appStore';
 
 export const FILTERS: { id: FilterKey; label: string; icon: ReactNode }[] = [
   { id: 'within1km', label: 'Within 1 km', icon: <Footprints className="size-3.5" /> },
+  { id: 'communityParas', label: '🏘️ Community Paras', icon: <Users className="size-3.5 text-gold" /> },
   { id: 'howrahLiluah', label: '📍 Howrah & Liluah', icon: <MapPin className="size-3.5 text-gold" /> },
   { id: 'traditional', label: 'Traditional', icon: <Landmark className="size-3.5" /> },
   { id: 'theme2026', label: 'Theme 2026', icon: <Sparkles className="size-3.5" /> },
