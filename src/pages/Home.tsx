@@ -9,7 +9,6 @@ import { PujoMap } from '@/components/MetroMap/PujoMap';
 import { MetroDiscovery } from '@/components/MetroSelector/MetroDiscovery';
 import { PujaCalendar } from '@/components/PujaCalendar/PujaCalendar';
 import { TravelAdvisory } from '@/components/TravelAdvisory/TravelAdvisory';
-import { TravelDecisionEngine } from '@/components/TravelOptions/TravelDecisionEngine';
 import { ThemeGallery } from '@/components/ThemeGallery/ThemeGallery';
 import { Reveal, SectionHeading } from '@/components/ui/primitives';
 import { TOTAL_PANDALS } from '@/data';
@@ -121,10 +120,7 @@ export default function Home() {
       {/* 5. Metro Line Discovery */}
       <MetroDiscovery />
 
-      {/* 6. Travel Options Engine (Metro vs Car vs Bike) */}
-      <TravelDecisionEngine />
-
-      {/* 7. Pandal Explorer Preview */}
+      {/* 6. Pandal Explorer Preview */}
       <Explorer preview />
 
       {/* 8. Interactive Trishul Map */}
