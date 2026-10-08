@@ -26,6 +26,8 @@ You may **not** copy, reuse, modify, redistribute, deploy or imitate the code, d
 
 The pandal photographs in `public/img` were gathered from public sources and belong to their photographers. They are **not** covered by this licence, and no rights in them are claimed or granted. Instagram reels shown in the app are linked, not copied, and belong to their creators.
 
+The soft background dhak (`public/audio`) is a short rhythm from a video by TrainzHub. It belongs to its owner and is not covered by this licence.
+
 Environment files and API keys are never committed.
 
 ## Disclaimer

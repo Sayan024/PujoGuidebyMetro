@@ -20,3 +20,9 @@ tsconfig.tsbuildinfo
 # Compiled output must never sit next to the TypeScript source
 server/*.js
 api/*.js
+
+# Generated speech audio
+speech/
+
+# Original source audio (a processed copy is in public/audio)
+sound of dhak.mp3

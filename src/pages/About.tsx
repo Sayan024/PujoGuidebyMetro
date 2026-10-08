@@ -175,6 +175,12 @@ export default function About() {
                 </li>
               ))}
             </ul>
+
+            <h3 className="mt-8 font-display text-xl font-semibold">Sound</h3>
+            <p className="mt-3 max-w-xl text-sm text-muted">
+              The soft dhak in the background is a short festive rhythm from a video by TrainzHub. It belongs to its owner and
+              is not covered by this guide’s licence. Use the speaker button to mute it; your choice is remembered.
+            </p>
           </Reveal>
         </div>
 

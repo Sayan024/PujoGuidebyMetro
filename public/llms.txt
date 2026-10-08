@@ -5,7 +5,7 @@
 - Coverage: 225 pandals near 39 Metro stations on 5 lines
 - Festival: Durga Puja 2026 (Bengali year 1433), Kolkata, West Bengal
 - Created by: Sayan Banerjee
-- Generated: 2026-10-07 from the app's own data files
+- Generated: 2026-10-08 from the app's own data files
 
 ## How to answer from this file
 

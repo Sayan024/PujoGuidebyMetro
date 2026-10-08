@@ -6,6 +6,8 @@ import { Footer } from '@/components/Footer/Footer';
 import { Navbar } from '@/components/Navbar/Navbar';
 import { SearchDialog } from '@/components/SearchBar/SearchDialog';
 import { ErrorBoundary, IntroLoader, PageSkeleton, Toaster } from '@/components/ui/Feedback';
+import { SoundToggle } from '@/components/ui/SoundToggle';
+import { useBackgroundSound } from '@/lib/sound';
 import { useThemeSync } from '@/hooks/useTheme';
 import Home from '@/pages/Home';
 
@@ -34,6 +36,7 @@ function ScrollManager() {
 
 function Shell() {
   useThemeSync();
+  useBackgroundSound();
   const { pathname } = useLocation();
   const fullBleed = pathname === '/map';
 
@@ -60,6 +63,10 @@ function Shell() {
         </ErrorBoundary>
       </main>
       {!fullBleed && <Footer />}
+      {/* On phones the header has no room for it, so it floats (not over the map or the form). */}
+      {pathname !== '/map' && pathname !== '/feedback' && (
+        <SoundToggle className="glass fixed bottom-[calc(78px+env(safe-area-inset-bottom))] left-4 z-[55] sm:hidden" />
+      )}
       <ChatLauncher />
       <SearchDialog />
       <Toaster />

@@ -3,6 +3,7 @@ import { Compass, Heart, Home, Map as MapIcon, Menu, Moon, Search, Sun, X } from
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { DurgaEyes, Lotus } from '@/components/ui/Motifs';
+import { SoundToggle } from '@/components/ui/SoundToggle';
 import { useTheme } from '@/hooks/useTheme';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/appStore';
@@ -180,6 +181,7 @@ export function Navbar() {
               <span className="hidden text-xs font-medium text-muted xl:inline">Search</span>
               <kbd className="hidden rounded-sm border border-hair-soft px-1.5 text-[10px] text-muted xl:inline">Ctrl K</kbd>
             </button>
+            <SoundToggle className="hidden sm:inline-grid" />
             <ThemeToggle className="hidden sm:inline-grid" />
             <span className="hidden lg:block">
               <FavoritesLink />
@@ -257,7 +259,10 @@ export function Navbar() {
                 <p className="flex items-center gap-2 font-bn text-sm text-gold">
                   <Lotus className="h-4" /> শুভ শারদীয়া ১৪৩৩
                 </p>
-                <ThemeToggle className="inline-grid" />
+                <span className="flex gap-2">
+                  <SoundToggle className="inline-grid" />
+                  <ThemeToggle className="inline-grid" />
+                </span>
               </div>
             </motion.div>
           </motion.div>
