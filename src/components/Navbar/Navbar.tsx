@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll, useSpring } from 'motion/react';
-import { Compass, Heart, Home, Map as MapIcon, Menu, Moon, Search, Sun, X } from 'lucide-react';
+import { Compass, Heart, Home, Map as MapIcon, Menu, Moon, Search, Shield, Sun, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { DurgaEyes, Lotus } from '@/components/ui/Motifs';
@@ -191,6 +191,15 @@ export function Navbar() {
             </span>
             <button
               type="button"
+              onClick={() => useAppStore.getState().openPoliceMapModal()}
+              className="btn btn-sm btn-ghost hidden xl:inline-flex items-center gap-1.5 !px-2.5 text-xs text-gold-bright"
+              title="Official Kolkata Police Traffic & Route Map"
+            >
+              <Shield className="size-3.5 text-red" />
+              <span>Police Map</span>
+            </button>
+            <button
+              type="button"
               className="icon-btn lg:hidden"
               onClick={() => setDrawer(true)}
               aria-label="Open menu"
@@ -265,6 +274,26 @@ export function Navbar() {
                     </Link>
                   </motion.li>
                 ))}
+                <motion.li
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.08 + LINKS.length * 0.05, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  className="border-b border-hair-soft"
+                >
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setDrawer(false);
+                      useAppStore.getState().openPoliceMapModal();
+                    }}
+                    className="flex w-full items-center justify-between py-4 font-display text-[26px] font-semibold text-ink text-left"
+                  >
+                    <span>Police Traffic Map</span>
+                    <span className="rounded bg-red/20 border border-red/40 px-2 py-0.5 font-sans text-[10px] font-bold text-red uppercase tracking-wider">
+                      Official
+                    </span>
+                  </button>
+                </motion.li>
               </ul>
               <div className="mt-auto flex items-center justify-between pt-8">
                 <p className="flex items-center gap-2 font-bn text-sm text-gold">

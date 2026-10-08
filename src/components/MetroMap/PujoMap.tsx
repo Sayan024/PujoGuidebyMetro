@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowUpRight, Box, Footprints, Map as MapIcon, MapPin, Navigation, Share2, TrainFront, WifiOff, X } from 'lucide-react';
+import { ArrowUpRight, Box, Footprints, Map as MapIcon, MapPin, Navigation, Share2, Shield, TrainFront, WifiOff, X } from 'lucide-react';
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { InstagramLink, SaveButton } from '@/components/PandalCard/PandalCard';
@@ -12,11 +12,12 @@ import { useCan3D, usePrefersReducedMotion } from '@/hooks/useMedia';
 import { cn, formatKm, themeLabel } from '@/lib/utils';
 import { useAppStore } from '@/store/appStore';
 import NetworkMap from './NetworkMap';
+import { PoliceMapViewer } from '@/components/PoliceMap/PoliceMapViewer';
 
 const StreetMap = lazy(() => import('./StreetMap'));
 const Metro3D = lazy(() => import('./Metro3D'));
 
-type ViewMode = 'street' | 'network' | '3d';
+type ViewMode = 'street' | 'network' | '3d' | 'police';
 
 function MapSkeleton({ label }: { label: string }) {
   return (
@@ -223,11 +224,17 @@ function PandalInfoCard() {
   );
 }
 
-/** Map surface with three views sharing one selection: street map, schematic network, 3D overview. */
-export function PujoMap({ variant = 'section' }: { variant?: 'section' | 'page' }) {
+/** Map surface with four views sharing one selection: street map, schematic network, 3D overview, and official Kolkata Police traffic guide map. */
+export function PujoMap({
+  variant = 'section',
+  initialMode = 'street',
+}: {
+  variant?: 'section' | 'page';
+  initialMode?: ViewMode;
+}) {
   const can3D = useCan3D();
   const reduced = usePrefersReducedMotion();
-  const [mode, setMode] = useState<ViewMode>('street');
+  const [mode, setMode] = useState<ViewMode>(initialMode);
   const [streetDown, setStreetDown] = useState(false);
   const online = typeof navigator === 'undefined' ? true : navigator.onLine;
 
@@ -240,6 +247,7 @@ export function PujoMap({ variant = 'section' }: { variant?: 'section' | 'page' 
     { id: 'street', label: 'Street', Icon: MapIcon, disabled: streetDown },
     { id: 'network', label: 'Network', Icon: TrainFront },
     ...(can3D ? [{ id: '3d' as const, label: '3D', Icon: Box }] : []),
+    { id: 'police', label: 'Police Guide', Icon: Shield },
   ];
 
   return (
@@ -254,6 +262,11 @@ export function PujoMap({ variant = 'section' }: { variant?: 'section' | 'page' 
           {effective === 'street' && <StreetMap interactiveScroll={variant === 'page'} onUnavailable={() => setStreetDown(true)} />}
           {effective === 'network' && <NetworkMap />}
           {effective === '3d' && <Metro3D animate={!reduced} />}
+          {effective === 'police' && (
+            <div className="absolute inset-0 pt-[52px]">
+              <PoliceMapViewer height="100%" showEmergencyBar={variant === 'page'} />
+            </div>
+          )}
         </Suspense>
       </ErrorBoundary>
 
@@ -281,34 +294,40 @@ export function PujoMap({ variant = 'section' }: { variant?: 'section' | 'page' 
             </button>
           ))}
         </div>
-        <div className="pointer-events-auto min-w-0 max-w-full">
-          <LineLegend />
-        </div>
+        {effective !== 'police' && (
+          <div className="pointer-events-auto min-w-0 max-w-full">
+            <LineLegend />
+          </div>
+        )}
       </div>
 
-      {streetDown && (
+      {streetDown && effective === 'street' && (
         <p role="status" className="glass absolute left-1/2 top-[104px] z-10 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-sm px-3 py-2 text-xs text-muted md:top-16">
           <WifiOff className="size-3.5 text-gold" aria-hidden="true" />
           Street tiles are unavailable — showing the network map
         </p>
       )}
 
-      {/* Station panel (desktop) */}
-      <div className="pointer-events-none absolute bottom-4 left-4 top-[72px] z-10 hidden items-start lg:flex">
-        <div className="pointer-events-auto flex max-h-full">
-          <StationPanel />
+      {/* Station panel (desktop) - only on metro maps */}
+      {effective !== 'police' && (
+        <div className="pointer-events-none absolute bottom-4 left-4 top-[72px] z-10 hidden items-start lg:flex">
+          <div className="pointer-events-auto flex max-h-full">
+            <StationPanel />
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Selected pandal */}
-      <div
-        className={cn(
-          'pointer-events-none absolute inset-x-3 z-10 flex justify-center lg:inset-x-auto lg:right-16',
-          variant === 'page' ? 'bottom-4' : 'bottom-4',
-        )}
-      >
-        <PandalInfoCard />
-      </div>
+      {/* Selected pandal - only on metro maps */}
+      {effective !== 'police' && (
+        <div
+          className={cn(
+            'pointer-events-none absolute inset-x-3 z-10 flex justify-center lg:inset-x-auto lg:right-16',
+            variant === 'page' ? 'bottom-4' : 'bottom-4',
+          )}
+        >
+          <PandalInfoCard />
+        </div>
+      )}
     </div>
   );
 }

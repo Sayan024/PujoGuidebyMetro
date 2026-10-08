@@ -6,10 +6,11 @@ import { STATIONS } from '@/data/metroLines';
 import { usePageTitle } from '@/hooks/useMedia';
 import { useAppStore } from '@/store/appStore';
 
-/** Full-screen map. Deep links: /map?pandal=<id> or /map?station=<id>. */
+/** Full-screen map. Deep links: /map?pandal=<id>, /map?station=<id>, /map?view=police */
 export default function MapPage() {
-  usePageTitle('Pujo Map');
   const [params] = useSearchParams();
+  const isPoliceView = params.get('view') === 'police';
+  usePageTitle(isPoliceView ? 'Kolkata Police Puja Guide Map' : 'Pujo Map');
 
   useEffect(() => {
     const store = useAppStore.getState();
@@ -27,8 +28,8 @@ export default function MapPage() {
 
   return (
     <div className="fixed inset-0 pb-[calc(62px+env(safe-area-inset-bottom))] pt-[78px] lg:pb-0 lg:pt-[84px]">
-      <h1 className="sr-only">Pujo Map — Kolkata Metro lines, stations and pandals</h1>
-      <PujoMap variant="page" />
+      <h1 className="sr-only">Pujo Map — Kolkata Metro lines, stations, pandals and Kolkata Police Guide Map</h1>
+      <PujoMap variant="page" initialMode={isPoliceView ? 'police' : 'street'} />
     </div>
   );
 }

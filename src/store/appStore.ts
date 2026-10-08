@@ -44,6 +44,7 @@ interface AppState {
   // Parking & Feedback Modals
   parkingModalPandalId: string | null;
   feedbackModal: { open: boolean } & FeedbackPrefill;
+  policeMapModalOpen: boolean;
 
   setTheme: (t: ThemeMode) => void;
   toggleTheme: () => void;
@@ -67,6 +68,8 @@ interface AppState {
   setParkingModalPandalId: (id: string | null) => void;
   openFeedbackModal: (prefill?: FeedbackPrefill) => void;
   closeFeedbackModal: () => void;
+  openPoliceMapModal: () => void;
+  closePoliceMapModal: () => void;
 }
 
 let toastId = 0;
@@ -91,6 +94,7 @@ export const useAppStore = create<AppState>()(
 
       parkingModalPandalId: null,
       feedbackModal: { open: false },
+      policeMapModalOpen: false,
 
       setTheme: (theme) => set({ theme }),
       toggleTheme: () => set({ theme: get().theme === 'dark' ? 'light' : 'dark' }),
@@ -136,6 +140,8 @@ export const useAppStore = create<AppState>()(
       setParkingModalPandalId: (parkingModalPandalId) => set({ parkingModalPandalId }),
       openFeedbackModal: (prefill) => set({ feedbackModal: { open: true, ...prefill } }),
       closeFeedbackModal: () => set({ feedbackModal: { open: false } }),
+      openPoliceMapModal: () => set({ policeMapModalOpen: true }),
+      closePoliceMapModal: () => set({ policeMapModalOpen: false }),
     }),
     {
       name: 'pujo-by-metro',

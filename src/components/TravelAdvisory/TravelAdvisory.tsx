@@ -4,6 +4,7 @@ import { useState, type ReactNode } from 'react';
 import { Reveal } from '@/components/ui/primitives';
 import { currentPujaDay, PUJA_DAYS } from '@/data/pujaDates';
 import { cn } from '@/lib/utils';
+import { useAppStore } from '@/store/appStore';
 
 const CROWD_COLOURS = ['#10B981', '#84cc16', '#EAB308', '#F97316', '#E52D3F'];
 
@@ -126,8 +127,22 @@ export function TravelAdvisory() {
             </Indicator>
           </div>
         </div>
-        <p className="border-t border-hair-soft px-6 py-3 text-[11px] text-muted md:px-10">
-          Indicative guidance based on previous years. Confirm timetables with Metro Railway Kolkata before you travel.
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-hair-soft bg-[#18080d]/60 px-6 py-3.5 md:px-10">
+          <p className="flex items-center gap-2 text-xs text-muted">
+            <span className="size-2 rounded-full bg-red animate-pulse" />
+            <span>Kolkata Police Traffic Restriction: No vehicular entry 3:00 PM – 4:00 AM on festival days.</span>
+          </p>
+          <button
+            type="button"
+            onClick={() => useAppStore.getState().openPoliceMapModal()}
+            className="text-xs font-semibold text-gold-bright hover:underline flex items-center gap-1.5"
+          >
+            <span>View Official Police Traffic & Parking Map</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+        <p className="border-t border-hair-soft px-6 py-2.5 text-[11px] text-muted md:px-10">
+          Indicative guidance based on official releases. Confirm timetables with Metro Railway Kolkata before you travel.
         </p>
       </Reveal>
     </section>

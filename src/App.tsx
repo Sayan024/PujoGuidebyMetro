@@ -8,6 +8,7 @@ import { SearchDialog } from '@/components/SearchBar/SearchDialog';
 import { ErrorBoundary, IntroLoader, PageSkeleton, Toaster } from '@/components/ui/Feedback';
 import { ParkingModal } from '@/components/Parking/ParkingModal';
 import { FeedbackModal } from '@/components/Feedback/FeedbackModal';
+import { PoliceMapModal } from '@/components/PoliceMap/PoliceMapModal';
 import { SoundToggle } from '@/components/ui/SoundToggle';
 import { useBackgroundSound } from '@/lib/sound';
 import { useThemeSync } from '@/hooks/useTheme';
@@ -73,6 +74,7 @@ function Shell() {
       <SearchDialog />
       <ParkingModal />
       <FeedbackModal />
+      <PoliceMapModal />
       <Toaster />
     </>
   );

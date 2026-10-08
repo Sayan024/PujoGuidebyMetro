@@ -6,11 +6,13 @@ dist
 .env.*
 !.env.example
 
-# Not published: old site, personal source photo, third-party photos
+# Not published: old site, personal source photo, third-party photos, local source inputs
 legacy/
 myphoto/
+Eng_map.jpg
 public/img/*
 !public/img/sayan-*.webp
+!public/img/kolkata-police-puja-map*
 public/og.jpg
 
 # Build and tooling output
