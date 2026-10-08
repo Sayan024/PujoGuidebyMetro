@@ -48,15 +48,15 @@ Explorer filters: Within 1 km · Traditional · Theme 2026 · VIP Pass · Petpuj
 |---|---|---|---|---|
 | Mahalaya | মহালয়া | October 10, 2026 | Saturday | Pitru Paksha ends · Devi Paksha begins |
 | Mahasashthi | মহাষষ্ঠী | October 16, 2026 | Friday | Bodhan · Amantran · Adhivas |
-| Mahasaptami | মহাসপ্তমী | October 17, 2026 | Saturday | Nabapatrika snan · Pran Pratishtha |
-| Maha Ashtami | মহাষ্টমী | October 18–19, 2026 | Sunday – Monday | Pushpanjali · Kumari Puja · Sandhi Puja |
+| Mahasaptami | মহাসপ্তমী | October 17–18, 2026 | Saturday – Sunday | Nabapatrika snan · Pran Pratishtha · Saptami Puja |
+| Maha Ashtami | মহাষ্টমী | October 19, 2026 | Monday | Pushpanjali · Kumari Puja (9:00 AM) · Sandhi Puja |
 | Mahanavami | মহানবমী | October 20, 2026 | Tuesday | Navami Homa · Bhog · Dhunuchi naach |
 | Vijaya Dashami | বিজয়া দশমী | October 21, 2026 | Wednesday | Darpan Visarjan · Sindoor Khela · Immersion |
 
 - **Mahalaya:** Dawn tarpan on the Ganga ghats and the Mahishasuramardini broadcast. At Kumartuli the eyes of the goddess are painted — Chokkhudaan.
 - **Mahasashthi:** The goddess is unveiled and welcomed. Pandals open in full and the first evening queues form across the city.
-- **Mahasaptami:** Before sunrise the Nabapatrika — Kola Bou — is bathed in the Ganga and installed beside Ganesha. The puja begins in earnest.
-- **Maha Ashtami:** Morning anjali in new clothes, Kumari Puja, and the Sandhi Puja with 108 lamps at the junction of Ashtami and Navami — the tithi runs across two calendar days this year.
+- **Mahasaptami:** Before sunrise the Nabapatrika — Kola Bou — is bathed in the sacred Ganga ghats and installed beside Ganesha. Saptami festivities continue through the weekend.
+- **Maha Ashtami:** Morning Pushpanjali in pristine new clothes, Kumari Puja at 9:00 AM, and the auspicious Sandhi Puja with 108 lotus flowers and 108 earthen lamps at the junction of Ashtami and Navami.
 - **Mahanavami:** The sacrificial fire, community bhog at noon and dhunuchi dancing to the dhak after dark. The last full night of pandal hopping.
 - **Vijaya Dashami:** Married women bid farewell with vermilion, the idols travel to the river, and the city exchanges Shubho Bijoya with sweets.
 
