@@ -4,11 +4,13 @@ import type { ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { InstagramLink, PandalCard, SaveButton } from '@/components/PandalCard/PandalCard';
 import { PandalCover } from '@/components/PandalCard/PandalCover';
+import { MapShareButton } from '@/components/Share/MapShare';
 import { EmptyState, LineBadge } from '@/components/ui/primitives';
 import { PANDAL_BY_ID, stationPandals } from '@/data';
 import { reelsOf } from '@/data/instagram';
 import { themeIdOf } from '@/data/themes';
 import { usePageTitle } from '@/hooks/useMedia';
+import { pandalDirectionsUrl } from '@/lib/googleMaps';
 import { formatKm, isFestivalOn, isOpenNow, summaryOf } from '@/lib/utils';
 import { useAppStore } from '@/store/appStore';
 
@@ -182,6 +184,14 @@ export default function PandalDetail() {
             <a href={p.mapUrl} target="_blank" rel="noreferrer" className="btn btn-primary">
               <Navigation className="size-4" aria-hidden="true" /> Get directions
             </a>
+            <MapShareButton
+              title={p.name}
+              subtitle={`Near ${p.station} Metro`}
+              options={[{ id: 'walk', label: 'Walking', url: pandalDirectionsUrl(p) }]}
+              pageUrl={`${location.origin}/pandal/${p.id}`}
+              fileName={p.id}
+              className="h-11 !rounded-full"
+            />
             <div className="grid grid-cols-2 gap-2.5">
               <Link to={`/map?pandal=${p.id}`} className="btn btn-sm btn-ghost h-11">
                 <MapPinned className="size-4" aria-hidden="true" /> View map

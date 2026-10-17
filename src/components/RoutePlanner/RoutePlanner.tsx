@@ -1,10 +1,12 @@
 import { motion } from 'motion/react';
-import { Car, Check, ClipboardCopy, Flag, Footprints, Landmark, Route, TrainFront } from 'lucide-react';
+import { Car, Check, ClipboardCopy, Flag, Footprints, Landmark, Navigation, Route, TrainFront } from 'lucide-react';
 import { useMemo, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { MapShareButton } from '@/components/Share/MapShare';
 import { EmptyState } from '@/components/ui/primitives';
 import { LINE_BY_ID, STATIONS } from '@/data/metroLines';
 import type { Pandal } from '@/data/types';
+import { MAX_ROUTE_STOPS, routeUrl } from '@/lib/googleMaps';
 import { buildDayPlan, type PlanStep } from '@/lib/route';
 import { cn, formatClock, formatDuration, formatKm } from '@/lib/utils';
 import { useAppStore } from '@/store/appStore';
@@ -98,6 +100,12 @@ export function RoutePlanner({ pandals }: { pandals: Pandal[] }) {
   const setStart = useAppStore((s) => s.setPlanStart);
   const pushToast = useAppStore((s) => s.pushToast);
   const plan = useMemo(() => buildDayPlan(pandals, start), [pandals, start]);
+  // The pandals in the order the plan visits them, as one Google Maps route.
+  const { walkRoute, driveRoute } = useMemo(() => {
+    const byId = new Map(pandals.map((p) => [p.id, p]));
+    const ordered = plan.steps.flatMap((s) => (s.kind === 'visit' && s.pandalId && byId.get(s.pandalId) ? [byId.get(s.pandalId)!] : []));
+    return { walkRoute: routeUrl(ordered, 'walking'), driveRoute: routeUrl(ordered, 'driving') };
+  }, [plan, pandals]);
 
   const copy = async () => {
     const text = [
@@ -195,9 +203,34 @@ export function RoutePlanner({ pandals }: { pandals: Pandal[] }) {
               Times assume about 2.5 minutes per Metro stop, a 5 minute platform wait and 20–35 minutes at each
               pandal. Add the advisory’s walking delay on peak nights.
             </p>
-            <button type="button" className="btn btn-sm btn-ghost" onClick={copy}>
-              <ClipboardCopy className="size-3.5" aria-hidden="true" /> Copy plan
-            </button>
+            <div className="flex flex-wrap items-center gap-2">
+              <a href={walkRoute.url} target="_blank" rel="noreferrer" className="btn btn-sm btn-primary !rounded-full">
+                <Navigation className="size-3.5" aria-hidden="true" /> Route in Google Maps
+              </a>
+              <MapShareButton
+                label="QR"
+                title="My Pujo route"
+                subtitle={`${walkRoute.included} ${walkRoute.included === 1 ? 'stop' : 'stops'}, in the order planned above`}
+                options={[
+                  { id: 'walking', label: 'Walking', url: walkRoute.url },
+                  { id: 'driving', label: 'Driving', url: driveRoute.url },
+                ]}
+                note={
+                  <>
+                    Google Maps starts from wherever you are and visits the pandals in this order. It can’t combine stops
+                    with the Metro, so use it to walk or drive between pandals and follow the plan for the Metro legs.
+                    {walkRoute.dropped > 0 &&
+                      ` A Google Maps link holds at most ${MAX_ROUTE_STOPS} stops, so the first ${MAX_ROUTE_STOPS} are included.`}{' '}
+                    Some phone browsers show only the first few stops; the Google Maps app shows them all.
+                  </>
+                }
+                fileName="my-pujo-route"
+                className="!rounded-full"
+              />
+              <button type="button" className="btn btn-sm btn-ghost !rounded-full" onClick={copy}>
+                <ClipboardCopy className="size-3.5" aria-hidden="true" /> Copy plan
+              </button>
+            </div>
           </div>
         </>
       )}

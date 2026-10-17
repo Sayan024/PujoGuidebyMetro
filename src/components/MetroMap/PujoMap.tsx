@@ -1,8 +1,10 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowUpRight, Box, Footprints, Map as MapIcon, MapPin, Navigation, Share2, Shield, TrainFront, WifiOff, X } from 'lucide-react';
+import { ArrowUpRight, Box, Footprints, Map as MapIcon, MapPin, Navigation, Shield, TrainFront, WifiOff, X } from 'lucide-react';
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { InstagramLink, SaveButton } from '@/components/PandalCard/PandalCard';
+import { MapShareButton } from '@/components/Share/MapShare';
+import { pandalDirectionsUrl } from '@/lib/googleMaps';
 import { PandalCover } from '@/components/PandalCard/PandalCover';
 import { ErrorBoundary } from '@/components/ui/Feedback';
 import { LineBadge, LineDot } from '@/components/ui/primitives';
@@ -154,22 +156,8 @@ function StationPanel() {
 function PandalInfoCard() {
   const id = useAppStore((s) => s.selectedPandalId);
   const selectPandal = useAppStore((s) => s.selectPandal);
-  const pushToast = useAppStore((s) => s.pushToast);
   const p = id ? PANDAL_BY_ID.get(id) : undefined;
 
-  const share = async () => {
-    if (!p) return;
-    const url = `${location.origin}/pandal/${p.id}`;
-    try {
-      if (navigator.share) await navigator.share({ title: p.name, text: `${p.name} — near ${p.station} Metro`, url });
-      else {
-        await navigator.clipboard.writeText(url);
-        pushToast('Link copied');
-      }
-    } catch {
-      /* share sheet dismissed */
-    }
-  };
 
   return (
     <AnimatePresence>
@@ -213,9 +201,14 @@ function PandalInfoCard() {
               </a>
               <InstagramLink pandal={p} />
               <SaveButton pandal={p} />
-              <button type="button" className="icon-btn size-[38px] max-sm:hidden" onClick={share} aria-label="Share this pandal">
-                <Share2 className="size-4" />
-              </button>
+              <MapShareButton
+                variant="icon"
+                title={p.name}
+                subtitle={`Near ${p.station} Metro`}
+                options={[{ id: 'walk', label: 'Walking', url: pandalDirectionsUrl(p) }]}
+                pageUrl={`${location.origin}/pandal/${p.id}`}
+                fileName={p.id}
+              />
             </div>
           </div>
         </motion.article>
