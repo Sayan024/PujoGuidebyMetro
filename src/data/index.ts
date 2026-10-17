@@ -3,6 +3,7 @@ import { HOWRAH_PANDALS } from './howrahPandals.ts';
 import { COMMUNITY_PARAS } from './communityParas.ts';
 import { getParkingForPandal } from './parking.ts';
 import { LOCATION_FIXES, SOUTH_KOLKATA_ADDITIONS, alignToMetro } from './southKolkata.ts';
+import { applyThemeUpdate } from './themeUpdates.ts';
 import { METRO_LINES } from './metroLines.ts';
 import type { MetroLineId, Pandal } from './types.ts';
 
@@ -28,7 +29,7 @@ export const PANDALS: Pandal[] = [
   ...HOWRAH_PANDALS,
   ...COMMUNITY_PARAS,
   ...SOUTH_KOLKATA_ADDITIONS.map((p) => ({ ...p, parking: getParkingForPandal(p.id, p.stationId) })),
-];
+].map(applyThemeUpdate);
 
 export const PANDAL_BY_ID = new Map<string, Pandal>(PANDALS.map((p) => [p.id, p]));
 

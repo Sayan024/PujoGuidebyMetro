@@ -58,7 +58,7 @@ export function SearchDialog() {
         key: `s-${s.id}`,
         to: `/station/${s.id}`,
         title: s.name,
-        meta: `${s.area ? `${s.area} · ` : ''}${stationPandals(s.id).length} pandals nearby`,
+        meta: `${s.area ? `${s.area} · ` : ''}${stationPandals(s.id).length} ${stationPandals(s.id).length === 1 ? 'pandal' : 'pandals'} nearby`,
         kind: 'station',
         line: s.lines[0],
       }));

@@ -188,4 +188,25 @@ export const SOUTH_KOLKATA_ADDITIONS: Pandal[] = [
   para('netaji-jatiya-sebadal-ranikuthi', 'Ranikuthi Netaji Jatiya Sebadal', 22.48334, 88.35464, 'Ranikuthi', 'Ranikuthi puja on the road from Tollygunge towards Garia, near Netaji (Kudghat) Metro.'),
   // Garia
   para('garia-pancha-durga', 'Garia Pancha Durga', 22.46154, 88.3783, 'Garia', 'Kamdhari Road, Garia, near Garia Naba Durga at the southern end of the route.'),
+  // Park Street
+  para(
+    'allen-park-park-street',
+    'Allen Park Durga Puja (Kolkata Sanatani Sangha)',
+    22.55028,
+    88.35447,
+    'Park Street',
+    "Park Street's first-ever Durga Puja, in Allen Park, the home of the Christmas festival. Theme by Subrata Bandyopadhyay on Shiva's leela: the Rudra form, his love for Parvati, and the tandava of creation and destruction. Varanasi-style evening aarti from Chaturthi to Dashami, Baul and folk programmes from Purulia, Bankura and North Bengal, all-night jagaran from Ashtami to Navami and sindoor khela on Dashami. Expect big crowds; the Park Street–Middleton Street stretch may close to cars.",
+    {
+      theme: 'Shiva Leela: Tandav o Laya',
+      category: 'Mythology',
+      artist: 'Subrata Bandyopadhyay',
+      popularity: 88,
+      theme2026: true,
+      traditional: false,
+      darshanTime: 'Evening aarti daily from Chaturthi to Dashami; open till late night',
+      tags: ['Park Street', 'First year', 'Ganga-style aarti', 'Central Kolkata'],
+      source: 'Sangbad Pratidin, Organiser and Zee 24 Ghanta reports; location from OpenStreetMap',
+      verificationStatus: 'verified',
+    },
+  ),
 ];

@@ -60,7 +60,7 @@ export default function StationDetail() {
 
         <dl className="mt-10 grid grid-cols-3 gap-px overflow-hidden border border-hair bg-hair">
           {[
-            { label: 'Pandals nearby', value: <Counter value={pandals.length} /> },
+            { label: pandals.length === 1 ? 'Pandal nearby' : 'Pandals nearby', value: <Counter value={pandals.length} /> },
             { label: 'Within 1 km', value: <Counter value={within1} /> },
             { label: 'Nearest', value: pandals[0] ? formatKm(pandals[0].distanceKm) : '—' },
           ].map((s) => (
