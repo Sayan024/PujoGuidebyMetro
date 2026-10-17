@@ -366,7 +366,7 @@ export function MahalayaMorning() {
                         key={b}
                         type="button"
                         onClick={() => setActiveBand(b)}
-                        className={`rounded px-2 py-0.5 font-bold uppercase transition-colors ${
+                        className={`min-h-7 min-w-9 rounded px-2.5 py-1 font-bold uppercase transition-colors ${
                           activeBand === b
                             ? 'bg-gold-bright text-[#1a0808] shadow-sm'
                             : 'bg-black/40 text-muted hover:text-ink'

@@ -8,7 +8,7 @@ import { instagramOf, instagramUrl } from '@/data/instagram';
 import type { Pandal } from '@/data/types';
 import { useIsFavorite } from '@/hooks/useFavorites';
 import { useCanHover } from '@/hooks/useMedia';
-import { cn, formatKm, themeLabel } from '@/lib/utils';
+import { cn, formatKm, lineTextColor, themeLabel } from '@/lib/utils';
 import { useAppStore } from '@/store/appStore';
 import { PandalCover } from './PandalCover';
 
@@ -160,7 +160,7 @@ function PandalCardImpl({ pandal: p, priority }: { pandal: Pandal; priority?: bo
             <MapPin className="size-3.5 shrink-0 text-red" aria-hidden="true" />
             <span className="min-w-0 truncate text-muted">{p.locality ?? 'Near the station'}</span>
             <span aria-hidden="true" className="text-muted">·</span>
-            <span className="shrink-0 font-bold" style={{ color: `var(--${p.line}-line)` }}>
+            <span className="shrink-0 font-bold" style={{ color: lineTextColor(p.line) }}>
               {p.station}
             </span>
           </p>

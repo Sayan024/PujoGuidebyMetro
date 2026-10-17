@@ -12,6 +12,10 @@
   --maroon: #701525;
   --cream: #fff4e6;
   --muted: #c8aeb0;
+  /* Text colours that stay readable on tinted surfaces (see the light theme for the darker values). */
+  --gold-text: #ffd66b;
+  --ok: #34d399;
+  --on-gold: #1a0c08;
 
   --ink: var(--cream);
   --hair: rgba(221, 170, 68, 0.2);
@@ -40,6 +44,9 @@
   --red: #d90429;
   --maroon: #7a0a1b;
   --muted: #6e5a52;
+  --gold-text: #8f4705;
+  --ok: #047857;
+  --on-gold: #ffffff;
 
   --ink: #2c1210;
   --hair: #ead5a0;
@@ -58,6 +65,9 @@
   --color-surface-2: var(--surface-light);
   --color-gold: var(--gold);
   --color-gold-bright: var(--gold-bright);
+  --color-gold-text: var(--gold-text);
+  --color-ok: var(--ok);
+  --color-on-gold: var(--on-gold);
   --color-red: var(--red);
   --color-maroon: var(--maroon);
   --color-ink: var(--ink);
@@ -65,7 +75,7 @@
   --color-hair: var(--hair);
   --color-hair-soft: var(--hair-soft);
   --font-display: 'Merriweather', Georgia, serif;
-  --font-sans: 'Figtree', system-ui, sans-serif;
+  --font-sans: 'Figtree Variable', 'Figtree', system-ui, sans-serif;
   --font-mono: 'Fragment Mono', ui-monospace, monospace;
   --font-bn: 'Noto Serif Bengali', 'Merriweather', serif;
   --breakpoint-3xl: 1800px;

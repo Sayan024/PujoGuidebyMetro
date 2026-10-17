@@ -17,7 +17,8 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 function RevealLine({ text, delay, className }: { text: string; delay: number; className?: string }) {
   return (
-    <span className={className} aria-label={text}>
+    <span className={className}>
+      <span className="sr-only">{text}</span>
       {text.split(' ').map((word, i) => (
         <span key={i} className="inline-block overflow-hidden pb-[0.08em] align-bottom" aria-hidden="true">
           <motion.span

@@ -6,6 +6,7 @@
  * is checked, so the visitor is told "sent" only when Google accepted it.
  */
 import { FEEDBACK_SUBMIT_URL, FIELD, MAX_TEXT, USES } from '../src/data/feedback.js';
+import { crossSiteResponse, withTimeout } from './guard.js';
 
 const EMAIL = /^[^\s@]+@[^\s@]{1,}\.[^\s@]{2,}$/;
 const MIN_FILL_MS = 2500;
@@ -31,6 +32,8 @@ const text = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MAX_TEXT
 
 export async function handleFeedback(request: Request, options: { clientId?: string } = {}): Promise<Response> {
   if (request.method !== 'POST') return reply(405, { error: 'Use POST.' });
+  const foreign = crossSiteResponse(request);
+  if (foreign) return foreign;
 
   let data: Record<string, unknown>;
   try {
@@ -73,6 +76,7 @@ export async function handleFeedback(request: Request, options: { clientId?: str
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: form,
+      signal: withTimeout(10_000),
     });
   } catch (error) {
     console.error('[feedback] could not reach Google Forms:', error);

@@ -208,4 +208,24 @@ w(
 
 const text = out.join('\n');
 for (const name of ['llms.txt', 'llms.md']) fs.writeFileSync(path.join(root, 'public', name), text);
+
+// sitemap.xml: every page a search engine can reach, from the same data.
+const base = SITE || 'https://pujo-guideby-metro.vercel.app';
+const sitemapPaths = [
+  '',
+  '/explore',
+  '/map',
+  '/routes',
+  '/favorites',
+  '/about',
+  '/privacy',
+  '/feedback',
+  ...Object.keys(STATIONS).map((id) => `/station/${id}`),
+  ...PANDALS.map((p) => `/pandal/${p.id}`),
+];
+fs.writeFileSync(
+  path.join(root, 'public', 'sitemap.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((p) => `  <url><loc>${base}${p}</loc></url>`).join('\n')}\n</urlset>\n`,
+);
+console.log(`sitemap.xml: ${sitemapPaths.length} urls`);
 console.log(`llms.txt / llms.md: ${(text.length / 1024).toFixed(1)} kB, ${out.length} lines, ${PANDALS.length} pandals`);

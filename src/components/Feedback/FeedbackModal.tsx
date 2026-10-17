@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Star, Download, Send, CheckCircle2, MessageSquare, AlertTriangle } from 'lucide-react';
+import { X, Star, Send, CheckCircle2, MessageSquare, AlertTriangle } from 'lucide-react';
 import { useAppStore } from '@/store/appStore';
-import { submitFeedback, downloadFeedbackCsv, getQueuedFeedback } from '@/data/feedbackStore';
+import { reportText, sendFeedback } from '@/lib/sendFeedback';
 
 export function FeedbackModal() {
   const modal = useAppStore((s) => s.feedbackModal);
@@ -16,7 +16,9 @@ export function FeedbackModal() {
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [queueCount, setQueueCount] = useState(0);
+  const [error, setError] = useState('');
+  const [trap, setTrap] = useState(''); // honeypot: people never see or fill this
+  const openedAt = useRef(Date.now());
 
   useEffect(() => {
     if (modal.open) {
@@ -25,8 +27,9 @@ export function FeedbackModal() {
       if (modal.incorrectField) {
         setMessage(`Correction needed regarding: ${modal.incorrectField}\nDetails: `);
       }
-      setQueueCount(getQueuedFeedback().length);
       setSubmitted(false);
+      setError('');
+      openedAt.current = Date.now();
     }
   }, [modal]);
 
@@ -34,29 +37,31 @@ export function FeedbackModal() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!message.trim()) return;
+    if (!message.trim() || submitting) return;
 
     setSubmitting(true);
-    const result = await submitFeedback({
-      name: name.trim() || 'Anonymous Pilgrim',
-      email: email.trim(),
-      type,
-      rating,
-      station: modal.station,
-      pandal: modal.pandal,
-      message: message.trim(),
-      source: 'web_modal_v2026',
-    });
-    setSubmitting(false);
-    setSubmitted(true);
-    setQueueCount(getQueuedFeedback().length);
-    pushToast(result.message, 'save');
-
-    setTimeout(() => {
-      close();
-      setSubmitted(false);
-      setMessage('');
-    }, 2000);
+    setError('');
+    try {
+      await sendFeedback({
+        rating,
+        wrong: reportText({ type, message, pandal: modal.pandal, station: modal.station, name }),
+        email: email.trim(),
+        trap,
+        elapsed: Date.now() - openedAt.current,
+      });
+      setSubmitted(true);
+      pushToast('Thank you. Your report was sent.', 'save');
+      setTimeout(() => {
+        close();
+        setSubmitted(false);
+        setMessage('');
+      }, 2000);
+    } catch (err) {
+      // Only a delivered report counts as sent; the text stays here so nothing is lost.
+      setError(err instanceof TypeError ? 'Could not reach the server. Check your connection and try again.' : (err as Error).message);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -115,9 +120,9 @@ export function FeedbackModal() {
           {submitted ? (
             <div className="py-12 text-center">
               <CheckCircle2 className="mx-auto size-12 text-emerald-500" />
-              <h4 className="mt-4 text-lg font-bold text-ink">Thank You!</h4>
+              <h4 className="mt-4 text-lg font-bold text-ink">Thank you!</h4>
               <p className="mt-1 text-xs text-muted">
-                Your feedback has been recorded and safely queued.
+                Your report was sent to the guide’s creator.
               </p>
             </div>
           ) : (
@@ -205,18 +210,22 @@ export function FeedbackModal() {
                 </div>
               </div>
 
-              {/* Action buttons */}
-              <div className="flex items-center justify-between pt-3">
-                <button
-                  type="button"
-                  onClick={downloadFeedbackCsv}
-                  className="btn btn-sm btn-ghost text-xs"
-                  title="Download all stored feedback as a CSV file"
-                >
-                  <Download className="size-3.5" />
-                  <span>CSV Queue ({queueCount})</span>
-                </button>
+              {/* Bots fill this; people never see it. */}
+              <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+                <label>
+                  Leave this empty
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" value={trap} onChange={(e) => setTrap(e.target.value)} />
+                </label>
+              </div>
 
+              {error && (
+                <p role="alert" className="flex items-start gap-2 text-sm text-red">
+                  <AlertTriangle className="mt-0.5 size-4 shrink-0" aria-hidden="true" /> {error}
+                </p>
+              )}
+
+              {/* Action buttons */}
+              <div className="flex items-center justify-end pt-3">
                 <div className="flex gap-2">
                   <button
                     type="button"
@@ -230,7 +239,7 @@ export function FeedbackModal() {
                     disabled={submitting || !message.trim()}
                     className="btn btn-sm btn-primary"
                   >
-                    {submitting ? 'Saving...' : 'Submit Feedback'}
+                    {submitting ? 'Sending…' : 'Submit Feedback'}
                     <Send className="size-3.5" />
                   </button>
                 </div>

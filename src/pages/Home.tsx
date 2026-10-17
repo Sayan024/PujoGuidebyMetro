@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Maximize2, MessageSquareHeart, Route } from 'lucide-react';
+import { ArrowRight, Maximize2, MessageSquareHeart, Route } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Explorer } from '@/components/Explorer/Explorer';
 import { MyPujaListSection } from '@/components/Favorites/MyPujaList';
@@ -14,7 +14,6 @@ import { Reveal, SectionHeading } from '@/components/ui/primitives';
 import { TOTAL_PANDALS } from '@/data';
 import { useIsDesktop, useNearViewport, usePageTitle } from '@/hooks/useMedia';
 import { useAppStore } from '@/store/appStore';
-import { downloadFeedbackCsv, getQueuedFeedback } from '@/data/feedbackStore';
 
 function MapChapter() {
   const desktop = useIsDesktop();
@@ -65,7 +64,6 @@ function MapChapter() {
 
 function FeedbackChapter() {
   const openFeedback = useAppStore((s) => s.openFeedbackModal);
-  const queueCount = getQueuedFeedback().length;
 
   return (
     <section id="feedback-section" aria-labelledby="feedback-title" className="shell pt-24 md:pt-36">
@@ -79,7 +77,7 @@ function FeedbackChapter() {
               Found a changed route, parking bay or new 2026 theme?
             </h3>
             <p className="mt-2 text-sm text-muted">
-              Help us maintain 100% ground-accurate data for Kolkata & Howrah. Feedback is instantly saved to our local queue and synced to organizers.
+              Help keep the guide accurate for Kolkata & Howrah. Your report goes straight to the guide’s creator.
             </p>
           </div>
 
@@ -90,14 +88,6 @@ function FeedbackChapter() {
               className="btn btn-primary"
             >
               <MessageSquareHeart className="size-4" /> Share Feedback / Report Info
-            </button>
-            <button
-              type="button"
-              onClick={downloadFeedbackCsv}
-              className="btn btn-ghost"
-              title="Download local feedback entries"
-            >
-              <Download className="size-4" /> Export CSV ({queueCount})
             </button>
           </div>
         </div>

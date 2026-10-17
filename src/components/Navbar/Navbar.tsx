@@ -89,7 +89,7 @@ function FavoritesLink() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.4, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 500, damping: 22 }}
-            className="absolute -right-1.5 -top-1.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-gold-bright px-1 text-[10px] font-bold text-[#1a0c08]"
+            className="absolute -right-1.5 -top-1.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-gold-bright px-1 text-[10px] font-bold text-on-gold"
           >
             {count}
           </motion.span>
@@ -124,7 +124,7 @@ export function Navbar() {
     <>
       <a
         href="#main"
-        className="fixed left-4 top-4 z-[90] -translate-y-24 rounded-sm bg-gold-bright px-4 py-2 text-sm font-bold text-[#1a0c08] transition-transform focus:translate-y-0"
+        className="fixed left-4 top-4 z-[90] -translate-y-24 rounded-sm bg-gold-bright px-4 py-2 text-sm font-bold text-on-gold transition-transform focus:translate-y-0"
       >
         Skip to content
       </a>

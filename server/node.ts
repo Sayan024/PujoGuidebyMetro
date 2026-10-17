@@ -31,9 +31,15 @@ export const clientIdOf = (req: NodeReq) => first(req.headers['x-forwarded-for']
 export function toWebRequest(req: NodeReq, path: string): Request {
   const hasBody = req.method === 'POST';
   const body = typeof req.body === 'string' ? req.body : JSON.stringify(req.body ?? {});
+  const headers: Record<string, string> = { 'content-type': 'application/json' };
+  // Passed on so the handlers can refuse requests that come from another website.
+  const origin = first(req.headers.origin);
+  const host = first(req.headers['x-forwarded-host']) ?? first(req.headers.host);
+  if (origin) headers.origin = origin;
+  if (host) headers.host = host;
   return new Request(`${originOf(req)}${path}`, {
     method: req.method,
-    headers: { 'content-type': 'application/json' },
+    headers,
     body: hasBody ? body : undefined,
   });
 }

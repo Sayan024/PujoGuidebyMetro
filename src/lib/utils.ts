@@ -8,6 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 
 export const img = (key: string, width: 480 | 1200 = 480) => `/img/${key}-${width}.webp`;
 
+/** A Metro line's colour, deepened (or lightened in dark mode) so it reads as text on the page. */
+export const lineTextColor = (line: string) => `color-mix(in srgb, var(--${line}-line) 45%, var(--ink))`;
+
 export const formatKm = (km: number) => (km < 1 ? `${Math.round(km * 1000)} m` : `${km.toFixed(1)} km`);
 
 export function formatDuration(minutes: number) {

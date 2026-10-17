@@ -38,7 +38,7 @@ function VerticalLine({ line, counts }: { line: MetroLine; counts: Map<string, n
       <header className="sticky top-0 z-10 flex items-center gap-3 bg-surface/95 px-5 py-3 backdrop-blur">
         <span className="h-5 w-1.5 rounded-full" style={{ background: color }} aria-hidden="true" />
         <div className="min-w-0">
-          <h3 className="text-[12px] font-bold uppercase tracking-[0.2em]">{line.name}</h3>
+          <h2 className="text-[12px] font-bold uppercase tracking-[0.2em]">{line.name}</h2>
           <p className="truncate text-[11px] text-muted">{line.route}</p>
         </div>
       </header>
@@ -88,7 +88,7 @@ function VerticalLine({ line, counts }: { line: MetroLine; counts: Map<string, n
                 <span
                   className={cn(
                     'grid h-6 min-w-6 shrink-0 place-items-center rounded-full px-1.5 text-[11px] font-bold tabular-nums',
-                    count ? 'bg-gold/15 text-gold-bright' : 'text-muted',
+                    count ? 'bg-gold/15 text-gold-text' : 'text-muted',
                   )}
                   aria-label={`${count} pandals`}
                 >

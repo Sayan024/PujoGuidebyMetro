@@ -147,7 +147,8 @@ export function PujaCalendar() {
           </ol>
         ) : (
           <ol
-            className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2"
+            tabIndex={0}
+            className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-bright"
             aria-label="Puja days, swipe sideways"
           >
             {PUJA_DAYS.map((d) => {

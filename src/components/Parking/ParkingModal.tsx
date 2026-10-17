@@ -135,7 +135,7 @@ export function ParkingModal() {
                   onClick={() => setVehicleFilter(tab.id as typeof vehicleFilter)}
                   className={`rounded-sm px-2.5 py-1 text-xs font-semibold transition-colors ${
                     vehicleFilter === tab.id
-                      ? 'bg-gold-bright text-[#1a0c08]'
+                      ? 'bg-gold-bright text-on-gold'
                       : 'border border-hair bg-surface text-ink/80 hover:text-ink'
                   }`}
                 >
@@ -149,7 +149,7 @@ export function ParkingModal() {
                 type="button"
                 onClick={() => setWithin500m(!within500m)}
                 className={`rounded-sm px-2.5 py-1 text-xs font-semibold transition-colors ${
-                  within500m ? 'bg-gold text-[#1a0c08]' : 'border border-hair bg-surface text-ink/80 hover:text-ink'
+                  within500m ? 'bg-gold text-on-gold' : 'border border-hair bg-surface text-ink/80 hover:text-ink'
                 }`}
               >
                 Within 500m
@@ -158,7 +158,7 @@ export function ParkingModal() {
                 type="button"
                 onClick={() => setFreeOnly(!freeOnly)}
                 className={`rounded-sm px-2.5 py-1 text-xs font-semibold transition-colors ${
-                  freeOnly ? 'bg-gold text-[#1a0c08]' : 'border border-hair bg-surface text-ink/80 hover:text-ink'
+                  freeOnly ? 'bg-gold text-on-gold' : 'border border-hair bg-surface text-ink/80 hover:text-ink'
                 }`}
               >
                 Free Only
@@ -167,7 +167,7 @@ export function ParkingModal() {
                 type="button"
                 onClick={() => setAvailableOnly(!availableOnly)}
                 className={`rounded-sm px-2.5 py-1 text-xs font-semibold transition-colors ${
-                  availableOnly ? 'bg-gold text-[#1a0c08]' : 'border border-hair bg-surface text-ink/80 hover:text-ink'
+                  availableOnly ? 'bg-gold text-on-gold' : 'border border-hair bg-surface text-ink/80 hover:text-ink'
                 }`}
               >
                 Available

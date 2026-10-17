@@ -163,6 +163,8 @@ export function Explorer({ preview = false, headingLevel = 'h2' }: { preview?: b
               <NoResults />
             </div>
           ) : (
+            <>
+            <h2 className="sr-only">Pandals</h2>
             <ul
               className={cn(
                 'mt-6 grid gap-3 transition-opacity sm:grid-cols-2 sm:gap-5 xl:grid-cols-3 3xl:grid-cols-4',
@@ -180,6 +182,7 @@ export function Explorer({ preview = false, headingLevel = 'h2' }: { preview?: b
                 </motion.li>
               ))}
             </ul>
+            </>
           )}
 
           {preview && results.length > shown.length && (

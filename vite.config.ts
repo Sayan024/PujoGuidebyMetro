@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig, loadEnv, type Connect, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
@@ -33,7 +34,11 @@ function localApi(env: Record<string, string>): Plugin {
       const response = await route(
         new Request(`http://${req.headers.host ?? 'localhost'}${req.url}`, {
           method: req.method,
-          headers: { 'content-type': 'application/json' },
+          headers: {
+            'content-type': 'application/json',
+            ...(typeof req.headers.origin === 'string' ? { origin: req.headers.origin } : {}),
+            ...(typeof req.headers.host === 'string' ? { host: req.headers.host } : {}),
+          },
           body: req.method === 'POST' ? (Readable.toWeb(req) as unknown as BodyInit) : undefined,
           // Required by Node when the request body is a stream.
           duplex: 'half',
@@ -65,6 +70,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return {
     plugins: [react(), tailwindcss(), localApi(env)],
+    test: { include: ['tests/**/*.test.ts'] },
     resolve: {
       alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
     },

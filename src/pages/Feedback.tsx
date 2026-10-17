@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import { Alpana } from '@/components/ui/Motifs';
 import { Reveal } from '@/components/ui/primitives';
 import { FEEDBACK_FORM_URL, MAX_TEXT, USES } from '@/data/feedback';
-import { submitFeedback, downloadFeedbackCsv } from '@/data/feedbackStore';
 import { usePageTitle } from '@/hooks/useMedia';
+import { sendFeedback } from '@/lib/sendFeedback';
 import { cn } from '@/lib/utils';
 
 const COOLDOWN_MS = 30_000;
@@ -86,18 +86,7 @@ export default function FeedbackPage() {
 
     setStatus('sending');
     try {
-      await submitFeedback({
-        name: 'Website Visitor',
-        email: email.trim(),
-        type: uses.join(', ') || 'General Guide Feedback',
-        rating,
-        message: [
-          worked ? `What worked well: ${worked}` : '',
-          better ? `What could be better: ${better}` : '',
-          wrong ? `Incorrect details reported: ${wrong}` : '',
-        ].filter(Boolean).join('\n\n'),
-        source: 'feedback_page_v2026',
-      });
+      await sendFeedback({ rating, uses, worked, better, wrong, email: email.trim(), trap, elapsed: Date.now() - opened.current });
 
       try {
         localStorage.setItem(STORAGE_KEY, String(Date.now()));
@@ -143,15 +132,6 @@ export default function FeedbackPage() {
                 Open the form <ExternalLink className="size-3.5" aria-hidden="true" />
               </a>
             </p>
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={downloadFeedbackCsv}
-                className="btn btn-sm btn-ghost text-xs"
-              >
-                Export local feedback CSV queue
-              </button>
-            </div>
           </Reveal>
         </div>
 

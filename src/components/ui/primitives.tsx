@@ -193,7 +193,9 @@ export function SmartImage({
           }}
           className={cn(
             'absolute inset-0 size-full object-cover transition-opacity duration-500',
-            state === 'ready' ? 'opacity-100' : 'opacity-0',
+            // Above-the-fold photos paint as soon as they decode; waiting for React to re-render first delays
+            // the largest paint by seconds on a slow phone. Lazy ones keep the gentle fade-in.
+            eager || state === 'ready' ? 'opacity-100' : 'opacity-0',
             imgClassName,
           )}
         />
@@ -219,7 +221,7 @@ export function LineBadge({ line, className }: { line: MetroLineId; className?: 
         'inline-flex h-6 items-center gap-1.5 rounded-sm px-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white',
         className,
       )}
-      style={{ background: `color-mix(in srgb, var(--${line}-line) 82%, #000)` }}
+      style={{ background: `color-mix(in srgb, var(--${line}-line) 62%, #000)` }}
     >
       {LINE_BY_ID[line].short} line
     </span>
@@ -247,7 +249,7 @@ export function EmptyState({
       )}
     >
       <div className="mb-5 grid size-14 place-items-center rounded-full border border-hair text-gold">{icon}</div>
-      <h3 className="font-display text-2xl font-semibold">{title}</h3>
+      <h2 className="font-display text-2xl font-semibold">{title}</h2>
       {children && <p className="mt-2 max-w-md text-sm text-muted">{children}</p>}
       {action && <div className="mt-6 flex flex-wrap justify-center gap-3">{action}</div>}
     </div>

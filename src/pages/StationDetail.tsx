@@ -7,19 +7,19 @@ import { OrangeLineNotice } from '@/components/MetroNotice/OrangeLineNotice';
 import { nearestPandal, stationPandals } from '@/data';
 import { LINE_BY_ID, STATIONS } from '@/data/metroLines';
 import { usePageTitle } from '@/hooks/useMedia';
-import { formatKm } from '@/lib/utils';
+import { formatKm, lineTextColor } from '@/lib/utils';
 
 export default function StationDetail() {
   const { id = '' } = useParams();
   const station = STATIONS[id];
-  usePageTitle(station ? `${station.name} Metro · pandals nearby` : 'Station not found');
+  usePageTitle(station ? `${station.name} Metro Â· pandals nearby` : 'Station not found');
 
   if (!station)
     return (
       <div className="shell pt-36">
         <EmptyState
           icon={<TrainTrack className="size-6" />}
-          title="That station isn’t on our map"
+          title="That station isnâ€™t on our map"
           action={
             <Link to="/explore" className="btn btn-primary">
               Choose a station
@@ -39,7 +39,7 @@ export default function StationDetail() {
     <div className="relative overflow-hidden">
       <Alpana className="pointer-events-none absolute -right-56 -top-20 size-[720px] text-gold opacity-[0.06]" />
       <div className="shell relative pt-28 md:pt-36">
-        <Link to="/explore" className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-muted hover:text-gold-bright">
+        <Link to="/explore" className="inline-flex min-h-8 items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-muted hover:text-gold-bright">
           <ArrowLeft className="size-3.5" aria-hidden="true" /> Pandal Explorer
         </Link>
 
@@ -49,7 +49,7 @@ export default function StationDetail() {
               {station.lines.map((l) => (
                 <LineBadge key={l} line={l} />
               ))}
-              <span className="eyebrow ml-1">Metro station{station.area ? ` · ${station.area}` : ''}</span>
+              <span className="eyebrow ml-1">Metro station{station.area ? ` Â· ${station.area}` : ''}</span>
             </p>
             <h1 className="display mt-4 text-[clamp(2.8rem,8vw,7.5rem)]">{station.name}</h1>
           </Reveal>
@@ -66,7 +66,7 @@ export default function StationDetail() {
           {[
             { label: pandals.length === 1 ? 'Pandal nearby' : 'Pandals nearby', value: <Counter value={pandals.length} /> },
             { label: 'Within 1 km', value: <Counter value={within1} /> },
-            { label: 'Nearest', value: nearest ? formatKm(nearest.distanceKm) : '—' },
+            { label: 'Nearest', value: nearest ? formatKm(nearest.distanceKm) : 'â€”' },
           ].map((s) => (
             <div key={s.label} className="bg-surface px-4 py-5 md:px-7 md:py-6">
               <dd className="display text-[clamp(1.9rem,4vw,3.6rem)] text-gold-bright">{s.value}</dd>
@@ -92,7 +92,7 @@ export default function StationDetail() {
                 ) : (
                   <span className="flex-1 text-xs uppercase tracking-widest text-muted">Terminus</span>
                 )}
-                <span className="flex shrink-0 items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em]" style={{ color: `var(--${lineId}-line)` }}>
+                <span className="flex shrink-0 items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em]" style={{ color: lineTextColor(lineId) }}>
                   <TrainFront className="size-4" aria-hidden="true" /> {line.short}
                 </span>
                 {next ? (
@@ -122,7 +122,7 @@ export default function StationDetail() {
             </ul>
           ) : (
             <EmptyState className="mt-8" icon={<TrainFront className="size-6" />} title="No pandals listed here yet">
-              Nothing in this year’s list is within walking distance of {station.name}. Try the neighbouring stations
+              Nothing in this yearâ€™s list is within walking distance of {station.name}. Try the neighbouring stations
               above.
             </EmptyState>
           )}

@@ -38,7 +38,7 @@ function LineLegend() {
         role="radio"
         aria-checked={line === 'all'}
         onClick={() => setLine('all')}
-        className={cn('h-8 shrink-0 rounded-[2px] px-3 text-[11px] font-bold uppercase tracking-[0.14em]', line === 'all' ? 'bg-gold-bright text-[#1a0c08]' : 'text-muted hover:text-ink')}
+        className={cn('h-8 shrink-0 rounded-[2px] px-3 text-[11px] font-bold uppercase tracking-[0.14em]', line === 'all' ? 'bg-gold-bright text-on-gold' : 'text-muted hover:text-ink')}
       >
         All
       </button>
@@ -270,7 +270,7 @@ export function PujoMap({
               onClick={() => setMode(id)}
               className={cn(
                 'relative flex h-8 items-center gap-2 rounded-[2px] px-3 text-[11px] font-bold uppercase tracking-[0.14em] transition-colors disabled:opacity-40',
-                effective === id ? 'text-[#1a0c08]' : 'text-muted hover:text-ink',
+                effective === id ? 'text-on-gold' : 'text-muted hover:text-ink',
               )}
             >
               {effective === id && (

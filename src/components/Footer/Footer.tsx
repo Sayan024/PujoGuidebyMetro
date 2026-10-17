@@ -42,6 +42,7 @@ export function Footer() {
                 ['/map', 'Pujo Map'],
                 ['/favorites', 'My Puja List & day planner'],
                 ['/about', 'About this guide'],
+                ['/privacy', 'Privacy and terms'],
                 ['/feedback', 'Send feedback'],
               ].map(([to, label]) => (
                 <li key={to}>

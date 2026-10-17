@@ -17,14 +17,14 @@ import { useAppStore } from '@/store/appStore';
 
 function Fact({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
   return (
-    <div className="flex gap-4 border-t border-hair-soft py-4">
-      <span className="mt-0.5 text-gold" aria-hidden="true">
-        {icon}
-      </span>
-      <div>
-        <dt className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted">{label}</dt>
-        <dd className="mt-1 text-[15px]">{children}</dd>
-      </div>
+    <div className="border-t border-hair-soft py-4">
+      <dt className="flex items-center gap-2.5 text-[10px] font-bold uppercase tracking-[0.22em] text-muted">
+        <span className="text-gold" aria-hidden="true">
+          {icon}
+        </span>
+        {label}
+      </dt>
+      <dd className="mt-1.5 pl-[26px] text-[15px]">{children}</dd>
     </div>
   );
 }
@@ -32,21 +32,21 @@ function Fact({ icon, label, children }: { icon: ReactNode; label: string; child
 export default function PandalDetail() {
   const { id = '' } = useParams();
   const p = PANDAL_BY_ID.get(id);
-  usePageTitle(p ? `${p.name} · ${p.station} Metro` : 'Pandal not found');
+  usePageTitle(p ? `${p.name} Â· ${p.station} Metro` : 'Pandal not found');
 
   if (!p)
     return (
       <div className="shell pt-36">
         <EmptyState
           icon={<SearchX className="size-6" />}
-          title="We couldn’t find that pandal"
+          title="We couldnâ€™t find that pandal"
           action={
             <Link to="/explore" className="btn btn-primary">
               Back to the explorer
             </Link>
           }
         >
-          The link may be out of date, or the pandal has been renamed in this year’s list.
+          The link may be out of date, or the pandal has been renamed in this yearâ€™s list.
         </EmptyState>
       </div>
     );
@@ -68,7 +68,7 @@ export default function PandalDetail() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#120909]/80 to-transparent" />
 
         <div className="shell relative pb-10 pt-32 md:pb-16">
-          <Link to="/explore" className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-muted hover:text-gold-bright">
+          <Link to="/explore" className="inline-flex min-h-8 items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-muted hover:text-gold-bright">
             <ArrowLeft className="size-3.5" aria-hidden="true" /> Pandal Explorer
           </Link>
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }}>
@@ -140,9 +140,9 @@ export default function PandalDetail() {
           )}
           <BusGuideCard pandalId={p.id} />
           <p className="mt-6 border-t border-hair-soft pt-4 text-xs text-muted">
-            {!p.hasPhoto && 'We don’t have a photograph of this pandal yet, so the cover above is an illustration. '}
+            {!p.hasPhoto && 'We donâ€™t have a photograph of this pandal yet, so the cover above is an illustration. '}
             The map marker is placed at the listed walking distance from the station, not at a surveyed address. Use
-            “Get directions” for turn-by-turn walking.
+            â€œGet directionsâ€ for turn-by-turn walking.
           </p>
         </div>
 
@@ -209,7 +209,7 @@ export default function PandalDetail() {
               <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted">
                 <Car className="size-3.5 text-gold" /> Parking Near Pandal
               </span>
-              <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
+              <span className="text-[10px] text-ok font-bold uppercase tracking-wider">
                 {p.parking && p.parking.length > 0 ? 'Verified' : 'Public Bays'}
               </span>
             </div>
@@ -230,7 +230,7 @@ export default function PandalDetail() {
           {/* Verification & Report Correction */}
           <div className="mt-5 flex items-center justify-between border-t border-hair-soft pt-4 text-xs text-muted">
             <span className="flex items-center gap-1 text-[11px]">
-              <ShieldCheck className="size-3.5 text-emerald-400" />
+              <ShieldCheck className="size-3.5 text-ok" />
               {p.verificationStatus === 'verified' ? 'Verified 2026' : 'Community Data'}
             </span>
             <button
@@ -243,7 +243,7 @@ export default function PandalDetail() {
                   type: 'Incorrect information on pandal',
                 });
               }}
-              className="inline-flex items-center gap-1 font-semibold text-gold-light hover:underline"
+              className="inline-flex min-h-8 items-center gap-1 font-semibold text-gold-light hover:underline"
             >
               <Flag className="size-3" /> Report incorrect info
             </button>
