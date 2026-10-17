@@ -10,7 +10,6 @@ import { MetroDiscovery } from '@/components/MetroSelector/MetroDiscovery';
 import { PujaCalendar } from '@/components/PujaCalendar/PujaCalendar';
 import { TravelAdvisory } from '@/components/TravelAdvisory/TravelAdvisory';
 import { SharadShammanSection } from '@/components/Awards/SharadShammanSection';
-import { ThemeGallery } from '@/components/ThemeGallery/ThemeGallery';
 import { Reveal, SectionHeading } from '@/components/ui/primitives';
 import { TOTAL_PANDALS } from '@/data';
 import { useIsDesktop, useNearViewport, usePageTitle } from '@/hooks/useMedia';
@@ -130,30 +129,7 @@ export default function Home() {
       {/* 9. Asian Paints Sharad Shamman 2026 shortlist */}
       <SharadShammanSection />
 
-      {/* 10. 2026 Theme Gallery */}
-      <section id="themes" aria-labelledby="themes-title" className="shell pt-24 md:pt-36">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHeading
-            eyebrow="Theme discovery"
-            title={
-              <span id="themes-title">
-                2026 theme <em className="font-medium text-gold">gallery</em>
-              </span>
-            }
-            lead="From three-hundred-year-old thakurdalans to walk-through installations — browse the season by what you want to see."
-          />
-          <Reveal delay={0.1}>
-            <Link to="/themes" className="btn btn-ghost">
-              All themes <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
-          </Reveal>
-        </div>
-        <div className="mt-10 md:mt-14">
-          <ThemeGallery />
-        </div>
-      </section>
-
-      {/* 11. My Puja List */}
+      {/* 10. My Puja List */}
       <MyPujaListSection />
 
       {/* 12. Community Feedback & Reporting */}
