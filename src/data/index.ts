@@ -3,6 +3,7 @@ import { HOWRAH_PANDALS } from './howrahPandals.ts';
 import { COMMUNITY_PARAS } from './communityParas.ts';
 import { getParkingForPandal } from './parking.ts';
 import { LOCATION_FIXES, SOUTH_KOLKATA_ADDITIONS, alignToMetro } from './southKolkata.ts';
+import { PIN_FIXES, PUJO_MAP_ADDITIONS } from './pujoMap.ts';
 import { applyThemeUpdate } from './themeUpdates.ts';
 import { METRO_LINES } from './metroLines.ts';
 import type { MetroLineId, Pandal } from './types.ts';
@@ -12,10 +13,18 @@ export * from './parking.ts';
 export * from './howrahPandals.ts';
 export * from './communityParas.ts';
 
+/** Moves a pandal to its checked position; re-ties parking if that changes its station. */
+function relocate(p: Pandal): Pandal {
+  const fix = LOCATION_FIXES[p.id] ?? PIN_FIXES[p.id];
+  if (!fix) return p;
+  const moved = alignToMetro(p, ...fix);
+  if (moved.stationId === p.stationId) return moved;
+  const parking = getParkingForPandal(moved.id, moved.stationId);
+  return { ...moved, parking: parking.length > 0 ? parking : undefined };
+}
+
 export const PANDALS: Pandal[] = [
   ...BASE_PANDALS.map((p) => {
-    const fix = LOCATION_FIXES[p.id];
-    if (fix) p = alignToMetro(p, ...fix);
     const parking = getParkingForPandal(p.id, p.stationId);
     return {
       ...p,
@@ -28,8 +37,13 @@ export const PANDALS: Pandal[] = [
   }),
   ...HOWRAH_PANDALS,
   ...COMMUNITY_PARAS,
-  ...SOUTH_KOLKATA_ADDITIONS.map((p) => ({ ...p, parking: getParkingForPandal(p.id, p.stationId) })),
-].map(applyThemeUpdate);
+  ...[...SOUTH_KOLKATA_ADDITIONS, ...PUJO_MAP_ADDITIONS].map((p) => {
+    const parking = getParkingForPandal(p.id, p.stationId);
+    return { ...p, parking: parking.length > 0 ? parking : undefined };
+  }),
+]
+  .map(relocate)
+  .map(applyThemeUpdate);
 
 export const PANDAL_BY_ID = new Map<string, Pandal>(PANDALS.map((p) => [p.id, p]));
 

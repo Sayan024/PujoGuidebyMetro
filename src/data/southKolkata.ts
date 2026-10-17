@@ -122,7 +122,7 @@ export function alignToMetro(p: Pandal, lat: number, lng: number): Pandal {
     line: station.lines.includes(p.line) ? p.line : station.lines[0],
     distanceKm,
     walkingMinutes: Math.round(distanceKm * 11),
-    access: distanceKm > 2 ? (p.access ?? 'auto') : p.access,
+    access: distanceKm > 4 ? 'cab' : distanceKm > 2 ? (p.access ?? 'auto') : p.access,
     metroExit: moved ? `${station.name} Metro` : p.metroExit,
     latitude: lat,
     longitude: lng,
@@ -130,7 +130,8 @@ export function alignToMetro(p: Pandal, lat: number, lng: number): Pandal {
   };
 }
 
-const para = (id: string, name: string, lat: number, lng: number, locality: string, description: string, extra: Partial<Pandal> = {}): Pandal =>
+/** A new pandal record, tied to its nearest Metro station. */
+export const newPandal = (id: string, name: string, lat: number, lng: number, locality: string, description: string, extra: Partial<Pandal> = {}): Pandal =>
   alignToMetro(
     {
       id,
@@ -171,25 +172,25 @@ const para = (id: string, name: string, lat: number, lng: number, locality: stri
 /** Pandals on the hopping maps that the guide did not list before. */
 export const SOUTH_KOLKATA_ADDITIONS: Pandal[] = [
   // Khidirpur cluster, the northern end of the Behala route
-  para('kidderpore-25-pally', 'Kidderpore 25 Pally', 22.53848, 88.3266, 'Khidirpur', 'One of the Khidirpur cluster at the top of the Diamond Harbour Road route, a short walk from 74 Pally, Kabitirtha and Nabarag.'),
-  para('kidderpore-74-pally', 'Kidderpore 74 Pally', 22.53978, 88.32512, 'Khidirpur', 'Khidirpur neighbourhood puja, a few lanes from 25 Pally; see the whole Khidirpur cluster in one walk.'),
-  para('kabitirtha-sarbojanin', 'Kabitirtha Sarbojanin', 22.54113, 88.3216, 'Khidirpur', 'Watganj–Khidirpur puja off Kabitirtha Sarani, known for large themed pandals. Next door to Nabarag.'),
-  para('nabarag-khidirpur', 'Nabarag', 22.5413, 88.32079, 'Khidirpur', 'Hemchandra Street, Watganj. Pairs with Kabitirtha, two minutes away.'),
-  para('kidderpore-pally-sharadiya', 'Kidderpore Pally Sharadiya', 22.54306, 88.32109, 'Khidirpur', 'The last stop of the Khidirpur cluster, north of Kabitirtha.'),
+  newPandal('kidderpore-25-pally', 'Kidderpore 25 Pally', 22.53848, 88.3266, 'Khidirpur', 'One of the Khidirpur cluster at the top of the Diamond Harbour Road route, a short walk from 74 Pally, Kabitirtha and Nabarag.'),
+  newPandal('kidderpore-74-pally', 'Kidderpore 74 Pally', 22.53978, 88.32512, 'Khidirpur', 'Khidirpur neighbourhood puja, a few lanes from 25 Pally; see the whole Khidirpur cluster in one walk.'),
+  newPandal('kabitirtha-sarbojanin', 'Kabitirtha Sarbojanin', 22.54113, 88.3216, 'Khidirpur', 'Watganj–Khidirpur puja off Kabitirtha Sarani, known for large themed pandals. Next door to Nabarag.'),
+  newPandal('nabarag-khidirpur', 'Nabarag', 22.5413, 88.32079, 'Khidirpur', 'Hemchandra Street, Watganj. Pairs with Kabitirtha, two minutes away.'),
+  newPandal('kidderpore-pally-sharadiya', 'Kidderpore Pally Sharadiya', 22.54306, 88.32109, 'Khidirpur', 'The last stop of the Khidirpur cluster, north of Kabitirtha.'),
   // Behala, Diamond Harbour Road
-  para('players-corner-behala', "Players' Corner", 22.48533, 88.3138, 'Behala', "Neighbourhood puja off Janakalyan Road by Behala Chowrasta, popularly known as Sourav Ganguly's para puja.", { popularity: 76 }),
-  para('kfr-ground-behala', 'KFR Ground Puja', 22.50234, 88.32171, 'Behala', 'Puja on KFR Ground near the Behala 14 No. bus stop, in the same walk as Behala Friends, Notun Dal and Debdaru Fatak.'),
+  newPandal('players-corner-behala', "Players' Corner", 22.48533, 88.3138, 'Behala', "Neighbourhood puja off Janakalyan Road by Behala Chowrasta, popularly known as Sourav Ganguly's para puja.", { popularity: 76 }),
+  newPandal('kfr-ground-behala', 'KFR Ground Puja', 22.50234, 88.32171, 'Behala', 'Puja on KFR Ground near the Behala 14 No. bus stop, in the same walk as Behala Friends, Notun Dal and Debdaru Fatak.'),
   // Hazra
-  para('golmath-durga-puja', 'Golmath Durga Puja Samiti', 22.52693, 88.34954, 'Bhowanipore', 'Rakhal Mukherjee Road, between Abasar and Bakulbagan, north of Hazra More.'),
+  newPandal('golmath-durga-puja', 'Golmath Durga Puja Samiti', 22.52693, 88.34954, 'Bhowanipore', 'Rakhal Mukherjee Road, between Abasar and Bakulbagan, north of Hazra More.'),
   // Jadavpur, off Gariahat Road
-  para('jodhpur-park-sarbojanin', 'Jodhpur Park Sarbojanin', 22.50458, 88.3656, 'Jodhpur Park', 'Big-budget South Kolkata puja on Jodhpur Park Road, left off Gariahat Road on the way to Jadavpur. 95 Pally is a few minutes north.', { popularity: 80 }),
-  para('95-pally-jodhpur-park', '95 Pally', 22.50834, 88.36323, 'Jodhpur Park', 'Dhakuria–Jodhpur Park puja on Rahim Ostagar Lane; walk on to Jodhpur Park Sarbojanin.', { popularity: 76 }),
-  para('babubagan-sarbojanin', 'Babubagan Sarbojanin', 22.50793, 88.36864, 'Dhakuria', 'Babu Bagan Lane, Dhakuria, right off Gariahat Road opposite Jodhpur Park.', { popularity: 74 }),
-  para('netaji-jatiya-sebadal-ranikuthi', 'Ranikuthi Netaji Jatiya Sebadal', 22.48334, 88.35464, 'Ranikuthi', 'Ranikuthi puja on the road from Tollygunge towards Garia, near Netaji (Kudghat) Metro.'),
+  newPandal('jodhpur-park-sarbojanin', 'Jodhpur Park Sarbojanin', 22.50458, 88.3656, 'Jodhpur Park', 'Big-budget South Kolkata puja on Jodhpur Park Road, left off Gariahat Road on the way to Jadavpur. 95 Pally is a few minutes north.', { popularity: 80 }),
+  newPandal('95-pally-jodhpur-park', '95 Pally', 22.50834, 88.36323, 'Jodhpur Park', 'Dhakuria–Jodhpur Park puja on Rahim Ostagar Lane; walk on to Jodhpur Park Sarbojanin.', { popularity: 76 }),
+  newPandal('babubagan-sarbojanin', 'Babubagan Sarbojanin', 22.50793, 88.36864, 'Dhakuria', 'Babu Bagan Lane, Dhakuria, right off Gariahat Road opposite Jodhpur Park.', { popularity: 74 }),
+  newPandal('netaji-jatiya-sebadal-ranikuthi', 'Ranikuthi Netaji Jatiya Sebadal', 22.48334, 88.35464, 'Ranikuthi', 'Ranikuthi puja on the road from Tollygunge towards Garia, near Netaji (Kudghat) Metro.'),
   // Garia
-  para('garia-pancha-durga', 'Garia Pancha Durga', 22.46154, 88.3783, 'Garia', 'Kamdhari Road, Garia, near Garia Naba Durga at the southern end of the route.'),
+  newPandal('garia-pancha-durga', 'Garia Pancha Durga', 22.46154, 88.3783, 'Garia', 'Kamdhari Road, Garia, near Garia Naba Durga at the southern end of the route.'),
   // Park Street
-  para(
+  newPandal(
     'allen-park-park-street',
     'Allen Park Durga Puja (Kolkata Sanatani Sangha)',
     22.55028,
