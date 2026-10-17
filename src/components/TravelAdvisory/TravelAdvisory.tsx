@@ -2,8 +2,19 @@ import { AnimatePresence, motion } from 'motion/react';
 import { Footprints, TrainFront, TriangleAlert, Users, Megaphone } from 'lucide-react';
 import { useState, type ReactNode } from 'react';
 import { Reveal } from '@/components/ui/primitives';
+import { LINE_ORDER } from '@/data/metroLines';
+import { LINE_SERVICES, PHASE_LABEL, SERVICE_SOURCE_NOTE, type ServicePhase } from '@/data/metroServices';
 import { currentPujaDay, PUJA_DAYS } from '@/data/pujaDates';
 import { cn } from '@/lib/utils';
+
+/** Which special timetable applies to each puja day (Mahalaya runs the normal one). */
+const PHASE_OF_DAY: Record<string, ServicePhase | undefined> = {
+  sashthi: 'sashthi',
+  saptami: 'saptami-navami',
+  ashtami: 'saptami-navami',
+  navami: 'saptami-navami',
+  dashami: 'dashami',
+};
 
 const CROWD_COLOURS = ['#10B981', '#84cc16', '#EAB308', '#F97316', '#E52D3F'];
 
@@ -26,6 +37,7 @@ export function TravelAdvisory() {
     return today.id === 'mahalaya' ? 'ashtami' : today.id;
   });
   const day = PUJA_DAYS.find((d) => d.id === dayId)!;
+  const phase = PHASE_OF_DAY[day.id];
   const a = day.advisory;
   const severe = a.crowd >= 4;
 
@@ -126,6 +138,33 @@ export function TravelAdvisory() {
             </Indicator>
           </div>
         </div>
+        {phase && (
+          <div className="border-t border-hair px-6 py-6 md:px-10">
+            <h3 className="flex flex-wrap items-baseline gap-x-3 text-[10px] font-bold uppercase tracking-[0.22em] text-muted">
+              <span className="text-gold">Metro by line</span>
+              <span>{PHASE_LABEL[phase]}</span>
+            </h3>
+            <ul className="mt-4 grid gap-px overflow-hidden border border-hair-soft bg-hair-soft sm:grid-cols-2 xl:grid-cols-5">
+              {LINE_ORDER.map((id) => {
+                const line = LINE_SERVICES[id];
+                const s = line.phases[phase];
+                return (
+                  <li key={id} className="bg-surface px-4 py-3">
+                    <p className="flex items-center gap-2 text-xs font-bold">
+                      <span className="size-2.5 rounded-full" style={{ background: `var(--${id}-line)` }} aria-hidden="true" />
+                      {line.name}
+                    </p>
+                    <p className={cn('mt-1.5 font-display text-[17px] font-semibold leading-tight', s.hours ? 'text-ink' : 'text-red')}>
+                      {s.hours ?? 'Not running'}
+                    </p>
+                    <p className="mt-1 text-[11px] leading-snug text-muted">{s.detail}</p>
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="mt-3 text-[11px] text-muted">{SERVICE_SOURCE_NOTE}</p>
+          </div>
+        )}
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-hair bg-surface-2/70 px-6 py-3.5 md:px-10">
           <p className="flex items-center gap-2 text-xs text-muted">
             <span className="size-2 rounded-full bg-red animate-pulse" />

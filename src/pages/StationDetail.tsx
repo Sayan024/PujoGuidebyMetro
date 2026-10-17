@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { PandalCard } from '@/components/PandalCard/PandalCard';
 import { Counter, EmptyState, LineBadge, Reveal } from '@/components/ui/primitives';
 import { Alpana } from '@/components/ui/Motifs';
+import { OrangeLineNotice } from '@/components/MetroNotice/OrangeLineNotice';
 import { nearestPandal, stationPandals } from '@/data';
 import { LINE_BY_ID, STATIONS } from '@/data/metroLines';
 import { usePageTitle } from '@/hooks/useMedia';
@@ -58,6 +59,8 @@ export default function StationDetail() {
             </Link>
           </Reveal>
         </div>
+
+        <OrangeLineNotice stationId={station.id} className="mt-8" />
 
         <dl className="mt-10 grid grid-cols-3 gap-px overflow-hidden border border-hair bg-hair">
           {[

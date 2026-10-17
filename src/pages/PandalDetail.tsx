@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { InstagramLink, PandalCard, SaveButton } from '@/components/PandalCard/PandalCard';
 import { PandalCover } from '@/components/PandalCard/PandalCover';
+import { OrangeLineNotice } from '@/components/MetroNotice/OrangeLineNotice';
 import { MapShareButton } from '@/components/Share/MapShare';
 import { EmptyState, LineBadge } from '@/components/ui/primitives';
 import { PANDAL_BY_ID, stationPandals } from '@/data';
@@ -89,6 +90,8 @@ export default function PandalDetail() {
           </motion.div>
         </div>
       </header>
+
+      <OrangeLineNotice stationId={p.stationId} className="shell mt-8" />
 
       <div className="shell grid gap-10 pt-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(320px,0.8fr)] lg:gap-16 lg:pt-16">
         <div>

@@ -67,11 +67,11 @@ The "Open Now" filter treats 14–21 October 2026 (Chaturthi to Dashami, India t
 | Day | Crowd (1–5) | Metro | Extra walking time | Note |
 |---|---|---|---|---|
 | Mahalaya | 2 · Moderate | Regular weekend timetable | +0–5 min | Early crowds near the river ghats; normal services through the day. A calm day for Kumartuli. Use Shobhabazar Sutanuti and walk west towards the ghats. |
-| Mahasashthi | 3 · Busy | Extended evening services | +5–10 min | Office-hour and pandal crowds overlap between 5 and 9 PM. The best night for the big-ticket theme pujas before the weekend rush arrives. |
-| Mahasaptami | 4 · Heavy | Special services, late into the night | +10–15 min | Entry is regulated at the busiest stations after 6 PM. Queues build at Kalighat, Rabindra Sarovar and Shyambazar. Start north, finish south. |
-| Maha Ashtami | 5 · Very heavy | Special services through the night | +15–20 min | Expect platform holding and one-way exits at major stations. Expect heavy crowds around major stations during Ashtami and Navami. Allow additional walking time. |
-| Mahanavami | 5 · Very heavy | Special services through the night | +15–20 min | The busiest night of the year on the Blue Line. Expect heavy crowds around major stations during Ashtami and Navami. Allow additional walking time. |
-| Vijaya Dashami | 3 · Busy | Reduced holiday timetable | +5–10 min | Immersion processions close roads near the ghats from the afternoon. Bonedi Bari immersions begin early. Roads to Babughat and Bagbazar ghat close first. |
+| Mahasashthi | 3 · Busy | Full day, 6 AM – 11 PM on Blue and Green | +5–10 min | Blue and Green run about every 6 min at peak. Orange runs its last day before the break (to 8:45 PM). The best night for the big-ticket theme pujas before the weekend rush arrives. |
+| Mahasaptami | 4 · Heavy | Blue and Green run from 1 PM to about 4 AM | +10–15 min | No trains before 1 PM (1:30 PM on Green). Yellow and Purple stop by about 11 PM. No Orange Line trains. Queues build at Kalighat, Rabindra Sarovar and Shyambazar. Start north, finish south. |
+| Maha Ashtami | 5 · Very heavy | Blue and Green run from 1 PM to about 4 AM | +15–20 min | No trains for the morning Pushpanjali and Kumari Puja: service starts at 1 PM. No Orange Line trains. Expect heavy crowds around major stations during Ashtami and Navami. Allow additional walking time. |
+| Mahanavami | 5 · Very heavy | Blue and Green run from 1 PM to about 4 AM | +15–20 min | The last overnight Metro of the festival: Blue and Green only. No Orange Line trains. Expect heavy crowds around major stations during Ashtami and Navami. Allow additional walking time. |
+| Vijaya Dashami | 3 · Busy | Short day: Blue and Green 1 PM – 10:30 PM | +5–10 min | Blue every 8 min, Green every 15 min. Immersion processions close roads near the ghats from the afternoon. No Orange Line trains. Bonedi Bari immersions begin early. Roads to Babughat and Bagbazar ghat close first. |
 
 ## Metro lines
 
