@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { InstagramLink, PandalCard, SaveButton } from '@/components/PandalCard/PandalCard';
 import { PandalCover } from '@/components/PandalCard/PandalCover';
+import { BusGuideCard } from '@/components/BusGuide/BusGuideCard';
 import { OrangeLineNotice } from '@/components/MetroNotice/OrangeLineNotice';
 import { MapShareButton } from '@/components/Share/MapShare';
 import { EmptyState, LineBadge } from '@/components/ui/primitives';
@@ -137,6 +138,7 @@ export default function PandalDetail() {
               </ul>
             </section>
           )}
+          <BusGuideCard pandalId={p.id} />
           <p className="mt-6 border-t border-hair-soft pt-4 text-xs text-muted">
             {!p.hasPhoto && 'We don’t have a photograph of this pandal yet, so the cover above is an illustration. '}
             The map marker is placed at the listed walking distance from the station, not at a surveyed address. Use

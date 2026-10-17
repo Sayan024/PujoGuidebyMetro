@@ -2,7 +2,7 @@
 
 > A guide to Durga Puja pandals and Bonedi Bari (old family) pujas in Kolkata, India, organised by the Kolkata Metro station you walk from. This file is the complete dataset behind the web app, written for AI assistants.
 
-- Coverage: 391 pandals near 47 Metro stations on 5 lines
+- Coverage: 394 pandals near 47 Metro stations on 5 lines
 - Festival: Durga Puja 2026 (Bengali year 1433), Kolkata, West Bengal
 - Created by: Sayan Banerjee
 - Generated: 2026-10-17 from the app's own data files
@@ -17,9 +17,9 @@
 
 ## What is uncertain — say so when it matters
 
-- **Themes:** only 102 of 391 pandals have a theme on record. "—" in the Theme column means not announced or not known, not "no theme".
+- **Themes:** only 102 of 394 pandals have a theme on record. "—" in the Theme column means not announced or not known, not "no theme".
 - **Photos:** the app has a real photograph for 31 pandals. The rest show an illustrated cover.
-- **Notes:** 262 pandals have notes from the compiler; the others have none.
+- **Notes:** 265 pandals have notes from the compiler; the others have none.
 - **Map positions:** Metro stations are at approximately real coordinates. Pandal markers are placed at the listed distance from the station on an arbitrary bearing, so they are not surveyed addresses. Do not quote pandal coordinates or give turn-by-turn directions from this file.
 - **Station coordinates and station lists** were compiled by hand and are not from an official Metro Railway source.
 - **Travel advisory and crowd levels** are indicative, based on previous years.
@@ -77,11 +77,11 @@ The "Open Now" filter treats 14–21 October 2026 (Chaturthi to Dashami, India t
 
 | Line | Line id | Route | Pandals | Stations with pandals |
 |---|---|---|---|---|
-| Blue Line | blue | Dakshineswar ↔ Shahid Khudiram | 224 | 23 of 25 |
-| Green Line | green | Howrah Maidan ↔ Sector V | 82 | 10 of 12 |
-| Purple Line | purple | Joka ↔ Majerhat | 51 | 6 of 7 |
+| Blue Line | blue | Dakshineswar ↔ Shahid Khudiram | 228 | 23 of 25 |
+| Green Line | green | Howrah Maidan ↔ Sector V | 81 | 10 of 12 |
+| Purple Line | purple | Joka ↔ Majerhat | 52 | 6 of 7 |
 | Orange Line | orange | Satyajit Ray ↔ Beleghata | 30 | 6 of 8 |
-| Yellow Line | yellow | Noapara ↔ Jai Hind (Airport) | 4 | 2 of 4 |
+| Yellow Line | yellow | Noapara ↔ Jai Hind (Airport) | 3 | 2 of 4 |
 
 Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green). The Purple and Orange lines have no Metro link to the rest of the network here; the day planner suggests a cab or bus between them.
 
@@ -89,7 +89,7 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 
 | Category | Pandals |
 |---|---|
-| Heritage Kolkata | 308 |
+| Heritage Kolkata | 311 |
 | Traditional Bonedi Bari | 29 |
 | Contemporary Installation | 22 |
 | Art & Innovation | 14 |
@@ -262,7 +262,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 
 - **CIT Sarbojanin:** Neighbourhood puja in Tala, part of the Tala Belgachia Dakshineswar cluster.
 
-#### Belgachia — 23 pandals · station id `belgachia`
+#### Belgachia — 25 pandals · station id `belgachia`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -289,6 +289,8 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Dum Dum Park Sarbojanin | 3.6 km | 40 min | — | Ride (auto) | day | 86 | dum-dum-park-sarbojanin |
 | Dum Dum Park Yubak Brinda | 3.7 km | 41 min | — | Ride (auto) | day | 84 | dum-dum-park-yubak-brinda |
 | Dum Dum Park Tarun Dal | 3.9 km | 43 min | — | Ride (auto) | day | 85 | dum-dum-park-tarun-dal |
+| Kestopur Prafullakanan (Poschim) Adhibasibrinda | 4.5 km | 50 min | — | Ride (cab) | day | 70 | kestopur-prafullakanan-poschim-adhibasibrinda |
+| Arjunpur Amra Sabai Club | 5.1 km | 56 min | — | Ride (cab) | day | 70 | arjunpur-amra-sabai-club |
 
 - **Tala Prattoy:** 101st year on a new, smaller site; go early
 - **Laketown Nutan Palli Pradeep Sangha:** Neighbourhood puja in Lake Town, part of the Dum Dum & Lake Town cluster.
@@ -503,13 +505,15 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 
 - **Allen Park Durga Puja (Kolkata Sanatani Sangha):** Park Street's first-ever Durga Puja, in Allen Park, the home of the Christmas festival. Theme by Subrata Bandyopadhyay on Shiva's leela: the Rudra form, his love for Parvati, and the tandava of creation and destruction. Varanasi-style evening aarti from Chaturthi to Dashami, Baul and folk programmes from Purulia, Bankura and North Bengal, all-night jagaran from Ashtami to Navami and sindoor khela on Dashami. Expect big crowds; the Park Street–Middleton Street stretch may close to cars.
 
-#### Rabindra Sadan — 1 pandal · station id `rabindra-sadan`
+#### Rabindra Sadan — 2 pandals · station id `rabindra-sadan`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Chakraberia Sarbojanin | 1.2 km | 13 min | — | — | day | 70 | chakraberia-sarbojanin |
+| Kidderpore Udayan | 3.4 km | 37 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | kidderpore-udayan |
 
 - **Chakraberia Sarbojanin:** Also reachable from Netaji Bhavan
+- **Kidderpore Udayan:** Khidirpur puja at the northern end of the Kabitirtha and Nabarag lanes.
 
 #### Netaji Bhavan (Bhowanipore) — 11 pandals · station id `netaji-bhavan`
 
@@ -559,7 +563,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **Falguni Sangha:** Neighbourhood puja in Gariahat, part of the Gariahat & Dhakuria cluster.
 - **Ballygunge 21 Pally:** Neighbourhood puja in Adi Ballygunge, part of the Ballygunge & Park Circus cluster.
 
-#### Kalighat — 24 pandals · station id `kalighat`
+#### Kalighat — 25 pandals · station id `kalighat`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -577,6 +581,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Bengal United Club | 800 m | 9 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | bengal-united-club |
 | Chetla Sarbasadharaner Club | 800 m | 9 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | chetla-sarbasadharaner-club |
 | Chetla Agrani | 1.1 km | 12 min | Vishva Rupe Vishwarupini | VIP Pass, Petpujo, Popular | day | 96 | chetla-agrani |
+| Chetla Akal Bodhan | 1.2 km | 13 min | — | Chetla, South Kolkata | day | 70 | chetla-akal-bodhan |
 | Tridhara Sammilani | 1.3 km | 14 min | Surasur (Gods and Demons) | VIP Pass, Petpujo, Popular | 24h | 96 | tridhara-sammilani |
 | Ballygunge Cultural | 1.3 km | 14 min | Jojon (Joining) | 2026 Theme, VIP Pass, Petpujo, Popular | day | 96 | ballygunge-cultural |
 | Manoharpukur Youngs | 1.3 km | 14 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | manoharpukur-youngs |
@@ -599,6 +604,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **Bengal United Club:** Neighbourhood puja in Kalighat, part of the Kalighat & Rashbehari cluster.
 - **Chetla Sarbasadharaner Club:** Neighbourhood puja in Chetla, part of the Kalighat & Rashbehari cluster.
 - **Chetla Agrani:** Durga as protector of the universe, with the Vishwarupa of Vishnu. Chetla; auto advised from the Metro
+- **Chetla Akal Bodhan:** Akalbodhan Durga Mandir puja in Chetla, beside Chetla Agrani and Alipore Sarbojanin.
 - **Tridhara Sammilani:** Mythological battles: Ram and Ravana, Krishna and Kansa, Durga and the asuras, in artwork, light and sculpture. Look for a 5.5 ft Durga made from 13,000 recycled pens
 - **Ballygunge Cultural:** Built from chip packets, bottles and old flex
 - **Manoharpukur Youngs:** Neighbourhood puja in Manoharpukur Road, part of the Kalighat & Rashbehari cluster.
@@ -875,7 +881,7 @@ Stations in order: Howrah Maidan → Howrah → Mahakaran → Esplanade → Seal
 - **Salt Lake GC Block:** Neighbourhood puja in Salt Lake Sector III, part of the Salt Lake Sector III cluster.
 - **Salt Lake AA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 
-#### Central Park — 16 pandals · station id `central-park`
+#### Central Park — 15 pandals · station id `central-park`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -886,7 +892,6 @@ Stations in order: Howrah Maidan → Howrah → Mahakaran → Esplanade → Seal
 | Salt Lake AG Block | 1.7 km | 19 min | — | — | 24h | 70 | salt-lake-ag-block |
 | Salt Lake AH Block | 1.7 km | 19 min | — | — | 24h | 70 | salt-lake-ah-block |
 | Masterda Smriti Sangha (Prafulla Kanan) | 2.3 km | 25 min | — | Ride (cab) | day | 70 | masterda-smriti-sangha-prafulla-kanan |
-| Kestopur Prafullakanan (Poschim) Adhibasibrinda | 2.3 km | 25 min | — | Ride (cab) | day | 70 | kestopur-prafullakanan-poschim-adhibasibrinda |
 | Bangur Avenue C Block | 2.5 km | 28 min | — | Ride (auto) | day | 70 | bangur-avenue-c-block |
 | Bangur Avenue Protirodh Bahini | 2.6 km | 29 min | — | Dum Dum & Lake Town, North Kolkata, Ride (auto) | day | 64 | bangur-avenue-protirodh-bahini |
 | Keshtopur Prafulla Kanan Paschim Adhibasi Brinda | 2.7 km | 30 min | — | Kestopur, VIP Road, Est 1968, Grand Pandal, Ride (auto) | 24h | 87 | keshtopur-prafulla-kanan |
@@ -1047,18 +1052,20 @@ Stations in order: Joka → Thakurpukur → Sakher Bazar → Behala Chowrasta �
 - **Behala Club:** Oil as faith, commerce, power and geopolitics, with a satirical edge. On the Asian Paints Sharad Shamman shortlist
 - **Jogajatri Club:** Neighbourhood puja in New Alipore, part of the Tollygunge & New Alipore cluster.
 
-#### Majerhat — 5 pandals · station id `majerhat`
+#### Majerhat — 6 pandals · station id `majerhat`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Kidderpore 25 Pally | 2.6 km | 29 min | Paricharan | Khidirpur, South Kolkata, Ride (auto) | day | 85 | kidderpore-25-pally |
 | Kidderpore 74 Pally | 2.8 km | 31 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 82 | kidderpore-74-pally |
+| Kidderpore 75 Pally | 2.8 km | 31 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | kidderpore-75-pally |
 | Kabitirtha Sarbojanin | 3.0 km | 33 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | kabitirtha-sarbojanin |
 | Nabarag | 3.0 km | 33 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | nabarag-khidirpur |
 | Kidderpore Pally Sharadiya | 3.2 km | 35 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | kidderpore-pally-sharadiya |
 
 - **Kidderpore 25 Pally:** One of the Khidirpur cluster at the top of the Diamond Harbour Road route, a short walk from 74 Pally, Kabitirtha and Nabarag.
 - **Kidderpore 74 Pally:** Khidirpur neighbourhood puja, a few lanes from 25 Pally; see the whole Khidirpur cluster in one walk.
+- **Kidderpore 75 Pally:** Khidirpur neighbourhood puja, a few lanes from 74 Pally and Kabitirtha.
 - **Kabitirtha Sarbojanin:** Watganj–Khidirpur puja off Kabitirtha Sarani, known for large themed pandals. Next door to Nabarag.
 - **Nabarag:** Hemchandra Street, Watganj. Pairs with Kabitirtha, two minutes away.
 - **Kidderpore Pally Sharadiya:** The last stop of the Khidirpur cluster, north of Kabitirtha.
@@ -1155,13 +1162,12 @@ No pandals are listed for: Barun Sengupta, Beleghata.
 
 Stations in order: Noapara → Dum Dum Cantonment → Jessore Road → Jai Hind (Airport).
 
-#### Dum Dum Cantonment — 3 pandals · station id `dum-dum-cantonment`
+#### Dum Dum Cantonment — 2 pandals · station id `dum-dum-cantonment`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Motijheel Sarbojanin | 1.9 km | 21 min | — | Dum Dum & Lake Town, North Kolkata | day | 64 | motijheel-sarbojanin |
 | Yuba Sangha (Nagerbazar) | 2.0 km | 22 min | Ek Pukur Bhalobasa (A Pond Full of Love) | — | day | 70 | nagerbazar-yuba-sangha |
-| Arjunpur Amra Sabai Club | 2.9 km | 32 min | — | Ride (auto) | day | 70 | arjunpur-amra-sabai-club |
 
 - **Motijheel Sarbojanin:** Neighbourhood puja in Motijheel, Dum Dum, part of the Dum Dum & Lake Town cluster.
 - **Yuba Sangha (Nagerbazar):** Bengal's disappearing neighbourhood ponds, with the Telipukur pond as a floating canvas. On the Asian Paints Sharad Shamman shortlist

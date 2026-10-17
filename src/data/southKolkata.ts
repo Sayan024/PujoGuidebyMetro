@@ -195,6 +195,10 @@ export const SOUTH_KOLKATA_ADDITIONS: Pandal[] = [
   newPandal('netaji-jatiya-sebadal-ranikuthi', 'Ranikuthi Netaji Jatiya Sebadal', 22.48334, 88.35464, 'Ranikuthi', 'Ranikuthi puja on the road from Tollygunge towards Garia, near Netaji (Kudghat) Metro.'),
   // Garia
   newPandal('garia-pancha-durga', 'Garia Pancha Durga', 22.46154, 88.3783, 'Garia', 'Kamdhari Road, Garia, near Garia Naba Durga at the southern end of the route.'),
+  // Listed on the Kolkata Bus-O-Pedia puja guide posters; points from OpenStreetMap
+  newPandal('kidderpore-75-pally', 'Kidderpore 75 Pally', 22.5403, 88.32525, 'Khidirpur', 'Khidirpur neighbourhood puja, a few lanes from 74 Pally and Kabitirtha.'),
+  newPandal('kidderpore-udayan', 'Kidderpore Udayan', 22.54565, 88.32165, 'Khidirpur', 'Khidirpur puja at the northern end of the Kabitirtha and Nabarag lanes.'),
+  newPandal('chetla-akal-bodhan', 'Chetla Akal Bodhan', 22.51575, 88.33663, 'Chetla', 'Akalbodhan Durga Mandir puja in Chetla, beside Chetla Agrani and Alipore Sarbojanin.'),
   // Santoshpur (on the Asian Paints Sharad Shamman shortlist; the club's own plot is not mapped, so this is Santoshpur Avenue)
   newPandal('santoshpur-avenue-south-club', 'Santoshpur Avenue South Club', 22.49163, 88.38485, 'Santoshpur', 'Santoshpur Avenue puja, part of the Santoshpur cluster with Lake Pally and Trikon Park.', { popularity: 82 }),
   // Park Street

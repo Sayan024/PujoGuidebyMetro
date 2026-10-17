@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Reveal, SectionHeading, SmartImage } from '@/components/ui/primitives';
 import { Diya, InstagramGlyph } from '@/components/ui/Motifs';
+import { BUS_GUIDE_CREDIT } from '@/data/busGuide';
 import { DHAK_CREDIT } from '@/data/credits';
 import { committeeAccounts, creditedSources, instagramUrl, PUJO_GUIDES } from '@/data/instagram';
 import { BONEDI_COUNT, PANDAL_BY_ID, STATIONS_WITH_PANDALS, TOTAL_PANDALS } from '@/data';
@@ -176,6 +177,23 @@ export default function About() {
                 </li>
               ))}
             </ul>
+
+            <h3 className="mt-8 font-display text-xl font-semibold">Bus routes</h3>
+            <p className="mt-3 max-w-xl text-sm text-muted">
+              The “Reaching it by bus” routes on pandal pages come from the Durga Puja guide posters by{' '}
+              <a href={BUS_GUIDE_CREDIT.site} target="_blank" rel="noreferrer" className="font-semibold text-gold-bright underline-offset-4 hover:underline">
+                {BUS_GUIDE_CREDIT.name}
+              </a>{' '}
+              (
+              <a href={BUS_GUIDE_CREDIT.facebook} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-gold-bright">
+                Facebook
+              </a>
+              ,{' '}
+              <a href={BUS_GUIDE_CREDIT.instagram} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-gold-bright">
+                Instagram
+              </a>
+              ). Bus numbers are copied as they published them and can change during the festival; their app has the latest.
+            </p>
 
             <h3 className="mt-8 font-display text-xl font-semibold">Sound</h3>
             <p className="mt-3 max-w-xl text-sm text-muted">

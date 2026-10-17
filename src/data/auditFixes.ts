@@ -55,11 +55,12 @@ export const AUDIT_STATIONS: Record<string, string> = {
   'rammohan-sammilani': 'mahatma-gandhi-road',
   // Baguiati / Kestopur sit on VIP Road, nearest the Green Line's Central Park and City Centre
   'masterda-smriti-sangha-prafulla-kanan': 'central-park',
-  'kestopur-prafullakanan-poschim-adhibasibrinda': 'central-park',
+  // Kolkata Bus-O-Pedia's Dum Dum Park poster sends Prafullakanan and Arjunpur via Belgachia
+  'kestopur-prafullakanan-poschim-adhibasibrinda': 'belgachia',
   'keshtopur-prafulla-kanan': 'central-park',
   'aswininagar-bandhu-mahal': 'central-park',
   'rail-pukur-united-club': 'central-park',
-  'arjunpur-amra-sabai-club': 'dum-dum-cantonment',
+  'arjunpur-amra-sabai-club': 'belgachia',
   'chinar-park-adhibasibrinda': 'central-park',
   'nagerbazar-yuba-sangha': 'dum-dum-cantonment',
 };
