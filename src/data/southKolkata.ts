@@ -104,13 +104,16 @@ const kmBetween = (aLat: number, aLng: number, bLat: number, bLng: number) => {
 };
 
 /** Ties a pandal to its nearest Metro station, with walking figures from that station. */
-export function alignToMetro(p: Pandal, lat: number, lng: number): Pandal {
+export function alignToMetro(p: Pandal, lat: number, lng: number, forceStationId?: string): Pandal {
   let station = STATIONS[p.stationId];
   let crow = station ? kmBetween(lat, lng, station.lat, station.lng) : Infinity;
   // A listed station follows the Metro's puja advisory and the usual auto routes (Dum Dum Park
   // and Lake Town are reached from Belgachia, not across the canal from Central Park), so it is
   // kept; only the distance is recomputed. New pandals take the nearest station.
-  if (!station)
+  if (forceStationId && STATIONS[forceStationId]) {
+    station = STATIONS[forceStationId];
+    crow = kmBetween(lat, lng, station.lat, station.lng);
+  } else if (!station)
     for (const s of STATION_LIST) {
       const d = kmBetween(lat, lng, s.lat, s.lng);
       if (d < crow) [station, crow] = [s, d];

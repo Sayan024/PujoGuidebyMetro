@@ -8,7 +8,9 @@ import type { Pandal } from './types.ts';
  *
  * Kept apart from the generated pandals.ts so a data rebuild keeps them.
  */
-type Update = Partial<Pick<Pandal, 'theme' | 'artist' | 'description' | 'category' | 'popularity'>>;
+type Update = Partial<Pick<Pandal, 'name' | 'theme' | 'artist' | 'description' | 'category' | 'popularity' | 'traditional'>>;
+
+const NO_ARTIST = 'Not announced';
 
 /**
  * Big-name pujas the source lists left at the default score. Station lists put the most
@@ -68,6 +70,7 @@ export const THEME_UPDATES: Record<string, Update> = {
   },
   'naktala-udayan-sangha': {
     theme: 'Kaler Dhwani (Sound of Time)',
+    artist: 'Anirban Das',
     description: '40th year. One of the big Naktala crowd-pullers; go early or late',
   },
   'kasba-bosepukur-sitala-mandir': {
@@ -96,24 +99,67 @@ export const THEME_UPDATES: Record<string, Update> = {
   'kidderpore-25-pally': { theme: 'Paricharan', artist: 'Bimal Samanta' },
   // North and central Kolkata
   'ahiritola-sarbojanin': {
-    theme: 'Madhuri Mishtir Onneshan (In Search of Sweetness)',
+    theme: 'Maitri Madhuri Anweshane (Searching for Sweet Friendship)',
     artist: 'Manas Das (idea), Subrata Mridha',
     description: "Bengal's mishti and the culture around it, beside the Ganga",
   },
   'dakshindari-youth': { theme: 'Ashwamedher Ghora (The Horse of Ashwamedha)', category: 'Mythology' },
   'beleghata-33-pally': { theme: 'Uddan (Flight)', artist: 'Riju Kar, Ganesh Haloi & Shib Sankar Das' },
-  'hatibagan-sarbojanin': { artist: 'Rabindranath Roy' },
+  'hatibagan-sarbojanin': { theme: 'Chhandachhara Chhannachhara (Rhythmless, Orderless)', artist: 'Rabindranath Roy' },
   'hatibagan-nabin-pally': { artist: 'Arighna Saha' },
   'jagat-mukherjee-park': { artist: 'Abhijit Ghatak; idol by Amal Pal' },
   'chorebagan-sarbojanin': { artist: 'Sushanta Shibani Pal' },
   'santosh-mitra-square': { artist: 'Shibshankar Das' },
   'santosh-mitra-square-sealdah': { artist: 'Shibshankar Das' },
   'taltala-sarbojanin': { artist: 'Amit & Arindam' },
+
+  // ── Content audit, October 2026 ─────────────────────────────────────────────────────────
+  // Corrections and new 2026 reports
+  'college-square': { theme: "Jaipur's Albert Hall Museum", description: 'Replica-inspired pandal after the Albert Hall Museum of Jaipur, known for its illuminated facade. College Street; MG Road and Central Metro are both close' },
+  'college-square-sealdah': { theme: "Jaipur's Albert Hall Museum" },
+  'mohammad-ali-park': { theme: 'Ancient Ram Mandir', description: '58th year. Inspired by ancient temples dedicated to Lord Ram' },
+  'chetla-agrani': {
+    theme: 'Vishva Rupe Vishwarupini',
+    description: 'Durga as protector of the universe, with the Vishwarupa of Vishnu. Chetla; auto advised from the Metro',
+  },
+  'kendua-shanti-sangha-patuli': { theme: 'Aishwaryi', description: '53rd year. A caged woman whose hair becomes a ladder: a critique of the oppression of women. Patuli' },
+  'chaltabagan-lohapatty': { artist: 'Aditi Chakraborty' },
+  'kashi-bose-lane': { artist: 'Anirban Das' },
+  'south-city-mall': { artist: 'Subhankar Dutta', description: "The mall's first-ever Durga Puja, built on its own front on Prince Anwar Shah Road" },
+  'samaj-sebi-sangha': { artist: 'Artists from the Government College of Art and Craft' },
+  'golden-arrow-club': { description: 'Neighbourhood puja on Sardar Sankar Road, Kalighat, part of the Kalighat & Rashbehari cluster.' },
+  'naktala-pally-unnayan-samiti': { name: 'Pally Unnayan Samiti (Paschim Putiary)' },
+
+  // Placeholder themes: a road name or "Sabeki Ekchala Puja" stuck on club pujas, with no 2026 report
+  '64-pally-manoharpukur': { theme: '', artist: NO_ARTIST },
+  'chotushkone-park-kalighat': { theme: '', artist: NO_ARTIST },
+  'barisha-club': { theme: '', category: 'Heritage Kolkata', traditional: false },
+  'barisha-netaji-sangha': { theme: '', category: 'Heritage Kolkata', traditional: false },
+  'barisha-yuba-brinda': { theme: '', category: 'Heritage Kolkata', traditional: false },
+  'barisha-nabin-sangha': { theme: '', category: 'Heritage Kolkata', traditional: false },
+  'barisha-tarun-tirtha': { theme: '', category: 'Heritage Kolkata', traditional: false },
+  'uttar-barisha': { theme: '', category: 'Heritage Kolkata', traditional: false },
+  // Themes and artists with no 2026 report anywhere (Howrah, Beleghata, Baguiati): blank, not invented
+  'shibpur-mandirtala-sarbojanin': { theme: '', artist: NO_ARTIST },
+  'howrah-nabagopal-sporting': { theme: '', artist: NO_ARTIST },
+  'baje-shibpur-sammilani': { theme: '', artist: NO_ARTIST },
+  'kadamtala-sarbojanin': { theme: '', artist: NO_ARTIST },
+  'ramkrishnapur-sarbojanin-howrah': { theme: '', artist: NO_ARTIST },
+  'olabibitala-sarbojanin': { theme: '', artist: NO_ARTIST },
+  'ramkrishnapur-byayam-samity': { theme: '', artist: NO_ARTIST },
+  'salkia-alapani-sangha': { theme: '', artist: NO_ARTIST },
+  'boral-sukanta-sangha': { theme: '', artist: NO_ARTIST },
+  'beliaghata-nabamilan': { theme: '', artist: NO_ARTIST },
+  'keshtopur-prafulla-kanan': { theme: '', artist: NO_ARTIST },
+  'nirvik-sangha-baguiati': { theme: '', artist: NO_ARTIST },
+  'behala-29-palli': { theme: '', artist: NO_ARTIST },
 };
 
 export function applyThemeUpdate(p: Pandal): Pandal {
   const u = THEME_UPDATES[p.id];
   const popularity = Math.max(p.popularity, POPULARITY[p.id] ?? 0);
   if (!u) return popularity === p.popularity ? p : { ...p, popularity };
-  return { ...p, ...u, popularity, theme2026: Boolean(u.theme ?? p.theme) || p.theme2026 };
+  // A theme that was blanked is no longer a "2026 theme".
+  const theme2026 = 'theme' in u ? Boolean(u.theme) : p.theme2026 || Boolean(p.theme);
+  return { ...p, ...u, popularity, theme2026 };
 }

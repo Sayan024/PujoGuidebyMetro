@@ -11,6 +11,16 @@ export const INSTAGRAM: Record<string, string> = {
   'tridhara-sammilani': 'tridhara_akalbodhan',
   'hatibagan-sarbojanin': 'hatibagan_sarbojanin_durgotsav',
   'kumartuli-park': 'kumartulipark',
+  // Opened during the October 2026 audit; each posts as the committee itself.
+  "tala-prattoy": "talaprattoy",
+  "suruchi-sangha": "suruchisangha",
+  "singhi-park": "singhipark",
+  "dum-dum-park-tarun-sangha": "dumdumparktarunsangha",
+  "badamtala-ashar-sangha": "badamtalaasharsangha",
+  "chetla-agrani": "chetla_agrani",
+  "66-pally": "66_pally",
+  "samaj-sebi-sangha": "samaj_sebi",
+  "jagat-mukherjee-park": "jagatmukherjeepark",
 };
 
 export interface InstagramSource {
@@ -38,6 +48,11 @@ export const PUJO_GUIDES: InstagramSource[] = [
   { handle: 'kolkatacityofjoy', note: 'Pandal previews' },
   { handle: 'kalkatian', note: 'Pujo season posts' },
   { handle: 'pixel.tuhin_', note: 'Pandals beyond the city, including Howrah' },
+  { handle: 'thebosetalks', note: 'Pandal walkthroughs from this season' },
+  { handle: 'festive_shorts', note: 'Pandal and idol short reels, many in collaboration with committees' },
+  { handle: 'kolkata_pujo_4u', note: 'Idol and pandal reels' },
+  { handle: 'souradips_photography', note: 'Photographer · pandal walkthroughs' },
+  { handle: 'ayondutta491994', note: 'Cinematic pandal walkthroughs' },
 ];
 
 const HANDLE = /^[a-z0-9._]{1,30}$/i;
@@ -152,6 +167,85 @@ export const REELS: Record<string, PandalReel[]> = {
       title: 'First look at the 2026 Durga pratima',
       by: 'explorewitharitra',
     },
+  ],
+  // Found and independently verified in the October 2026 content audit: each URL was opened and its
+  // caption names the pandal and the 2026 season.
+  "tala-prattoy": [
+    { url: "https://www.instagram.com/reel/Deca72LSDkP/", title: "Walkthrough of the Tala Prattoy 2026 pandal", by: "thebosetalks" },
+    { url: "https://www.instagram.com/reel/DekFS1sERrd/", title: "Maha Shashthi at the pandal", by: "talaprattoy" },
+    { url: "https://www.instagram.com/reel/Dela8lwiosi/", title: "Maha Saptami greetings from the pandal", by: "talaprattoy" },
+  ],
+  "sreebhumi-sporting-club": [
+    { url: "https://www.instagram.com/reel/DeezAOtv3PG/", title: "Inside the 2026 Sreebhumi pandal", by: "festive_shorts" },
+  ],
+  "kumartuli-park": [
+    { url: "https://www.instagram.com/reel/DeldC6lhA40/", title: "Darshan at Kumartuli Park Sarbajanin", by: "thebosetalks" },
+    { url: "https://www.instagram.com/reel/DebyEXyI2DP/", title: "A 2026 reel from the committee", by: "kumartulipark" },
+  ],
+  "suruchi-sangha": [
+    { url: "https://www.instagram.com/reel/DelRP-NvEv3/", title: "Nabapatrika snan (ritual bath) at Suruchi Sangha", by: "suruchisangha" },
+    { url: "https://www.instagram.com/reel/Delts1Av6_5/", title: "The 2026 pandal", by: "suruchisangha" },
+    { url: "https://www.instagram.com/reel/DekAc_DvUxy/", title: "Pandal glimpses on Shashthi", by: "suruchisangha" },
+  ],
+  "singhi-park": [
+    { url: "https://www.instagram.com/reel/Dej-48QEcyi/", title: "Maha Shashthi at Singhi Park", by: "singhipark" },
+  ],
+  "ekdalia-evergreen": [
+    { url: "https://www.instagram.com/reel/DeirdPHJ6h4/", title: "The 2026 idol and pandal", by: "festive_shorts" },
+  ],
+  "dum-dum-park-tarun-sangha": [
+    { url: "https://www.instagram.com/reel/Dej_014CPqz/", title: "Wins Berger Priyo Pujo 2026 for its theme \"Banijye Basate Lakshmi\"", by: "dumdumparktarunsangha" },
+  ],
+  "badamtala-ashar-sangha": [
+    { url: "https://www.instagram.com/reel/DejxF7ShHIq/", title: "Cinematic walkthrough of the temple-style 2026 pandal", by: "ayondutta491994" },
+    { url: "https://www.instagram.com/reel/Deg-qD4MFS4/", title: "The puja begins", by: "badamtalaasharsangha" },
+  ],
+  "chetla-agrani": [
+    { url: "https://www.instagram.com/reel/Deh2dggSi-T/", title: "The lit pandal and idol on Panchami", by: "chetla_agrani" },
+  ],
+  "66-pally": [
+    { url: "https://www.instagram.com/reel/DeGj0vtzOzU/", title: "The 2026 Durga idol revealed", by: "66_pally" },
+  ],
+  "ballygunge-cultural": [
+    { url: "https://www.instagram.com/reel/DeV2yguI1s9/", title: "Complete first look at the 2026 pandal", by: "explorewitharitra" },
+  ],
+  "chorebagan-sarbojanin": [
+    { url: "https://www.instagram.com/reel/DeUtBhfz56u/", title: "Complete first look at the 2026 pandal", by: "explorewitharitra" },
+    { url: "https://www.instagram.com/reel/DeZGacAvUFG/", title: "Visit to the Chorebagan pandal", by: "thebosetalks" },
+  ],
+  "south-city-mall": [
+    { url: "https://www.instagram.com/reel/Deg_djTtZm6/", title: "Opening of South City Mall's first Durga Puja, with an old market and thakurdalan pandal", by: "bongnabangali" },
+  ],
+  "hindustan-park": [
+    { url: "https://www.instagram.com/reel/DedpiLJzxVN/", title: "Pandal and idol made from matchsticks", by: "bongnabangali" },
+  ],
+  "jodhpur-park-sarbojanin": [
+    { url: "https://www.instagram.com/reel/DeccAXKzsEf/", title: "The only Durga in Kolkata that rotates 360°", by: "bongnabangali" },
+  ],
+  "tala-barowari": [
+    { url: "https://www.instagram.com/reel/DeeS1CBvva1/", title: "A walk through the Tala Barowari pandal", by: "souradips_photography" },
+  ],
+  "jagat-mukherjee-park": [
+    { url: "https://www.instagram.com/reel/Dej0dfxxPsL/", title: "Visit to the 2026 Jagat Mukherjee Park pandal", by: "thebosetalks" },
+    { url: "https://www.instagram.com/reel/DdoH1HcgmVc/", title: "A pre-puja reel from the committee", by: "jagatmukherjeepark" },
+  ],
+  "samaj-sebi-sangha": [
+    { url: "https://www.instagram.com/reel/DeeLFUkpZZs/", title: "Opening of the 81st puja, with Raima Sen and other guests", by: "samaj_sebi" },
+  ],
+  "allen-park-park-street": [
+    { url: "https://www.instagram.com/reel/Dego_-tpMBt/", title: "Durga Puja at Allen Park for the first time", by: "festive_shorts" },
+  ],
+  "sikdar-bagan-sadharan-durgotsav": [
+    { url: "https://www.instagram.com/reel/DegFfWkJH8y/", title: "The 2026 Sikdar Bagan pandal", by: "festive_shorts" },
+  ],
+  "barisha-club": [
+    { url: "https://www.instagram.com/reel/DedzAliPL_-/", title: "The 2026 Barisha Club pandal and idol", by: "festive_shorts" },
+  ],
+  "maddox-square": [
+    { url: "https://www.instagram.com/reel/Deeolqtv1v9/", title: "The 2026 idol at Maddox Square", by: "kolkata_pujo_4u" },
+  ],
+  "new-town-sarbojanin": [
+    { url: "https://www.instagram.com/reel/DeemUuuhq7m/", title: "The 2026 New Town Sarbajanin pandal", by: "thebosetalks" },
   ],
 };
 

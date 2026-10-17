@@ -3,6 +3,7 @@ import { HOWRAH_PANDALS } from './howrahPandals.ts';
 import { COMMUNITY_PARAS } from './communityParas.ts';
 import { getParkingForPandal } from './parking.ts';
 import { LOCATION_FIXES, SOUTH_KOLKATA_ADDITIONS, alignToMetro } from './southKolkata.ts';
+import { AUDIT_ALIASES, AUDIT_POSITIONS, AUDIT_STATIONS } from './auditFixes.ts';
 import { PIN_FIXES, PUJO_MAP_ADDITIONS } from './pujoMap.ts';
 import { applyThemeUpdate } from './themeUpdates.ts';
 import { METRO_LINES } from './metroLines.ts';
@@ -15,9 +16,11 @@ export * from './communityParas.ts';
 
 /** Moves a pandal to its checked position; re-ties parking if that changes its station. */
 function relocate(p: Pandal): Pandal {
-  const fix = LOCATION_FIXES[p.id] ?? PIN_FIXES[p.id];
-  if (!fix) return p;
-  const moved = alignToMetro(p, ...fix);
+  // The audit's checked points win, then the OpenStreetMap-verified ones, then the My Maps pins.
+  const fix = AUDIT_POSITIONS[p.id] ?? LOCATION_FIXES[p.id] ?? PIN_FIXES[p.id];
+  const station = AUDIT_STATIONS[p.id];
+  if (!fix && !station) return p;
+  const moved = alignToMetro(p, fix ? fix[0] : p.latitude, fix ? fix[1] : p.longitude, station);
   if (moved.stationId === p.stationId) return moved;
   const parking = getParkingForPandal(moved.id, moved.stationId);
   return { ...moved, parking: parking.length > 0 ? parking : undefined };
@@ -42,10 +45,16 @@ export const PANDALS: Pandal[] = [
     return { ...p, parking: parking.length > 0 ? parking : undefined };
   }),
 ]
+  .filter((p) => !(p.id in AUDIT_ALIASES))
   .map(relocate)
   .map(applyThemeUpdate);
 
 export const PANDAL_BY_ID = new Map<string, Pandal>(PANDALS.map((p) => [p.id, p]));
+// A puja that was listed twice keeps working under its old id (saved lists and shared links).
+for (const [from, to] of Object.entries(AUDIT_ALIASES)) {
+  const kept = PANDAL_BY_ID.get(to);
+  if (kept) PANDAL_BY_ID.set(from, kept);
+}
 
 export const PANDALS_BY_STATION = new Map<string, Pandal[]>();
 for (const p of PANDALS) {
