@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Maximize2, MessageSquareHeart } from 'lucide-react';
+import { ArrowRight, Download, Maximize2, MessageSquareHeart, Route } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Explorer } from '@/components/Explorer/Explorer';
 import { MyPujaListSection } from '@/components/Favorites/MyPujaList';
@@ -33,9 +33,14 @@ function MapChapter() {
           lead={`All ${TOTAL_PANDALS} pandals marked with sacred Durga Trishul markers alongside verified car & bike parking hubs.`}
         />
         <Reveal delay={0.1}>
-          <Link to="/map" className="btn btn-ghost">
-            <Maximize2 className="size-4" aria-hidden="true" /> Full-screen map
-          </Link>
+          <div className="flex flex-wrap gap-2">
+            <Link to="/routes" className="btn btn-ghost">
+              <Route className="size-4" aria-hidden="true" /> Hopping routes
+            </Link>
+            <Link to="/map" className="btn btn-ghost">
+              <Maximize2 className="size-4" aria-hidden="true" /> Full-screen map
+            </Link>
+          </div>
         </Reveal>
       </div>
 

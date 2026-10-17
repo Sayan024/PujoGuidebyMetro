@@ -38,6 +38,7 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm">
               {[
                 ['/explore', 'Pandal Explorer'],
+                ['/routes', 'Pandal-hopping routes'],
                 ['/map', 'Pujo Map'],
                 ['/map?view=police', 'Kolkata Police Traffic Map'],
                 ['/themes', '2026 Theme Gallery'],

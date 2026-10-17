@@ -19,6 +19,7 @@ import Home from '@/pages/Home';
 const ExplorerPage = lazy(() => import('@/pages/Explorer'));
 const MapPage = lazy(() => import('@/pages/Map'));
 const ThemesPage = lazy(() => import('@/pages/Themes'));
+const RoutesPage = lazy(() => import('@/pages/Routes'));
 const FavoritesPage = lazy(() => import('@/pages/Favorites'));
 const PandalDetail = lazy(() => import('@/pages/PandalDetail'));
 const StationDetail = lazy(() => import('@/pages/StationDetail'));
@@ -57,6 +58,7 @@ function Shell() {
               <Route path="/explore" element={<ExplorerPage />} />
               <Route path="/map" element={<MapPage />} />
               <Route path="/themes" element={<ThemesPage />} />
+              <Route path="/routes" element={<RoutesPage />} />
               <Route path="/favorites" element={<FavoritesPage />} />
               <Route path="/pandal/:id" element={<PandalDetail />} />
               <Route path="/station/:id" element={<StationDetail />} />
