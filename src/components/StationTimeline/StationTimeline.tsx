@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { ArrowUpRight, Footprints } from 'lucide-react';
 import { memo, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { stationPandals } from '@/data';
+import { nearestPandal } from '@/data';
 import { METRO_LINES, STATIONS } from '@/data/metroLines';
 import type { MetroLine } from '@/data/types';
 import { cn, formatKm } from '@/lib/utils';
@@ -54,7 +54,7 @@ function VerticalLine({ line, counts }: { line: MetroLine; counts: Map<string, n
           const st = STATIONS[sid];
           const count = counts.get(sid) ?? 0;
           const selected = stationId === sid;
-          const nearest = stationPandals(sid)[0];
+          const nearest = nearestPandal(sid);
           return (
             <li key={sid} data-station={sid}>
               <button

@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { PandalCard } from '@/components/PandalCard/PandalCard';
 import { Counter, EmptyState, LineBadge, Reveal } from '@/components/ui/primitives';
 import { Alpana } from '@/components/ui/Motifs';
-import { stationPandals } from '@/data';
+import { nearestPandal, stationPandals } from '@/data';
 import { LINE_BY_ID, STATIONS } from '@/data/metroLines';
 import { usePageTitle } from '@/hooks/useMedia';
 import { formatKm } from '@/lib/utils';
@@ -32,6 +32,7 @@ export default function StationDetail() {
 
   const pandals = stationPandals(station.id);
   const within1 = pandals.filter((p) => p.distanceKm <= 1).length;
+  const nearest = nearestPandal(station.id);
 
   return (
     <div className="relative overflow-hidden">
@@ -62,7 +63,7 @@ export default function StationDetail() {
           {[
             { label: pandals.length === 1 ? 'Pandal nearby' : 'Pandals nearby', value: <Counter value={pandals.length} /> },
             { label: 'Within 1 km', value: <Counter value={within1} /> },
-            { label: 'Nearest', value: pandals[0] ? formatKm(pandals[0].distanceKm) : '—' },
+            { label: 'Nearest', value: nearest ? formatKm(nearest.distanceKm) : '—' },
           ].map((s) => (
             <div key={s.label} className="bg-surface px-4 py-5 md:px-7 md:py-6">
               <dd className="display text-[clamp(1.9rem,4vw,3.6rem)] text-gold-bright">{s.value}</dd>
@@ -106,7 +107,7 @@ export default function StationDetail() {
 
         <section aria-labelledby="station-pandals" className="pt-14 md:pt-20">
           <h2 id="station-pandals" className="display text-[clamp(1.9rem,4vw,3.5rem)]">
-            Walk from here, <em className="font-medium text-gold">nearest first</em>
+            Walk from here, <em className="font-medium text-gold">most popular first</em>
           </h2>
           {pandals.length ? (
             <ul className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 2xl:grid-cols-4">

@@ -53,9 +53,15 @@ for (const p of PANDALS) {
   if (list) list.push(p);
   else PANDALS_BY_STATION.set(p.stationId, [p]);
 }
-for (const list of PANDALS_BY_STATION.values()) list.sort((a, b) => a.distanceKm - b.distanceKm);
+// Most popular first; the closer one wins a tie.
+for (const list of PANDALS_BY_STATION.values()) list.sort((a, b) => b.popularity - a.popularity || a.distanceKm - b.distanceKm);
 
+/** A station's pandals, most popular first. */
 export const stationPandals = (stationId: string) => PANDALS_BY_STATION.get(stationId) ?? [];
+
+/** The pandal with the shortest walk from a station. */
+export const nearestPandal = (stationId: string): Pandal | undefined =>
+  stationPandals(stationId).reduce<Pandal | undefined>((best, p) => (!best || p.distanceKm < best.distanceKm ? p : best), undefined);
 
 export const LINE_COUNTS = Object.fromEntries(
   METRO_LINES.map((l) => [l.id, PANDALS.filter((p) => p.line === l.id).length]),

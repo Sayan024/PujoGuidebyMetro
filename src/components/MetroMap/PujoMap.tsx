@@ -8,7 +8,7 @@ import { pandalDirectionsUrl } from '@/lib/googleMaps';
 import { PandalCover } from '@/components/PandalCard/PandalCover';
 import { ErrorBoundary } from '@/components/ui/Feedback';
 import { LineBadge, LineDot } from '@/components/ui/primitives';
-import { PANDAL_BY_ID, stationPandals } from '@/data';
+import { PANDAL_BY_ID, nearestPandal, stationPandals } from '@/data';
 import { METRO_LINES, STATIONS } from '@/data/metroLines';
 import { useCan3D, usePrefersReducedMotion } from '@/hooks/useMedia';
 import { cn, formatKm, themeLabel } from '@/lib/utils';
@@ -71,6 +71,7 @@ function StationPanel() {
   const selectPandal = useAppStore((s) => s.selectPandal);
   const station = stationId ? STATIONS[stationId] : null;
   const list = station ? stationPandals(station.id) : [];
+  const nearest = station ? nearestPandal(station.id) : undefined;
 
   return (
     <AnimatePresence mode="wait">
@@ -104,7 +105,7 @@ function StationPanel() {
               <span>
                 <strong className="text-base text-gold-bright">{list.length}</strong> pandals
               </span>
-              {list[0] && <span>nearest {formatKm(list[0].distanceKm)}</span>}
+              {nearest && <span>nearest {formatKm(nearest.distanceKm)}</span>}
               <Link to={`/station/${station.id}`} className="ml-auto flex items-center gap-1 font-semibold text-gold-bright hover:underline">
                 Guide <ArrowUpRight className="size-3" aria-hidden="true" />
               </Link>

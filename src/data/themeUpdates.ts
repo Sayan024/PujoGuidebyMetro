@@ -8,7 +8,47 @@ import type { Pandal } from './types.ts';
  *
  * Kept apart from the generated pandals.ts so a data rebuild keeps them.
  */
-type Update = Partial<Pick<Pandal, 'theme' | 'artist' | 'description' | 'category'>>;
+type Update = Partial<Pick<Pandal, 'theme' | 'artist' | 'description' | 'category' | 'popularity'>>;
+
+/**
+ * Big-name pujas the source lists left at the default score. Station lists put the most
+ * popular first, so these need a score that reflects their crowds.
+ * 90+: city-wide crowd-pullers · 85–89: major · 80–84: well known locally.
+ */
+const POPULARITY: Record<string, number> = {
+  '66-pally': 90,
+  'kasba-bosepukur-sitala-mandir': 90,
+  'behala-notun-dal': 88,
+  'barisha-club': 88,
+  'ahiritola-sarbojanin': 88,
+  'hindustan-park': 88,
+  'rajdanga-naba-uday-sangha': 88,
+  'ajeya-sanghati': 88,
+  'behala-club': 86,
+  'behala-friends': 86,
+  'thakurpukur-sb-park': 86,
+  'dum-dum-park-sarbojanin': 86,
+  'bosepukur-talbagan': 86,
+  'haridevpur-41-pally': 86,
+  'jodhpur-park-sarbojanin': 86,
+  'santoshpur-trikon-park': 86,
+  'nepal-bhattacharjee-street': 85,
+  'dum-dum-park-tarun-dal': 85,
+  'vivekananda-park-athletic-club': 85,
+  'shyam-square': 85,
+  '95-pally-jodhpur-park': 85,
+  'babubagan-sarbojanin': 85,
+  'selimpur-pally': 85,
+  'beleghata-33-pally': 85,
+  'bhowanipur-75-pally': 85,
+  'hazra-park-durgotsav': 85,
+  'kidderpore-25-pally': 85,
+  'dum-dum-park-yubak-brinda': 84,
+  'ahiritola-jubak-brinda': 84,
+  'players-corner-behala': 84,
+  'kendua-shanti-sangha-patuli': 82,
+  'kidderpore-74-pally': 82,
+};
 
 export const THEME_UPDATES: Record<string, Update> = {
   // South Kolkata
@@ -73,6 +113,7 @@ export const THEME_UPDATES: Record<string, Update> = {
 
 export function applyThemeUpdate(p: Pandal): Pandal {
   const u = THEME_UPDATES[p.id];
-  if (!u) return p;
-  return { ...p, ...u, theme2026: Boolean(u.theme ?? p.theme) || p.theme2026 };
+  const popularity = Math.max(p.popularity, POPULARITY[p.id] ?? 0);
+  if (!u) return popularity === p.popularity ? p : { ...p, popularity };
+  return { ...p, ...u, popularity, theme2026: Boolean(u.theme ?? p.theme) || p.theme2026 };
 }
