@@ -107,11 +107,14 @@ const kmBetween = (aLat: number, aLng: number, bLat: number, bLng: number) => {
 export function alignToMetro(p: Pandal, lat: number, lng: number): Pandal {
   let station = STATIONS[p.stationId];
   let crow = station ? kmBetween(lat, lng, station.lat, station.lng) : Infinity;
-  for (const s of STATION_LIST) {
-    const d = kmBetween(lat, lng, s.lat, s.lng);
-    // Keep the listed station unless another is clearly closer.
-    if (d < crow - 0.15) [station, crow] = [s, d];
-  }
+  // A listed station follows the Metro's puja advisory and the usual auto routes (Dum Dum Park
+  // and Lake Town are reached from Belgachia, not across the canal from Central Park), so it is
+  // kept; only the distance is recomputed. New pandals take the nearest station.
+  if (!station)
+    for (const s of STATION_LIST) {
+      const d = kmBetween(lat, lng, s.lat, s.lng);
+      if (d < crow) [station, crow] = [s, d];
+    }
   // Straight line × 1.25 approximates the walk through the lanes; ~11 minutes per km.
   const distanceKm = Math.max(0.1, Math.round(crow * 1.25 * 10) / 10);
   const moved = station.id !== p.stationId;

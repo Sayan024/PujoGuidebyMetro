@@ -77,10 +77,10 @@ The "Open Now" filter treats 14–21 October 2026 (Chaturthi to Dashami, India t
 
 | Line | Line id | Route | Pandals | Stations with pandals |
 |---|---|---|---|---|
-| Blue Line | blue | Dakshineswar ↔ Shahid Khudiram | 227 | 23 of 25 |
-| Green Line | green | Howrah Maidan ↔ Sector V | 80 | 10 of 12 |
-| Purple Line | purple | Joka ↔ Majerhat | 50 | 6 of 7 |
-| Orange Line | orange | Satyajit Ray ↔ Beleghata | 28 | 6 of 8 |
+| Blue Line | blue | Dakshineswar ↔ Shahid Khudiram | 226 | 23 of 25 |
+| Green Line | green | Howrah Maidan ↔ Sector V | 78 | 10 of 12 |
+| Purple Line | purple | Joka ↔ Majerhat | 52 | 6 of 7 |
+| Orange Line | orange | Satyajit Ray ↔ Beleghata | 29 | 6 of 8 |
 | Yellow Line | yellow | Noapara ↔ Jai Hind (Airport) | 9 | 3 of 4 |
 
 Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green). The Purple and Orange lines have no Metro link to the rest of the network here; the day planner suggests a cab or bus between them.
@@ -108,10 +108,10 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 | Tala Prattoy | Biyojon (Separation) | Belgachia | blue |
 | Sreebhumi Sporting Club | Hawa Mahal | Belgachia | blue |
 | Bagbazar Sarbojanin | Sabeki (traditional) | Shyambazar | blue |
-| Kashi Bose Lane | Adim (Primal) | Shobhabazar Sutanuti | blue |
+| Kashi Bose Lane | Adim (Primal) | Girish Park | blue |
 | College Square | The Himalayan Abode (Mount Kailash) | Mahatma Gandhi Road | blue |
-| Santosh Mitra Square | Sanatani Chetanay Vande Mataram | Sealdah | green |
-| Deshapriya Park | Imagined white-and-gold marble temple | Kalighat | blue |
+| Santosh Mitra Square | Sanatani Chetanay Vande Mataram | Central | blue |
+| Deshapriya Park | Imagined white-and-gold marble temple | Jatin Das Park | blue |
 | Badamtala Ashar Sangha | Kalponik Mondir (Imagined Temple) | Kalighat | blue |
 | Tridhara Sammilani | Surasur (Gods and Demons) | Kalighat | blue |
 | Ballygunge Cultural | Jojon (Joining) | Kalighat | blue |
@@ -144,10 +144,10 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 | Hartaki Bagan Sarbojanin Durgotsab | Sabeki Shonar Protima O Shanti | Girish Park | blue |
 | Behala 29 Palli | Nabajagaraner Sharod Utsab (Dawn of New Awakening) | Taratala | purple |
 | Ajeyo Sanhati | Shobdo O Shanti (Sound & Serenity) | Netaji | blue |
-| Tala Barowari | Barowarir Durgabari | Shyambazar | blue |
+| Tala Barowari | Barowarir Durgabari | Belgachia | blue |
 | Telengabagan | Tilottamar Alinder Iti Kotha | Belgachia | blue |
-| Dum Dum Park Bharat Chakra | Antarjami | Dum Dum | blue |
-| Dum Dum Park Tarun Sangha | Banijye Basate Lakshmi | Dum Dum | blue |
+| Dum Dum Park Bharat Chakra | Antarjami | Belgachia | blue |
+| Dum Dum Park Tarun Sangha | Banijye Basate Lakshmi | Belgachia | blue |
 | Lake Town Adhibasi Brinda | Bengal folk handloom heritage | Belgachia | blue |
 | Hatibagan Nabin Pally | Hasikhushi Para | Shyambazar | blue |
 | Hatibagan Sarbojanin | Chhanda Chhara Channahara | Shyambazar | blue |
@@ -159,11 +159,11 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 | Chaltabagan Lohapatty | Nishan (The Mark) | Girish Park | blue |
 | Chorebagan Sarbojanin | Beyond Sound | Mahatma Gandhi Road | blue |
 | Taltala Sarbojanin | Vande Mataram | Chandni Chowk | blue |
-| Abasar Sarbojanin | Anya Jekhane Ananya | Jatin Das Park | blue |
-| Alipore Sarbojanin | Ramayana: An Epic Woven in Time | Majerhat | purple |
+| Abasar Sarbojanin | Anya Jekhane Ananya | Netaji Bhavan | blue |
+| Alipore Sarbojanin | Ramayana: An Epic Woven in Time | Jatin Das Park | blue |
 | Hindusthan Club | Durgadalan | Kalighat | blue |
 | Shib Mandir Sarbojanin | Parab | Rabindra Sarovar | blue |
-| Samaj Sebi Sangha | Mahapujoy Mahanayak | Kalighat | blue |
+| Samaj Sebi Sangha | Mahapujoy Mahanayak | Rabindra Sarovar | blue |
 | South City Mall | Jatra | Rabindra Sarovar | blue |
 | Lake Gardens Peoples Association | Srijaney – Gaurab Sanyukta | Rabindra Sarovar | blue |
 | Beleghata 33 Pally | Uddan (Flight) | Phoolbagan | green |
@@ -176,7 +176,7 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 | Beleghata Sarbojanin Durga Puja Committee | Prakriti O Manobota (Nature & Humanity) | Phoolbagan | green |
 | Sobhabazar Burtolla Sarbojanin Durgotsab | Purono Kolkatar Pratidhwani (Echoes of Old Calcutta) | Shobhabazar Sutanuti | blue |
 | Beliaghata Nabamilan | Subhas Sarobarer Shanti (Serenity of Subhas Sarobar) | Phoolbagan | green |
-| Kidderpore 25 Pally | Paricharan | Rabindra Sadan | blue |
+| Kidderpore 25 Pally | Paricharan | Majerhat | purple |
 | Liluah Goswamipara Sarbojanin | Ancient Temple Carvings of Bengal | Howrah Maidan | green |
 | 64 Pally Durgotsav Committee | Satish Mukherjee Road Sarbojanin Utsab | Kalighat | blue |
 | Ramkrishnapur Sarbojanin Durgotsab | Ganga Teere Sharodotsab | Howrah Maidan | green |
@@ -263,27 +263,19 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 
 - **Nawpara Dadabhai Sangha:** Some lists call it Baranagar Dada Bhai Sangha
 
-#### Dum Dum — 9 pandals · station id `dum-dum`
+#### Dum Dum — 5 pandals · station id `dum-dum`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Sinthee Sarbojanin | 1.5 km | 17 min | — | Ride (auto) | day | 70 | sinthee-sarbojanin |
 | Bandhudal Sporting Club (Sithir More) | 1.5 km | 17 min | — | — | day | 70 | bandhudal-sporting-club-sithir-more |
-| Jawpur Bayam Samiti | 1.8 km | 20 min | — | Dum Dum & Lake Town, North Kolkata | day | 64 | jawpur-bayam-samiti |
 | Paikpara 14 Pally | 2.0 km | 22 min | — | Ride (auto) | day | 70 | paikpara-14-pally |
 | Paikpara 15 Pally | 2.0 km | 22 min | — | Ride (auto) | day | 70 | paikpara-15-pally |
-| Laketown Vivekananda Park | 2.0 km | 22 min | — | Dum Dum & Lake Town, North Kolkata | day | 64 | laketown-vivekananda-park |
 | CIT Sarbojanin | 2.1 km | 23 min | — | Tala Belgachia Dakshineswar, North Kolkata, Ride (auto) | day | 64 | cit-sarbojanin |
-| Dum Dum Park Tarun Sangha | 3.0 km | 33 min | Banijye Basate Lakshmi | 2026 Theme, Popular, Ride (auto) | day | 85 | dum-dum-park-tarun-sangha |
-| Dum Dum Park Bharat Chakra | 3.1 km | 34 min | Antarjami | 2026 Theme, Popular, Ride (auto) | day | 85 | dum-dum-park-bharat-chakra |
 
-- **Jawpur Bayam Samiti:** Neighbourhood puja in Dum Dum Park, part of the Dum Dum & Lake Town cluster.
-- **Laketown Vivekananda Park:** Neighbourhood puja in Lake Town, part of the Dum Dum & Lake Town cluster.
 - **CIT Sarbojanin:** Neighbourhood puja in Tala, part of the Tala Belgachia Dakshineswar cluster.
-- **Dum Dum Park Tarun Sangha:** Bengal's historic river trade, with boats and docks (also called Beniakatha)
-- **Dum Dum Park Bharat Chakra:** Old chariots of Bengal — Guptipara, Mahesh
 
-#### Belgachia — 18 pandals · station id `belgachia`
+#### Belgachia — 23 pandals · station id `belgachia`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -294,32 +286,39 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Laketown Netaji Sporting Club | 1.4 km | 15 min | — | Dum Dum & Lake Town, North Kolkata | day | 64 | laketown-netaji-sporting-club |
 | Telengabagan | 1.5 km | 17 min | Tilottamar Alinder Iti Kotha | 2026 Theme, Popular | day | 85 | telengabagan |
 | Dakshinpara Durgotsab | 1.5 km | 17 min | — | — | day | 70 | dakshinpara-durgotsab |
-| Ultadanga Karbagan | 1.5 km | 17 min | — | Petpujo | day | 70 | ultadanga-karbagan |
 | Lake Town Adhibasi Brinda | 1.6 km | 18 min | Bengal folk handloom heritage | 2026 Theme, Popular | day | 85 | lake-town-adhibasi-brinda |
 | Shurir Bagan | 1.6 km | 18 min | — | Hatibagan & Beadon St, North Kolkata | day | 64 | shurir-bagan |
 | Pragati Pally Adhibasi Brinda | 1.6 km | 18 min | — | Dum Dum & Lake Town, North Kolkata | day | 64 | pragati-pally-adhibasi-brinda |
+| Tala Barowari | 1.7 km | 19 min | Barowarir Durgabari | 2026 Theme, Traditional, Popular | ritual | 85 | tala-barowari |
+| Jawpur Bayam Samiti | 1.7 km | 19 min | — | Dum Dum & Lake Town, North Kolkata | day | 64 | jawpur-bayam-samiti |
+| Laketown Vivekananda Park | 1.9 km | 21 min | — | Dum Dum & Lake Town, North Kolkata | day | 64 | laketown-vivekananda-park |
 | Sreebhumi Sporting Club | 2.1 km | 23 min | Hawa Mahal | 2026 Theme, VIP Pass, Popular, Ride (auto) | day | 96 | sreebhumi-sporting-club |
-| United Club | 2.1 km | 23 min | — | Manicktala & Ultadanga, North Kolkata, Ride (auto) | day | 64 | united-club |
-| Bangur Avenue Protirodh Bahini | 2.6 km | 29 min | — | Dum Dum & Lake Town, North Kolkata, Ride (auto) | day | 64 | bangur-avenue-protirodh-bahini |
 | Dakshindari Youth | 3.0 km | 33 min | Ashwamedher Ghora (The Horse of Ashwamedha) | — | day | 70 | dakshindari-youth |
 | Tetultala Netaji Sporting Club | 3.0 km | 33 min | — | Ride (auto) | day | 70 | tetultala-netaji-sporting-club |
 | Golaghata Sammilani | 3.2 km | 35 min | — | — | day | 70 | golaghata-sammilani |
+| Dum Dum Park Bharat Chakra | 3.3 km | 36 min | Antarjami | 2026 Theme, Popular, Ride (auto) | day | 85 | dum-dum-park-bharat-chakra |
+| Dum Dum Park Tarun Sangha | 3.3 km | 36 min | Banijye Basate Lakshmi | 2026 Theme, Popular, Ride (auto) | day | 85 | dum-dum-park-tarun-sangha |
+| Dum Dum Park Sarbojanin | 3.6 km | 40 min | — | Ride (auto) | day | 86 | dum-dum-park-sarbojanin |
+| Dum Dum Park Yubak Brinda | 3.7 km | 41 min | — | Ride (auto) | day | 84 | dum-dum-park-yubak-brinda |
+| Dum Dum Park Tarun Dal | 3.9 km | 43 min | — | Ride (auto) | day | 85 | dum-dum-park-tarun-dal |
 | Lake Town Association | 4.0 km | 44 min | — | — | day | 70 | lake-town-association |
 
 - **Tala Prattoy:** 101st year on a new, smaller site; go early
 - **Laketown Nutan Palli Pradeep Sangha:** Neighbourhood puja in Lake Town, part of the Dum Dum & Lake Town cluster.
 - **Laketown Netaji Sporting Club:** Neighbourhood puja in Lake Town, part of the Dum Dum & Lake Town cluster.
 - **Telengabagan:** Old-Kolkata corridors, bridges and balconies. Good late-night stop after Hatibagan
-- **Ultadanga Karbagan:** Ultadanga; auto from Shyambazar
 - **Lake Town Adhibasi Brinda:** About 750 m walk from Sreebhumi
 - **Shurir Bagan:** Neighbourhood puja in Hedua / Goabagan, part of the Hatibagan & Beadon St cluster.
 - **Pragati Pally Adhibasi Brinda:** Neighbourhood puja in Lake Town, part of the Dum Dum & Lake Town cluster.
+- **Tala Barowari:** 106th year; the history of Durga Puja itself
+- **Jawpur Bayam Samiti:** Neighbourhood puja in Dum Dum Park, part of the Dum Dum & Lake Town cluster.
+- **Laketown Vivekananda Park:** Neighbourhood puja in Lake Town, part of the Dum Dum & Lake Town cluster.
 - **Sreebhumi Sporting Club:** 953-window replica; traditional idol; 2-hour queues. Also an auto from Central Park (Green Line)
-- **United Club:** Neighbourhood puja in Ultadanga, part of the Manicktala & Ultadanga cluster.
-- **Bangur Avenue Protirodh Bahini:** Neighbourhood puja in Bangur Avenue, part of the Dum Dum & Lake Town cluster.
+- **Dum Dum Park Bharat Chakra:** Old chariots of Bengal — Guptipara, Mahesh
+- **Dum Dum Park Tarun Sangha:** Bengal's historic river trade, with boats and docks (also called Beniakatha)
 - **Lake Town Association:** Near Sreebhumi
 
-#### Shyambazar — 22 pandals · station id `shyambazar`
+#### Shyambazar — 23 pandals · station id `shyambazar`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -334,17 +333,18 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Hatibagan Sarbojanin | 900 m | 10 min | Chhanda Chhara Channahara | 2026 Theme, Petpujo, Popular | 24h | 85 | hatibagan-sarbojanin |
 | Shyampukur Adi Sarbojanin | 1.0 km | 11 min | — | Petpujo | 24h | 70 | shyampukur-adi-sarbojanin |
 | Baghbazar Pally | 1.0 km | 11 min | — | Bagbazar & Shyambazar, North Kolkata | day | 64 | baghbazar-pally |
-| Tala Barowari | 1.1 km | 12 min | Barowarir Durgabari | 2026 Theme, Traditional, Popular | ritual | 85 | tala-barowari |
 | Hatibagan Nabin Pally | 1.1 km | 12 min | Hasikhushi Para | 2026 Theme, Petpujo, Popular | 24h | 85 | hatibagan-nabin-pally |
+| Hari Ghosh Street | 1.2 km | 13 min | — | Petpujo | 24h | 70 | hari-ghosh-street |
 | Beadon Street Sarbojanin | 1.2 km | 13 min | — | Petpujo | day | 70 | beadon-street-sarbojanin |
 | Bagbazar Sarbojanin | 1.2 km | 13 min | Sabeki (traditional) | 2026 Theme, Traditional, Bonedi Bari, VIP Pass, Petpujo, Popular | ritual | 96 | bagbazar-sarbojanin |
-| Gouriberia | 1.2 km | 13 min | — | Petpujo | day | 70 | gouriberia |
 | Tala Palli | 1.3 km | 14 min | — | Tala Belgachia Dakshineswar, North Kolkata | day | 64 | tala-palli |
 | Ultadanga Yuba Brinda | 1.4 km | 15 min | — | Petpujo | day | 70 | ultadanga-yuba-brinda |
 | Kabiraj Bagan | 1.6 km | 18 min | — | Petpujo | 24h | 70 | kabiraj-bagan |
+| Ultadanga Karbagan | 1.8 km | 20 min | — | Petpujo | day | 70 | ultadanga-karbagan |
 | Ultadanga Bidhan Sangha | 1.8 km | 20 min | — | Petpujo | day | 70 | ultadanga-bidhan-sangha |
 | Lalabagan Nabankur | 1.9 km | 21 min | — | Petpujo | 24h | 70 | lalabagan-nabankur |
 | Ultadanga Pallyshree | 2.5 km | 28 min | — | Petpujo | day | 70 | ultadanga-pallyshree |
+| Ultadanga Sangrami | 3.3 km | 36 min | — | Petpujo, Ride (auto) | day | 70 | ultadanga-sangrami |
 
 - **Deshbandhu Ladies Park:** Neighbourhood puja in Deshbandhu Park, Shyambazar, part of the Bagbazar & Shyambazar cluster.
 - **Baghbazar 7 Pally Sarbojanin:** Neighbourhood puja in Bagbazar, part of the Bagbazar & Shyambazar cluster.
@@ -353,24 +353,23 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **Nalin Sarkar Street:** Artist: Sanatan Dinda. The Ganga's flow, pollution and erosion; idol styled like carved stone; theme music on Bhupen Hazarika's Bistirno Dupare. On the Adani preview list
 - **Hatibagan Sarbojanin:** Century-old houses beside new high-rises: north Kolkata's mixed rhythm. Go early morning. Food nearby: Hatibagan street stalls for jhalmuri, aloo kabli, telebhaja
 - **Baghbazar Pally:** Neighbourhood puja in Bagbazar, part of the Bagbazar & Shyambazar cluster.
-- **Tala Barowari:** 106th year; the history of Durga Puja itself
 - **Hatibagan Nabin Pally:** Whole lane repainted in colour; tribute to rhyme-writer Jogindranath Sarkar
 - **Bagbazar Sarbojanin:** Ekchala idol with daker saj, on the Ganga bank. Food nearby: Golbari at Shyambazar five-point crossing for mutton kosha (~900 m)
-- **Gouriberia:** Some lists group it with Ultadanga
 - **Tala Palli:** Neighbourhood puja in Tala, part of the Tala Belgachia Dakshineswar cluster.
 - **Ultadanga Yuba Brinda:** Ultadanga; auto
+- **Ultadanga Karbagan:** Ultadanga; auto from Shyambazar
 - **Ultadanga Bidhan Sangha:** Ultadanga; auto from Shyambazar
 - **Lalabagan Nabankur:** Known for eye-catching themes lately
 - **Ultadanga Pallyshree:** Ultadanga; auto
+- **Ultadanga Sangrami:** Ultadanga; auto
 
-#### Shobhabazar Sutanuti (Sovabazar) — 22 pandals · station id `shobhabazar-sutanuti`
+#### Shobhabazar Sutanuti (Sovabazar) — 20 pandals · station id `shobhabazar-sutanuti`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Sobhabazar Burtolla Sarbojanin Durgotsab | 200 m | 3 min | Purono Kolkatar Pratidhwani (Echoes of Old Calcutta) | Sovabazar, Burtolla, Est 1962, Ekchala Pratima | 24h | 85 | sobhabazar-burtolla |
 | Shobhabazar Boro Rajbari | 300 m | 3 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari, Petpujo | ritual | 82 | shobhabazar-boro-rajbari |
 | Satadal | 300 m | 3 min | — | Hatibagan & Beadon St, North Kolkata | day | 64 | satadal |
-| Hari Ghosh Street | 400 m | 4 min | — | Petpujo | 24h | 70 | hari-ghosh-street |
 | Shobhabazar Choto Rajbari | 400 m | 4 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari, Petpujo | ritual | 82 | shobhabazar-choto-rajbari |
 | Shyampukur Sanghatirtha | 500 m | 6 min | Shobhabazarer Aitihyo O Shilpo (Heritage of Sovabazar) | Sovabazar, FFD Member, North Kolkata, Heritage Para | 24h | 82 | shyampukur-sanghatirtha |
 | Chhatu Babu Latu Babu Bari | 600 m | 7 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari, Petpujo | ritual | 82 | chhatu-babu-latu-babu-bari |
@@ -380,7 +379,6 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Ahiritola Jubak Brinda | 800 m | 9 min | — | Petpujo | 24h | 84 | ahiritola-jubak-brinda |
 | Kumartuli Park | 800 m | 9 min | O Ganga Tumi Boichho Keno | 2026 Theme, Petpujo, Popular | 24h | 85 | kumartuli-park |
 | Kumartuli Sarbojanin | 800 m | 9 min | Mon Diye Dekhun (Look closely) | 2026 Theme, Petpujo, Popular | day | 85 | kumartuli-sarbojanin |
-| Kashi Bose Lane | 800 m | 9 min | Adim (Primal) | 2026 Theme, VIP Pass, Popular | 24h | 96 | kashi-bose-lane |
 | Jorabagan Chhatra Sanghaati | 800 m | 9 min | Ganga Tire Sutanuti Katha | Jorabagan, Est 1996, North Kolkata, FFD Member | 24h | 84 | jorabagan-chhatra-sanghaati |
 | Ramdulal Nibas Durga Pujo | 800 m | 9 min | — | Hatibagan & Beadon St, Bonedi Barir Pujo | ritual | 64 | ramdulal-nibas-durga-pujo |
 | Darjipara Mitra Bari | 900 m | 10 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari, Petpujo | ritual | 82 | darjipara-mitra-bari |
@@ -388,7 +386,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Darjipara Sarbojanin | 1.0 km | 11 min | — | Petpujo | 24h | 70 | darjipara-sarbojanin |
 | Goabagan Sarbojanin | 1.1 km | 12 min | — | Hatibagan & Beadon St, North Kolkata | day | 64 | goabagan-sarbojanin |
 | Nimtala Sarbojanin | 1.3 km | 14 min | — | Petpujo | day | 70 | nimtala-sarbojanin |
-| Hathkhola Dutta Barir Durga Pujo | 1.4 km | 15 min | — | Jorabagan & Pathuriaghata, Bonedi Barir Pujo | ritual | 64 | hathkhola-dutta-barir-durga-pujo |
+| Gouriberia | 1.8 km | 20 min | — | Petpujo | day | 70 | gouriberia |
 
 - **Sobhabazar Burtolla Sarbojanin Durgotsab:** Established in 1962 on Abinash Kabiraj Street, Sovabazar. Steps away from the Metro station, this revered neighborhood puja features traditional Ekchala protima and sweet communal warmth.
 - **Shobhabazar Boro Rajbari:** Bonedi bari puja since 1757
@@ -399,15 +397,14 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **Jagat Mukherjee Park:** 90th year; also walkable from Shyambazar
 - **Kumartuli Park:** The Ganga's journey from Gangotri to the delta. Idol-makers' quarter. Food nearby: Mitra Café, Shobhabazar, for fish kabiraji and cabin snacks
 - **Kumartuli Sarbojanin:** Pairs easily with Kumartuli Park
-- **Kashi Bose Lane:** Warli folk-art pandal by artist Anirban. Pakdandi was the 2025 theme
 - **Jorabagan Chhatra Sanghaati:** Established in 1996 in Jorabagan. Nestled in historic North Kolkata near the riverside, celebrated for youth community leadership, classic clay modelling, and spirited Sindoor Khela.
 - **Ramdulal Nibas Durga Pujo:** Family (bonedi bari) puja in Beadon Street. Visiting hours can be limited; dress modestly.
 - **Darjipara Mitra Bari:** Bonedi bari (family puja); visiting hours limited
 - **Ahiritola Sarbojanin:** Bengal's mishti and the culture around it, beside the Ganga
 - **Goabagan Sarbojanin:** Neighbourhood puja in Hedua / Goabagan, part of the Hatibagan & Beadon St cluster.
-- **Hathkhola Dutta Barir Durga Pujo:** Family (bonedi bari) puja in Hatkhola. Visiting hours can be limited; dress modestly.
+- **Gouriberia:** Some lists group it with Ultadanga
 
-#### Girish Park — 26 pandals · station id `girish-park`
+#### Girish Park — 28 pandals · station id `girish-park`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -427,12 +424,14 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Alpha Athletic Association | 1.0 km | 12 min | Simlar Otit O Bartaman (Past & Present of Simla) | Manicktala, Simla, Amherst Row, FFD Member | 24h | 82 | alpha-athletic-association |
 | Azad Hind Bag (Hedua Park) | 1.0 km | 11 min | — | Hatibagan & Beadon St, North Kolkata | day | 64 | azad-hind-bag |
 | Durga Puja of 4 Ghosh Lane | 1.0 km | 11 min | — | Manicktala & Ultadanga, Bonedi Barir Pujo | ritual | 64 | durga-puja-of-4-ghosh-lane |
+| Kashi Bose Lane | 1.1 km | 12 min | Adim (Primal) | 2026 Theme, VIP Pass, Popular | 24h | 96 | kashi-bose-lane |
 | Chaltabagan Sarbojanin | 1.1 km | 12 min | — | — | day | 70 | chaltabagan-sarbojanin |
 | Tekiapara Sarbojanin Durgotsab Committee | 1.1 km | 13 min | Maniktalar Sanhati O Pujo | Maniktala, FFD Member, North Kolkata, Community Para | 24h | 82 | tekiapara-sarbojanin-maniktala |
 | Darpanarayan Tagore Street Sarbojanin | 1.1 km | 12 min | — | Jorabagan & Pathuriaghata, North Kolkata | day | 64 | darpanarayan-tagore-street-sarbojanin |
 | Pathuriaghata Rajbari | 1.2 km | 13 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari | ritual | 82 | pathuriaghata-rajbari |
 | Chaltabagan Lohapatty | 1.4 km | 15 min | Nishan (The Mark) | 2026 Theme, Popular | day | 85 | chaltabagan-lohapatty |
 | Vrindavan Matri Mandir | 1.4 km | 15 min | — | — | 24h | 70 | vrindavan-matri-mandir |
+| Hathkhola Dutta Barir Durga Pujo | 1.4 km | 15 min | — | Jorabagan & Pathuriaghata, Bonedi Barir Pujo | ritual | 64 | hathkhola-dutta-barir-durga-pujo |
 | Maniktala Saha Bari | 1.5 km | 17 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari | ritual | 82 | maniktala-saha-bari |
 | Srimani Barir Durga Pujo | 1.5 km | 17 min | — | Hatibagan & Beadon St, Bonedi Barir Pujo | ritual | 64 | srimani-barir-durga-pujo |
 | Rammohan Sammilani | 1.7 km | 19 min | — | College St & Sealdah, North Kolkata | day | 64 | rammohan-sammilani |
@@ -452,11 +451,13 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **Alpha Athletic Association:** Established in 1977 at Amherst Row in the historic Simla/Manicktala neighborhood. Known for intricate pandal craftsmanship, athletic club legacy, and sacred Sabeki Pratima.
 - **Azad Hind Bag (Hedua Park):** Neighbourhood puja in Hedua / Goabagan, part of the Hatibagan & Beadon St cluster.
 - **Durga Puja of 4 Ghosh Lane:** Family (bonedi bari) puja in Manicktala / Amherst Street. Visiting hours can be limited; dress modestly.
+- **Kashi Bose Lane:** Warli folk-art pandal by artist Anirban. Pakdandi was the 2025 theme
 - **Chaltabagan Sarbojanin:** Separate from Chaltabagan Lohapatty
 - **Tekiapara Sarbojanin Durgotsab Committee:** Established in 1994 in Maniktala, North Kolkata. Registered member of Forum for Durgotsab (FFD), celebrated for preserving close-knit community traditions, vibrant cultural shows, and classic idol.
 - **Darpanarayan Tagore Street Sarbojanin:** Neighbourhood puja in Pathuriaghata, part of the Jorabagan & Pathuriaghata cluster.
 - **Pathuriaghata Rajbari:** Bonedi bari (family puja); visiting hours limited
 - **Chaltabagan Lohapatty:** Ramnami Samaj of Chhattisgarh; music by Pt Vishwa Mohan Bhatt
+- **Hathkhola Dutta Barir Durga Pujo:** Family (bonedi bari) puja in Hatkhola. Visiting hours can be limited; dress modestly.
 - **Maniktala Saha Bari:** Bonedi bari (family puja); visiting hours limited
 - **Srimani Barir Durga Pujo:** Family (bonedi bari) puja in Hatibagan. Visiting hours can be limited; dress modestly.
 - **Rammohan Sammilani:** Neighbourhood puja in Amherst Street, part of the College St & Sealdah cluster.
@@ -488,17 +489,17 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 |---|---|---|---|---|---|---|---|
 | Subodh Mallick Square | 500 m | 6 min | — | — | 24h | 70 | subodh-mallick-square |
 | Bowbazar Sarbojanin | 600 m | 7 min | — | — | 24h | 70 | bowbazar-sarbojanin |
-| College Square | 600 m | 7 min | — | VIP Pass, Popular | day | 96 | college-square-sealdah |
 | Kapalitola Sarbojanin | 700 m | 8 min | — | — | 24h | 70 | kapalitola-sarbojanin |
 | Badan Chand Roy Bari (Kolutolla Rajbari) | 700 m | 8 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari | ritual | 82 | badan-chand-roy-bari-kolutolla-rajbari |
 | Ramgopal Saha Bari | 800 m | 9 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari | ritual | 82 | ramgopal-saha-bari |
 | Nilmoni Dutta Thakur Bari | 900 m | 10 min | Sabeki Ekchala Puja | Traditional, Bonedi Bari | ritual | 82 | nilmoni-dutta-thakur-bari |
+| Santosh Mitra Square | 1.1 km | 12 min | Sanatani Chetanay Vande Mataram | 2026 Theme, VIP Pass, Popular | day | 96 | santosh-mitra-square |
 
 - **Subodh Mallick Square:** Also close to Chandni Chowk
-- **College Square:** Walk along Bowbazar
 - **Badan Chand Roy Bari (Kolutolla Rajbari):** Bonedi bari (family puja); visiting hours limited
 - **Ramgopal Saha Bari:** Bonedi bari (family puja); visiting hours limited
 - **Nilmoni Dutta Thakur Bari:** Bonedi bari (family puja); visiting hours limited
+- **Santosh Mitra Square:** In Lebutala Park. Easier from Sealdah (Green Line)
 
 #### Chandni Chowk — 2 pandals · station id `chandni-chowk`
 
@@ -517,19 +518,15 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 
 - **Allen Park Durga Puja (Kolkata Sanatani Sangha):** Park Street's first-ever Durga Puja, in Allen Park, the home of the Christmas festival. Theme by Subrata Bandyopadhyay on Shiva's leela: the Rudra form, his love for Parvati, and the tandava of creation and destruction. Varanasi-style evening aarti from Chaturthi to Dashami, Baul and folk programmes from Purulia, Bankura and North Bengal, all-night jagaran from Ashtami to Navami and sindoor khela on Dashami. Expect big crowds; the Park Street–Middleton Street stretch may close to cars.
 
-#### Rabindra Sadan — 3 pandals · station id `rabindra-sadan`
+#### Rabindra Sadan — 1 pandal · station id `rabindra-sadan`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
-| Kidderpore 25 Pally | 2.7 km | 30 min | Paricharan | Khidirpur, South Kolkata, Ride (auto) | day | 85 | kidderpore-25-pally |
-| Kidderpore 74 Pally | 2.9 km | 32 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 82 | kidderpore-74-pally |
-| Kidderpore Pally Sharadiya | 3.4 km | 37 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | kidderpore-pally-sharadiya |
+| Chakraberia Sarbojanin | 1.2 km | 13 min | — | — | day | 70 | chakraberia-sarbojanin |
 
-- **Kidderpore 25 Pally:** One of the Khidirpur cluster at the top of the Diamond Harbour Road route, a short walk from 74 Pally, Kabitirtha and Nabarag.
-- **Kidderpore 74 Pally:** Khidirpur neighbourhood puja, a few lanes from 25 Pally; see the whole Khidirpur cluster in one walk.
-- **Kidderpore Pally Sharadiya:** The last stop of the Khidirpur cluster, north of Kabitirtha.
+- **Chakraberia Sarbojanin:** Also reachable from Netaji Bhavan
 
-#### Netaji Bhavan (Bhowanipore) — 12 pandals · station id `netaji-bhavan`
+#### Netaji Bhavan (Bhowanipore) — 11 pandals · station id `netaji-bhavan`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -539,19 +536,17 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Harish Park | 600 m | 7 min | — | — | 24h | 70 | harish-park |
 | 22 Pally (Northern Park) | 600 m | 7 min | — | — | 24h | 70 | 22-pally-northern-park |
 | 68 Pally | 700 m | 8 min | — | — | 24h | 70 | 68-pally |
-| Chakraberia Sarbojanin | 800 m | 9 min | — | — | day | 70 | chakraberia-sarbojanin |
 | Paddapukur Youth Association | 800 m | 9 min | — | — | 24h | 70 | paddapukur-youth-association |
+| Abasar Sarbojanin | 900 m | 10 min | Anya Jekhane Ananya | 2026 Theme, Popular | 24h | 85 | abasar-sarbojanin |
 | Agradut Udayan Sangha | 900 m | 10 min | — | — | 24h | 70 | agradut-udayan-sangha |
 | Swadhin Sangha | 1.0 km | 11 min | — | — | 24h | 70 | swadhin-sangha |
 | Padmapukur Baroyari | 1.1 km | 12 min | — | Bhowanipore & Hazra, South Kolkata | day | 64 | padmapukur-baroyari |
-| Ballygunge 21 Pally | 3.0 km | 33 min | — | Ballygunge & Park Circus, South Kolkata, Ride (auto) | day | 64 | ballygunge-21-pally |
 
 - **Bhowanipore Mallick Bari:** Bonedi bari (family puja); visiting hours limited
-- **Chakraberia Sarbojanin:** Also reachable from Netaji Bhavan
+- **Abasar Sarbojanin:** Tribute to painter Shanu Lahiri
 - **Padmapukur Baroyari:** Neighbourhood puja in Padmapukur, Bhowanipore, part of the Bhowanipore & Hazra cluster.
-- **Ballygunge 21 Pally:** Neighbourhood puja in Adi Ballygunge, part of the Ballygunge & Park Circus cluster.
 
-#### Jatin Das Park (Hazra) — 12 pandals · station id `jatin-das-park`
+#### Jatin Das Park (Hazra) — 13 pandals · station id `jatin-das-park`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -562,22 +557,24 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Chandranath Chatterjee Street | 400 m | 4 min | — | Bhowanipore & Hazra, South Kolkata | day | 64 | chandranath-chatterjee-street |
 | Golmath Durga Puja Samiti | 500 m | 6 min | — | Bhowanipore, South Kolkata | day | 70 | golmath-durga-puja |
 | Rupchand Mukherjee Lane Sarbojanin | 500 m | 6 min | — | Bhowanipore & Hazra, South Kolkata | day | 64 | rupchand-mukherjee-lane-sarbojanin |
-| Abasar Sarbojanin | 600 m | 7 min | Anya Jekhane Ananya | 2026 Theme, Popular | 24h | 85 | abasar-sarbojanin |
 | Matri Mandir | 900 m | 10 min | — | — | 24h | 70 | matri-mandir |
 | Maddox Square | 1.1 km | 12 min | — | VIP Pass, Popular | 24h | 96 | maddox-square |
-| Manoharpukur Youngs | 1.5 km | 17 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | manoharpukur-youngs |
+| Deshapriya Park | 1.2 km | 13 min | Imagined white-and-gold marble temple | 2026 Theme, VIP Pass, Popular | 24h | 96 | deshapriya-park |
+| Alipore Sarbojanin | 1.8 km | 20 min | Ramayana: An Epic Woven in Time | 2026 Theme, Popular | day | 85 | alipore-sarbojanin |
 | Falguni Sangha | 2.5 km | 28 min | — | Gariahat & Dhakuria, South Kolkata, Ride (auto) | day | 64 | falguni-sangha |
+| Ballygunge 21 Pally | 2.9 km | 32 min | — | Ballygunge & Park Circus, South Kolkata, Ride (auto) | day | 64 | ballygunge-21-pally |
 
 - **Hazra Park Durgotsav:** Right at the station
 - **Chandranath Chatterjee Street:** Neighbourhood puja in Bhowanipore, part of the Bhowanipore & Hazra cluster.
 - **Golmath Durga Puja Samiti:** Rakhal Mukherjee Road, between Abasar and Bakulbagan, north of Hazra More.
 - **Rupchand Mukherjee Lane Sarbojanin:** Neighbourhood puja in Bhowanipore, part of the Bhowanipore & Hazra cluster.
-- **Abasar Sarbojanin:** Tribute to painter Shanu Lahiri
 - **Maddox Square:** All about the adda, not the pandal
-- **Manoharpukur Youngs:** Neighbourhood puja in Manoharpukur Road, part of the Kalighat & Rashbehari cluster.
+- **Deshapriya Park:** 89th year; idol by Padma Shri Sanatan Rudra Pal
+- **Alipore Sarbojanin:** 81st year; artist Anirban Das; auto advised. On the Adani preview list
 - **Falguni Sangha:** Neighbourhood puja in Gariahat, part of the Gariahat & Dhakuria cluster.
+- **Ballygunge 21 Pally:** Neighbourhood puja in Adi Ballygunge, part of the Ballygunge & Park Circus cluster.
 
-#### Kalighat — 25 pandals · station id `kalighat`
+#### Kalighat — 23 pandals · station id `kalighat`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -594,18 +591,16 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | The Bengal Boys Training Association | 600 m | 7 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | the-bengal-boys-training-association |
 | Bengal United Club | 800 m | 9 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | bengal-united-club |
 | Chetla Sarbasadharaner Club | 800 m | 9 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | chetla-sarbasadharaner-club |
-| Deshapriya Park | 1.0 km | 11 min | Imagined white-and-gold marble temple | 2026 Theme, VIP Pass, Popular | 24h | 96 | deshapriya-park |
 | Chetla Agrani | 1.1 km | 12 min | — | VIP Pass, Petpujo, Popular | day | 96 | chetla-agrani |
 | Tridhara Sammilani | 1.3 km | 14 min | Surasur (Gods and Demons) | VIP Pass, Petpujo, Popular | 24h | 96 | tridhara-sammilani |
 | Ballygunge Cultural | 1.3 km | 14 min | Jojon (Joining) | 2026 Theme, VIP Pass, Petpujo, Popular | day | 96 | ballygunge-cultural |
-| Samaj Sebi Sangha | 1.4 km | 15 min | Mahapujoy Mahanayak | 2026 Theme, Popular | 24h | 85 | samaj-sebi-sangha |
+| Manoharpukur Youngs | 1.3 km | 14 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | manoharpukur-youngs |
 | Triangular Park Sarbojanin | 1.6 km | 18 min | — | Kalighat & Rashbehari, South Kolkata | day | 64 | triangular-park-sarbojanin |
 | Hindusthan Club | 1.9 km | 21 min | Durgadalan | 2026 Theme, Petpujo, Popular | day | 85 | hindusthan-club |
 | Hindustan Park | 2.1 km | 23 min | — | Petpujo, Ride (auto) | day | 88 | hindustan-park |
 | Singhi Park | 2.3 km | 25 min | — | VIP Pass, Petpujo, Popular, Ride (auto) | day | 96 | singhi-park |
 | Ekdalia Evergreen | 2.6 km | 29 min | Somnath Temple | 2026 Theme, VIP Pass, Petpujo, Popular, Ride (auto) | day | 96 | ekdalia-evergreen |
 | 19 Pally | 2.9 km | 32 min | — | Gariahat & Dhakuria, South Kolkata, Ride (auto) | day | 64 | 19-pally |
-| Dhakuria Sarbojanin | 3.5 km | 39 min | — | Ride (auto) | day | 70 | dhakuria-sarbojanin |
 
 - **Dilip Smriti Sangha:** Neighbourhood puja in Kalighat, part of the Kalighat & Rashbehari cluster.
 - **Badamtala Ashar Sangha:** 88th year. A folk tale of Maa Durga and a South Kolkata sadhu, with the idol modelled on Ashok Gupta's 1959 design. Consistent award winner
@@ -617,18 +612,17 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **The Bengal Boys Training Association:** Neighbourhood puja in Chetla, part of the Kalighat & Rashbehari cluster.
 - **Bengal United Club:** Neighbourhood puja in Kalighat, part of the Kalighat & Rashbehari cluster.
 - **Chetla Sarbasadharaner Club:** Neighbourhood puja in Chetla, part of the Kalighat & Rashbehari cluster.
-- **Deshapriya Park:** 89th year; idol by Padma Shri Sanatan Rudra Pal
 - **Chetla Agrani:** 2026 theme not confirmed: reported as Aantarik Anubhooti or Bengal folk life
 - **Tridhara Sammilani:** Mythological battles: Ram and Ravana, Krishna and Kansa, Durga and the asuras, in artwork, light and sculpture. Look for a 5.5 ft Durga made from 13,000 recycled pens
 - **Ballygunge Cultural:** Built from chip packets, bottles and old flex
-- **Samaj Sebi Sangha:** Posters from all 208 Uttam Kumar films
+- **Manoharpukur Youngs:** Neighbourhood puja in Manoharpukur Road, part of the Kalighat & Rashbehari cluster.
 - **Triangular Park Sarbojanin:** Neighbourhood puja in Triangular Park, Rashbehari, part of the Kalighat & Rashbehari cluster.
 - **Hindusthan Club:** Gariahat; the pillared hall of old Bengali homes
 - **Singhi Park:** Gariahat
 - **Ekdalia Evergreen:** Gariahat; traditional idol inside a temple replica. Food nearby: 6 Ballygunge Place (~750 m) for a Bengali dinner
 - **19 Pally:** Neighbourhood puja in Gariahat, part of the Gariahat & Dhakuria cluster.
 
-#### Rabindra Sarovar — 18 pandals · station id `rabindra-sarovar`
+#### Rabindra Sarovar — 19 pandals · station id `rabindra-sarovar`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -640,6 +634,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | New Alipore Children's Park | 1.1 km | 12 min | — | Tollygunge & New Alipore, South Kolkata | day | 64 | new-alipore-children-s-park |
 | Lake Gardens Peoples Association | 1.3 km | 14 min | Srijaney – Gaurab Sanyukta | 2026 Theme, Popular | day | 85 | lake-gardens-peoples-association |
 | Suruchi Sangha | 1.5 km | 17 min | Padma (Lotus) | VIP Pass, Petpujo, Popular | day | 96 | suruchi-sangha |
+| Samaj Sebi Sangha | 1.7 km | 19 min | Mahapujoy Mahanayak | 2026 Theme, Popular | 24h | 85 | samaj-sebi-sangha |
 | Pally Mangal Samity (Taltala Ground) | 2.1 km | 23 min | — | Gariahat & Dhakuria, South Kolkata, Ride (auto) | day | 64 | pally-mangal-samity |
 | South City Mall | 2.2 km | 24 min | Jatra | 2026 Theme, Popular | day | 85 | south-city-mall |
 | 95 Pally | 2.3 km | 25 min | — | Jodhpur Park, South Kolkata, Ride (auto) | day | 85 | 95-pally-jodhpur-park |
@@ -659,6 +654,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **New Alipore Children's Park:** Neighbourhood puja in New Alipore, part of the Tollygunge & New Alipore cluster.
 - **Lake Gardens Peoples Association:** 71st year; idol by Utpal Ghosh. Auto advised
 - **Suruchi Sangha:** A lotus theme honouring Syama Prasad Mookerjee's life and legacy, with a traditional idol and straw décor. New Alipore; auto advised from the Metro
+- **Samaj Sebi Sangha:** Posters from all 208 Uttam Kumar films
 - **Pally Mangal Samity (Taltala Ground):** Taltala Ground puja off Gariahat Road, on the way to Jadavpur.
 - **South City Mall:** First-year puja at the mall
 - **95 Pally:** Dhakuria–Jodhpur Park puja on Rahim Ostagar Lane; walk on to Jodhpur Park Sarbojanin.
@@ -670,35 +666,35 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **Abasarika Club:** Neighbourhood puja in Jodhpur Park, part of the Gariahat & Dhakuria cluster.
 - **Selimpur Pally:** Neighbourhood puja in Selimpur, part of the Gariahat & Dhakuria cluster.
 
-#### Mahanayak Uttam Kumar (Tollygunge) — 1 pandal · station id `mahanayak-uttam-kumar`
+#### Mahanayak Uttam Kumar (Tollygunge) — 5 pandals · station id `mahanayak-uttam-kumar`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
+| Haridevpur 41 Pally | 1.8 km | 20 min | — | — | day | 86 | haridevpur-41-pally |
+| Vivekananda Park Athletic Club | 2.1 km | 23 min | — | Ride (auto) | day | 85 | vivekananda-park-athletic-club |
+| Ajeya Sanghati | 2.1 km | 23 min | — | Ride (auto) | day | 88 | ajeya-sanghati |
 | Golf Green Phase 1 | 2.2 km | 24 min | — | Tollygunge & New Alipore, South Kolkata, Ride (auto) | day | 64 | golf-green-phase-1 |
+| Vivekananda Sporting Club | 2.7 km | 30 min | — | Ride (auto) | day | 70 | vivekananda-sporting-club |
 
+- **Haridevpur 41 Pally:** Auto advised
+- **Ajeya Sanghati:** Auto advised
 - **Golf Green Phase 1:** Neighbourhood puja in Surya Nagar, Tollygunge, part of the Tollygunge & New Alipore cluster.
 
-#### Netaji (Kudghat) (Kudghat) — 12 pandals · station id `netaji`
+#### Netaji (Kudghat) (Kudghat) — 8 pandals · station id `netaji`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Naktala Pally Unnayan Samiti | 700 m | 8 min | — | VIP Pass, Popular | 24h | 96 | naktala-pally-unnayan-samiti |
 | Ajeyo Sanhati | 900 m | 10 min | Shobdo O Shanti (Sound & Serenity) | Haridevpur, Netaji Kudghat, Est 1980, Theme Puja | 24h | 86 | ajeyo-sanhati-haridevpur |
 | Naskarpara Pally Unnayan Samity - Haridevpur | 900 m | 10 min | — | Behala & Barisha, South Kolkata | day | 64 | naskarpara-pally-unnayan-samity-haridevpur |
-| Haridevpur 41 Pally | 1.0 km | 11 min | — | — | day | 86 | haridevpur-41-pally |
-| Vivekananda Park Athletic Club | 1.1 km | 12 min | — | — | day | 85 | vivekananda-park-athletic-club |
-| Ajeya Sanghati | 1.1 km | 12 min | — | — | day | 88 | ajeya-sanghati |
 | Ranikuthi Netaji Jatiya Sebadal | 1.1 km | 12 min | — | Ranikuthi, South Kolkata | day | 70 | netaji-jatiya-sebadal-ranikuthi |
 | Judge Bagan Recreation Club | 1.1 km | 12 min | — | Behala & Barisha, South Kolkata | day | 64 | judge-bagan-recreation-club |
-| Vivekananda Sporting Club | 1.2 km | 13 min | — | — | day | 70 | vivekananda-sporting-club |
 | Azadgarh Sarbojanin | 1.4 km | 15 min | — | Tollygunge & New Alipore, South Kolkata | day | 64 | azadgarh-sarbojanin |
 | Haridevpur Adarsha Samiti | 1.4 km | 15 min | — | Behala & Barisha, South Kolkata | day | 64 | haridevpur-adarsha-samiti |
 | Sodepur Pragati Sangha (Haridevpur) | 1.9 km | 21 min | — | Behala & Barisha, South Kolkata | day | 64 | sodepur-pragati-sangha |
 
 - **Ajeyo Sanhati:** Established in 1980 on Mahatma Gandhi Road, Haridevpur. One of South Kolkata's most innovative theme pujas, known for profound conceptual installations and musical soundscapes.
 - **Naskarpara Pally Unnayan Samity - Haridevpur:** Neighbourhood puja in Haridevpur, part of the Behala & Barisha cluster.
-- **Haridevpur 41 Pally:** Auto advised
-- **Ajeya Sanghati:** Auto advised
 - **Ranikuthi Netaji Jatiya Sebadal:** Ranikuthi puja on the road from Tollygunge towards Garia, near Netaji (Kudghat) Metro.
 - **Judge Bagan Recreation Club:** Neighbourhood puja in Paschim Putiary, part of the Behala & Barisha cluster.
 - **Azadgarh Sarbojanin:** Neighbourhood puja in Azadgarh, Tollygunge, part of the Tollygunge & New Alipore cluster.
@@ -814,15 +810,15 @@ Stations in order: Howrah Maidan → Howrah → Mahakaran → Esplanade → Seal
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Sealdah Athletic Club | 400 m | 4 min | — | — | 24h | 70 | sealdah-athletic-club |
-| Santosh Mitra Square | 800 m | 9 min | Sanatani Chetanay Vande Mataram | 2026 Theme, VIP Pass, Popular | day | 96 | santosh-mitra-square |
 | Santosh Mitra Square | 800 m | 9 min | Sanatani Chetanay Vande Mataram | 2026 Theme, VIP Pass, Popular | 24h | 96 | santosh-mitra-square-sealdah |
 | 37 Pally | 1.1 km | 12 min | — | — | day | 70 | 37-pally |
 | Udayan Sangha (Entally) | 1.1 km | 13 min | Entally Saradiya Sammilani | Entally, Sealdah, Green Line, Est 1991 | 24h | 83 | udayan-sangha-entally |
+| College Square | 1.4 km | 15 min | — | VIP Pass, Popular | day | 96 | college-square-sealdah |
 | Uddipani (Park Circus Sarbojanin Durgotsab) | 2.2 km | 12 min | Sampriti O Barta (Harmony & Social Message) | Park Circus, FFD Member, Social Harmony, Central Kolkata, Ride (auto) | day | 87 | uddipani-park-circus |
 
-- **Santosh Mitra Square:** In Lebutala Park. Easier from Sealdah (Green Line)
 - **Santosh Mitra Square:** Lebutala Park. 150 years of Vande Mataram; light and sound
 - **Udayan Sangha (Entally):** Established in 1991 at Haralal Das Street, Entally. Minutes from Sealdah Metro Station, known for grand chandeliers, community feast, and vibrant pushpanjali on Ashtami morning.
+- **College Square:** Walk along Bowbazar
 - **Uddipani (Park Circus Sarbojanin Durgotsab):** Established in 2013 at Park Circus Maidan (opposite Don Bosco School). Official member of Forum for Durgotsab (FFD), renowned for promoting inter-community harmony, social causes, and grand visual aesthetics.
 
 #### Phoolbagan — 6 pandals · station id `phoolbagan`
@@ -839,88 +835,85 @@ Stations in order: Howrah Maidan → Howrah → Mahakaran → Esplanade → Seal
 - **Beleghata Sarbojanin Durga Puja Committee:** Located on Dr. Asutosh Sastri Road, Beleghata near Phoolbagan Metro. Official member of Forum for Durgotsab (FFD), noted for socially conscious themes and beautiful illumination.
 - **Beliaghata Nabamilan:** Established in 1969 on Dr. Asutosh Sastri Road beside Subhas Sarobar Park. Celebrated for over 50 years of peaceful community celebrations, traditional clay idol, and warm neighborhood hospitality.
 
-#### Salt Lake Stadium — 6 pandals · station id `salt-lake-stadium`
+#### Salt Lake Stadium — 5 pandals · station id `salt-lake-stadium`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Salt Lake GB Block | 900 m | 10 min | — | — | 24h | 70 | salt-lake-gb-block |
 | Salt Lake IB Block | 1.0 km | 11 min | — | — | 24h | 70 | salt-lake-ib-block |
-| Salt Lake GC Block | 1.4 km | 15 min | — | Salt Lake Sector III, Salt Lake | day | 64 | salt-lake-gc-block |
 | Salt Lake JC Block | 1.4 km | 15 min | — | Salt Lake Sector III, Salt Lake | day | 64 | salt-lake-jc-block |
 | Salt Lake GD Block | 1.5 km | 17 min | — | — | 24h | 70 | salt-lake-gd-block |
 | Salt Lake HB Block | 1.6 km | 18 min | — | Salt Lake Sector III, Salt Lake | day | 64 | salt-lake-hb-block |
 
-- **Salt Lake GC Block:** Neighbourhood puja in Salt Lake Sector III, part of the Salt Lake Sector III cluster.
 - **Salt Lake JC Block:** Neighbourhood puja in Salt Lake Sector III, part of the Salt Lake Sector III cluster.
 - **Salt Lake HB Block:** Neighbourhood puja in Salt Lake Sector III, part of the Salt Lake Sector III cluster.
 
-#### Bengal Chemical — 6 pandals · station id `bengal-chemical`
+#### Bengal Chemical — 3 pandals · station id `bengal-chemical`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Swapnar Bagan | 700 m | 8 min | — | Beliaghata & Kankurgachi, North Kolkata | day | 64 | swapnar-bagan |
 | Salt Lake DA Block | 700 m | 8 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-da-block |
-| Salt Lake CA Block | 1.0 km | 11 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-ca-block |
-| Salt Lake BA Block | 1.3 km | 14 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-ba-block |
-| Ultadanga Sangrami | 1.6 km | 18 min | — | Petpujo | day | 70 | ultadanga-sangrami |
-| Salt Lake AA Block | 1.7 km | 19 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-aa-block |
+| United Club | 2.0 km | 22 min | — | Manicktala & Ultadanga, North Kolkata | day | 64 | united-club |
 
 - **Swapnar Bagan:** Neighbourhood puja in Kankurgachi, part of the Beliaghata & Kankurgachi cluster.
 - **Salt Lake DA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
-- **Salt Lake CA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
-- **Salt Lake BA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
-- **Ultadanga Sangrami:** Ultadanga; auto
-- **Salt Lake AA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
+- **United Club:** Neighbourhood puja in Ultadanga, part of the Manicktala & Ultadanga cluster.
 
-#### City Centre — 13 pandals · station id `city-centre`
+#### City Centre — 16 pandals · station id `city-centre`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Salt Lake EC Block | 300 m | 3 min | — | — | day | 70 | salt-lake-ec-block |
 | Salt Lake DB Block | 400 m | 4 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-db-block |
-| Salt Lake CD Block | 500 m | 6 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-cd-block |
 | Laboni Estate | 600 m | 7 min | — | — | day | 70 | laboni-estate |
 | Salt Lake CB Block | 600 m | 7 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-cb-block |
 | Salt Lake FD Block | 700 m | 8 min | — | Petpujo | 24h | 70 | salt-lake-fd-block |
+| Salt Lake CA Block | 900 m | 10 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-ca-block |
 | Salt Lake BB Block | 1.0 km | 11 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-bb-block |
 | Salt Lake BC Block | 1.0 km | 11 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-bc-block |
 | Salt Lake FC Block | 1.0 km | 11 min | — | Salt Lake Sector III, Salt Lake | day | 64 | salt-lake-fc-block |
 | Salt Lake BD Block | 1.1 km | 12 min | — | — | 24h | 70 | salt-lake-bd-block |
 | Salt Lake AC Block | 1.2 km | 13 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-ac-block |
+| Salt Lake BA Block | 1.2 km | 13 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-ba-block |
+| Salt Lake GC Block | 1.3 km | 14 min | — | Salt Lake Sector III, Salt Lake | day | 64 | salt-lake-gc-block |
 | Salt Lake AB Block | 1.4 km | 15 min | — | — | day | 70 | salt-lake-ab-block |
 | Salt Lake AD Block | 1.4 km | 15 min | — | — | day | 70 | salt-lake-ad-block |
+| Salt Lake AA Block | 1.5 km | 17 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-aa-block |
 
 - **Salt Lake DB Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
-- **Salt Lake CD Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Laboni Estate:** Check exact gate on Google Maps
 - **Salt Lake CB Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Salt Lake FD Block:** Theme: Rainbow Kaleidoscope (colour maze with rotating prisms). Salt Lake's biggest crowd. Food nearby: Bhojohori Manna (Salt Lake branch, short cab) for bhetki cutlet, topse fry
+- **Salt Lake CA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Salt Lake BB Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Salt Lake BC Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Salt Lake FC Block:** Neighbourhood puja in Salt Lake Sector III, part of the Salt Lake Sector III cluster.
 - **Salt Lake AC Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
+- **Salt Lake BA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
+- **Salt Lake GC Block:** Neighbourhood puja in Salt Lake Sector III, part of the Salt Lake Sector III cluster.
+- **Salt Lake AA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 
-#### Central Park — 13 pandals · station id `central-park`
+#### Central Park — 11 pandals · station id `central-park`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
-| Salt Lake CE Block | 900 m | 10 min | — | — | day | 70 | salt-lake-ce-block |
-| Salt Lake CG Block | 900 m | 10 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-cg-block |
+| Salt Lake CD Block | 500 m | 6 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-cd-block |
 | Salt Lake BE Block Part 2 | 1.1 km | 12 min | — | — | 24h | 70 | salt-lake-be-block-part-2 |
 | Salt Lake BG Block | 1.3 km | 14 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-bg-block |
 | Salt Lake AE Block | 1.5 km | 17 min | — | — | day | 70 | salt-lake-ae-block |
 | Salt Lake AG Block | 1.7 km | 19 min | — | — | 24h | 70 | salt-lake-ag-block |
+| Salt Lake AH Block | 1.7 km | 19 min | — | — | 24h | 70 | salt-lake-ah-block |
 | Keshtopur Prafulla Kanan Paschim Adhibasi Brinda | 2.1 km | 12 min | Banglar Maatir Tane (Rooted in Bengal’s Soil) | Kestopur, VIP Road, Est 1968, Grand Pandal, Ride (auto) | 24h | 87 | keshtopur-prafulla-kanan |
-| Dum Dum Park Yubak Brinda | 2.3 km | 25 min | — | Ride (auto) | day | 84 | dum-dum-park-yubak-brinda |
-| Dum Dum Park Sarbojanin | 2.8 km | 31 min | — | Ride (auto) | day | 86 | dum-dum-park-sarbojanin |
+| Bangur Avenue Protirodh Bahini | 2.6 km | 29 min | — | Dum Dum & Lake Town, North Kolkata, Ride (auto) | day | 64 | bangur-avenue-protirodh-bahini |
 | Nirvik Sangha | 2.8 km | 15 min | Centenary Folk Art (Lokshilpo) | Baguiati, Est 1920, VIP Road Corridor, Centenary Puja, Ride (auto) | day | 83 | nirvik-sangha-baguiati |
 | Bangur Avenue C Block | 3.0 km | 33 min | — | Ride (auto) | day | 70 | bangur-avenue-c-block |
-| Dum Dum Park Tarun Dal | 3.2 km | 35 min | — | Ride (auto) | day | 85 | dum-dum-park-tarun-dal |
 | Joramandir Sarbojanin | 3.9 km | 43 min | — | Dum Dum & Lake Town, North Kolkata, Ride (auto) | day | 64 | joramandir-sarbojanin |
 
-- **Salt Lake CG Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
+- **Salt Lake CD Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Salt Lake BG Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
 - **Keshtopur Prafulla Kanan Paschim Adhibasi Brinda:** Established in 1968 at Prafulla Kanan West, Kestopur. A perennial crowd favorite along VIP Road, celebrated for massive architectural pavilions and social welfare initiatives.
+- **Bangur Avenue Protirodh Bahini:** Neighbourhood puja in Bangur Avenue, part of the Dum Dum & Lake Town cluster.
 - **Nirvik Sangha:** Established in 1920 at Jyangra, Baguiati. A centenarian community celebration in the northern VIP Road corridor known for rural Bengal folk art installations.
 - **Joramandir Sarbojanin:** Neighbourhood puja in VIP Road (Anupama), part of the Dum Dum & Lake Town cluster.
 
@@ -931,34 +924,36 @@ Stations in order: Howrah Maidan → Howrah → Mahakaran → Esplanade → Seal
 | Karunamayee G Block | 200 m | 2 min | — | Salt Lake Sector II, Salt Lake | day | 64 | karunamayee-g-block |
 | Salt Lake CJ Block | 500 m | 6 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-cj-block |
 | Salt Lake FE Block | 800 m | 9 min | — | — | day | 70 | salt-lake-fe-block |
+| Salt Lake CG Block | 800 m | 9 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-cg-block |
 | Salt Lake BJ Block | 900 m | 10 min | — | — | 24h | 70 | salt-lake-bj-block |
-| Salt Lake EE Block | 900 m | 10 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-ee-block |
-| Salt Lake BK Block | 1.0 km | 11 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-bk-block |
 | Salt Lake AJ Block | 1.2 km | 13 min | — | — | day | 70 | salt-lake-aj-block |
 | Salt Lake BH Block | 1.2 km | 13 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-bh-block |
 | Salt Lake AK Block | 1.3 km | 14 min | — | — | day | 70 | salt-lake-ak-block |
-| Salt Lake AH Block | 1.4 km | 15 min | — | — | 24h | 70 | salt-lake-ah-block |
+| Salt Lake BL Block | 1.3 km | 14 min | — | — | day | 70 | salt-lake-bl-block |
+| Salt Lake CE Block | 1.6 km | 18 min | — | — | day | 70 | salt-lake-ce-block |
 
 - **Karunamayee G Block:** Neighbourhood puja in Karunamoyee, part of the Salt Lake Sector II cluster.
 - **Salt Lake CJ Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
-- **Salt Lake EE Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
-- **Salt Lake BK Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
+- **Salt Lake CG Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
 - **Salt Lake BH Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
 
-#### Sector V (Salt Lake Sector V) — 6 pandals · station id `sector-v`
+#### Sector V (Salt Lake Sector V) — 7 pandals · station id `sector-v`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
-| Salt Lake BL Block | 500 m | 6 min | — | — | day | 70 | salt-lake-bl-block |
 | Salt Lake CK-CL Block | 600 m | 7 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-ck-cl-block |
 | Salt Lake DL Block | 600 m | 7 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-dl-block |
+| Salt Lake EE Block | 800 m | 9 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-ee-block |
 | Salt Lake AL Block | 900 m | 10 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-al-block |
+| Salt Lake BK Block | 900 m | 10 min | — | Salt Lake Sector II, Salt Lake | day | 64 | salt-lake-bk-block |
 | New Town Sarbojanin | 4.0 km | 44 min | Padmabhushan | 2026 Theme, Popular | day | 85 | new-town-sarbojanin |
 | New Town DB Block Sarbojanin | 5.0 km | 55 min | — | Ride (cab) | day | 70 | new-town-db-block-sarbojanin |
 
 - **Salt Lake CK-CL Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
 - **Salt Lake DL Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
+- **Salt Lake EE Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
 - **Salt Lake AL Block:** Neighbourhood puja in Karunamoyee, part of the Salt Lake Sector II cluster.
+- **Salt Lake BK Block:** Neighbourhood puja in Salt Lake Sector II, part of the Salt Lake Sector II cluster.
 - **New Town Sarbojanin:** Cab from the station; go late afternoon
 
 No pandals are listed for: Mahakaran, Esplanade.
@@ -993,7 +988,7 @@ Stations in order: Joka → Thakurpukur → Sakher Bazar → Behala Chowrasta �
 - **Barisha Club:** Artists: Eshika Chandra & Deep Das. Behala's heavyweight for social themes
 - **Amarendra Bhavan (Roy Bari):** Bonedi bari (family puja); visiting hours limited
 
-#### Behala Chowrasta — 12 pandals · station id `behala-chowrasta`
+#### Behala Chowrasta — 13 pandals · station id `behala-chowrasta`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -1009,6 +1004,7 @@ Stations in order: Joka → Thakurpukur → Sakher Bazar → Behala Chowrasta �
 | Jagarani | 1.2 km | 13 min | — | — | day | 70 | jagarani |
 | Sitalatala Kishore Sangha | 1.4 km | 15 min | — | Behala & Barisha, South Kolkata | day | 64 | sitalatala-kishore-sangha |
 | Ganbani Sangha | 1.9 km | 21 min | — | Behala & Barisha, South Kolkata | day | 64 | ganbani-sangha |
+| Behala Buroshibtala | 3.0 km | 33 min | — | Ride (auto) | day | 70 | behala-buroshibtala |
 
 - **Players' Corner:** Neighbourhood puja off Janakalyan Road by Behala Chowrasta, popularly known as Sourav Ganguly's para puja.
 - **Sabeda Bagan:** Neighbourhood puja in Behala, part of the Behala & Barisha cluster.
@@ -1044,7 +1040,7 @@ Stations in order: Joka → Thakurpukur → Sakher Bazar → Behala Chowrasta �
 - **Prasanta Disha Sarbojanin:** Neighbourhood puja in New Alipore, part of the Behala & Barisha cluster.
 - **Behala Adarsha Pally:** Neighbourhood puja in Behala, part of the Behala & Barisha cluster.
 
-#### Taratala — 12 pandals · station id `taratala`
+#### Taratala — 11 pandals · station id `taratala`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -1056,7 +1052,6 @@ Stations in order: Joka → Thakurpukur → Sakher Bazar → Behala Chowrasta �
 | Nandana Yuba Sangha | 1.0 km | 11 min | — | — | day | 70 | nandana-yuba-sangha |
 | Naskarpur Sarbojanin | 1.0 km | 11 min | — | — | day | 70 | naskarpur-sarbojanin |
 | Netaji Sangha | 1.2 km | 13 min | — | — | day | 70 | netaji-sangha |
-| Behala Buroshibtala | 1.4 km | 15 min | — | — | day | 70 | behala-buroshibtala |
 | Mitali Sangha | 1.6 km | 18 min | — | — | day | 70 | mitali-sangha |
 | Jogajatri Club | 1.6 km | 18 min | — | Tollygunge & New Alipore, South Kolkata | day | 64 | jogajatri-club |
 | Parnashree Palli | 2.7 km | 30 min | — | Ride (auto) | day | 70 | parnashree-palli |
@@ -1065,17 +1060,21 @@ Stations in order: Joka → Thakurpukur → Sakher Bazar → Behala Chowrasta �
 - **Behala Club:** Theme: Tel (oil), after Haraprasad Shastri's satire. Artist: Pradip Das. On the Adani preview list
 - **Jogajatri Club:** Neighbourhood puja in New Alipore, part of the Tollygunge & New Alipore cluster.
 
-#### Majerhat — 3 pandals · station id `majerhat`
+#### Majerhat — 5 pandals · station id `majerhat`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
-| Alipore Sarbojanin | 1.2 km | 13 min | Ramayana: An Epic Woven in Time | 2026 Theme, Popular | day | 85 | alipore-sarbojanin |
+| Kidderpore 25 Pally | 2.6 km | 29 min | Paricharan | Khidirpur, South Kolkata, Ride (auto) | day | 85 | kidderpore-25-pally |
+| Kidderpore 74 Pally | 2.8 km | 31 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 82 | kidderpore-74-pally |
 | Kabitirtha Sarbojanin | 3.0 km | 33 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | kabitirtha-sarbojanin |
 | Nabarag | 3.0 km | 33 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | nabarag-khidirpur |
+| Kidderpore Pally Sharadiya | 3.2 km | 35 min | — | Khidirpur, South Kolkata, Ride (auto) | day | 70 | kidderpore-pally-sharadiya |
 
-- **Alipore Sarbojanin:** 81st year; artist Anirban Das; auto advised. On the Adani preview list
+- **Kidderpore 25 Pally:** One of the Khidirpur cluster at the top of the Diamond Harbour Road route, a short walk from 74 Pally, Kabitirtha and Nabarag.
+- **Kidderpore 74 Pally:** Khidirpur neighbourhood puja, a few lanes from 25 Pally; see the whole Khidirpur cluster in one walk.
 - **Kabitirtha Sarbojanin:** Watganj–Khidirpur puja off Kabitirtha Sarani, known for large themed pandals. Next door to Nabarag.
 - **Nabarag:** Hemchandra Street, Watganj. Pairs with Kabitirtha, two minutes away.
+- **Kidderpore Pally Sharadiya:** The last stop of the Khidirpur cluster, north of Kabitirtha.
 
 No pandals are listed for: Joka.
 
@@ -1111,7 +1110,7 @@ Stations in order: Satyajit Ray → Jyotirindra Nandi → Kavi Sukanta → Heman
 
 - **Selimpur Naskarpara:** Neighbourhood puja in Selimpur, Dhakuria, part of the Gariahat & Dhakuria cluster.
 
-#### Kavi Sukanta (Kalikapur) — 7 pandals · station id `kavi-sukanta`
+#### Kavi Sukanta (Kalikapur) — 8 pandals · station id `kavi-sukanta`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
@@ -1122,43 +1121,44 @@ Stations in order: Satyajit Ray → Jyotirindra Nandi → Kavi Sukanta → Heman
 | Madhya Garfa Sarbojanin | 2.0 km | 22 min | — | — | day | 70 | madhya-garfa-sarbojanin |
 | Ramlal Bazar Sarbojanin | 2.1 km | 23 min | — | Ride (auto) | day | 70 | ramlal-bazar-sarbojanin |
 | Saraswati Sammilani | 3.2 km | 35 min | — | Ride (auto) | day | 70 | saraswati-sammilani |
+| Dhakuria Sarbojanin | 3.8 km | 42 min | — | Ride (auto) | day | 70 | dhakuria-sarbojanin |
 
 - **Greenwood Nook:** Neighbourhood puja in Santoshpur, part of the Kasba & Santoshpur cluster.
 
-#### Hemanta Mukhopadhyay (Ruby) — 3 pandals · station id `hemanta-mukhopadhyay`
+#### Hemanta Mukhopadhyay (Ruby) — 4 pandals · station id `hemanta-mukhopadhyay`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Rajdanga Amra Kajon Kalyan Samity | 1.0 km | 11 min | — | — | 24h | 70 | rajdanga-amra-kajon-kalyan-samity |
 | Rajdanga Naba Uday Sangha | 1.3 km | 14 min | Shodhan | — | 24h | 88 | rajdanga-naba-uday-sangha |
+| VIP Nagar Sarbojanin | 1.3 km | 14 min | — | — | day | 70 | vip-nagar-sarbojanin |
 | Rajdanga Tribarna Sangha | 1.5 km | 17 min | — | Kasba & Santoshpur, South Kolkata | day | 64 | rajdanga-tribarna-sangha |
 
 - **Rajdanga Amra Kajon Kalyan Samity:** Artist: Purnendu Dey. On the Adani preview list
 - **Rajdanga Naba Uday Sangha:** Artist: Debasis Barui. The cost of environmental destruction. On the Adani preview list
 - **Rajdanga Tribarna Sangha:** Neighbourhood puja in Rajdanga, Kasba, part of the Kasba & Santoshpur cluster.
 
-#### VIP Bazar — 7 pandals · station id `vip-bazar`
+#### VIP Bazar — 5 pandals · station id `vip-bazar`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
-| VIP Nagar Sarbojanin | 400 m | 4 min | — | — | day | 70 | vip-nagar-sarbojanin |
 | Milan Tirtha | 700 m | 8 min | — | — | 24h | 70 | milan-tirtha |
 | Sunil Nagar | 1.6 km | 18 min | — | — | day | 70 | sunil-nagar |
 | Kasba Bosepukur Sitala Mandir | 1.7 km | 19 min | Chup (Silence) | — | day | 90 | kasba-bosepukur-sitala-mandir |
 | Bosepukur Talbagan | 1.7 km | 19 min | — | — | day | 86 | bosepukur-talbagan |
 | Kalyan Sangha | 1.8 km | 20 min | — | — | day | 70 | kalyan-sangha |
-| Adi Ballygunge Sarbojanin | 3.1 km | 34 min | — | Ballygunge & Park Circus, South Kolkata, Ride (auto) | day | 64 | adi-ballygunge-sarbojanin |
 
 - **Kasba Bosepukur Sitala Mandir:** 77th year. A small site that consistently does more with less than pandals five times its size
-- **Adi Ballygunge Sarbojanin:** Neighbourhood puja in Adi Ballygunge, part of the Ballygunge & Park Circus cluster.
 
-#### Ritwik Ghatak — 1 pandal · station id `ritwik-ghatak`
+#### Ritwik Ghatak — 2 pandals · station id `ritwik-ghatak`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Uttar Panchanan Gram Milan | 100 m | 1 min | — | Kasba & Santoshpur, South Kolkata | day | 64 | uttar-panchanan-gram-milan |
+| Adi Ballygunge Sarbojanin | 3.1 km | 34 min | — | Ballygunge & Park Circus, South Kolkata, Ride (auto) | day | 64 | adi-ballygunge-sarbojanin |
 
 - **Uttar Panchanan Gram Milan:** Neighbourhood puja in Anandapur, part of the Kasba & Santoshpur cluster.
+- **Adi Ballygunge Sarbojanin:** Neighbourhood puja in Adi Ballygunge, part of the Ballygunge & Park Circus cluster.
 
 No pandals are listed for: Barun Sengupta, Beleghata.
 
