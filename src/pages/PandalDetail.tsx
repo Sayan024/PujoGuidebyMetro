@@ -8,7 +8,6 @@ import { MapShareButton } from '@/components/Share/MapShare';
 import { EmptyState, LineBadge } from '@/components/ui/primitives';
 import { PANDAL_BY_ID, stationPandals } from '@/data';
 import { reelsOf } from '@/data/instagram';
-import { themeIdOf } from '@/data/themes';
 import { usePageTitle } from '@/hooks/useMedia';
 import { pandalDirectionsUrl } from '@/lib/googleMaps';
 import { formatKm, isFestivalOn, isOpenNow, summaryOf } from '@/lib/utils';
@@ -96,9 +95,7 @@ export default function PandalDetail() {
           <p className="max-w-2xl font-display text-[clamp(1.25rem,2vw,1.7rem)] leading-snug">{summaryOf(p)}</p>
           <dl className="mt-8 grid gap-x-10 sm:grid-cols-2">
             <Fact icon={<Sparkles className="size-4" />} label="Theme category">
-              <Link to={`/themes?theme=${themeIdOf(p.category)}`} className="underline decoration-hair underline-offset-4 hover:text-gold-bright">
-                {p.category}
-              </Link>
+              {p.category}
             </Fact>
             <Fact icon={<Palette className="size-4" />} label="Artist / idol makers">
               {p.artist}

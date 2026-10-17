@@ -35,8 +35,8 @@ export default function FavoritesPage() {
               <Link to="/explore" className="btn btn-primary">
                 Browse pandals <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
-              <Link to="/themes" className="btn btn-ghost">
-                Browse by theme
+              <Link to="/routes" className="btn btn-ghost">
+                Hopping routes
               </Link>
             </>
           }

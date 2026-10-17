@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowUpRight, Box, Footprints, Map as MapIcon, MapPin, Navigation, Shield, TrainFront, WifiOff, X } from 'lucide-react';
+import { ArrowUpRight, Box, Footprints, Map as MapIcon, MapPin, Navigation, TrainFront, WifiOff, X } from 'lucide-react';
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { InstagramLink, SaveButton } from '@/components/PandalCard/PandalCard';
@@ -14,12 +14,11 @@ import { useCan3D, usePrefersReducedMotion } from '@/hooks/useMedia';
 import { cn, formatKm, themeLabel } from '@/lib/utils';
 import { useAppStore } from '@/store/appStore';
 import NetworkMap from './NetworkMap';
-import { PoliceMapViewer } from '@/components/PoliceMap/PoliceMapViewer';
 
 const StreetMap = lazy(() => import('./StreetMap'));
 const Metro3D = lazy(() => import('./Metro3D'));
 
-type ViewMode = 'street' | 'network' | '3d' | 'police';
+type ViewMode = 'street' | 'network' | '3d';
 
 function MapSkeleton({ label }: { label: string }) {
   return (
@@ -218,7 +217,7 @@ function PandalInfoCard() {
   );
 }
 
-/** Map surface with four views sharing one selection: street map, schematic network, 3D overview, and official Kolkata Police traffic guide map. */
+/** Map surface with three views sharing one selection: street map, schematic network and 3D overview. */
 export function PujoMap({
   variant = 'section',
   initialMode = 'street',
@@ -241,7 +240,6 @@ export function PujoMap({
     { id: 'street', label: 'Street', Icon: MapIcon, disabled: streetDown },
     { id: 'network', label: 'Network', Icon: TrainFront },
     ...(can3D ? [{ id: '3d' as const, label: '3D', Icon: Box }] : []),
-    { id: 'police', label: 'Police Guide', Icon: Shield },
   ];
 
   return (
@@ -256,11 +254,6 @@ export function PujoMap({
           {effective === 'street' && <StreetMap interactiveScroll={variant === 'page'} onUnavailable={() => setStreetDown(true)} />}
           {effective === 'network' && <NetworkMap />}
           {effective === '3d' && <Metro3D animate={!reduced} />}
-          {effective === 'police' && (
-            <div className="absolute inset-0 pt-[52px]">
-              <PoliceMapViewer height="100%" showEmergencyBar={variant === 'page'} />
-            </div>
-          )}
         </Suspense>
       </ErrorBoundary>
 
@@ -288,11 +281,9 @@ export function PujoMap({
             </button>
           ))}
         </div>
-        {effective !== 'police' && (
-          <div className="pointer-events-auto min-w-0 max-w-full">
-            <LineLegend />
-          </div>
-        )}
+        <div className="pointer-events-auto min-w-0 max-w-full">
+          <LineLegend />
+        </div>
       </div>
 
       {streetDown && effective === 'street' && (
@@ -302,26 +293,17 @@ export function PujoMap({
         </p>
       )}
 
-      {/* Station panel (desktop) - only on metro maps */}
-      {effective !== 'police' && (
-        <div className="pointer-events-none absolute bottom-4 left-4 top-[72px] z-10 hidden items-start lg:flex">
-          <div className="pointer-events-auto flex max-h-full">
-            <StationPanel />
-          </div>
+      {/* Station panel (desktop) */}
+      <div className="pointer-events-none absolute bottom-4 left-4 top-[72px] z-10 hidden items-start lg:flex">
+        <div className="pointer-events-auto flex max-h-full">
+          <StationPanel />
         </div>
-      )}
+      </div>
 
-      {/* Selected pandal - only on metro maps */}
-      {effective !== 'police' && (
-        <div
-          className={cn(
-            'pointer-events-none absolute inset-x-3 z-10 flex justify-center lg:inset-x-auto lg:right-16',
-            variant === 'page' ? 'bottom-4' : 'bottom-4',
-          )}
-        >
-          <PandalInfoCard />
-        </div>
-      )}
+      {/* Selected pandal */}
+      <div className="pointer-events-none absolute inset-x-3 bottom-4 z-10 flex justify-center lg:inset-x-auto lg:right-16">
+        <PandalInfoCard />
+      </div>
     </div>
   );
 }

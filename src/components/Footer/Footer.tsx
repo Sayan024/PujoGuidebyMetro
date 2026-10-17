@@ -40,8 +40,6 @@ export function Footer() {
                 ['/explore', 'Pandal Explorer'],
                 ['/routes', 'Pandal-hopping routes'],
                 ['/map', 'Pujo Map'],
-                ['/map?view=police', 'Kolkata Police Traffic Map'],
-                ['/themes', '2026 Theme Gallery'],
                 ['/favorites', 'My Puja List & day planner'],
                 ['/about', 'About this guide'],
                 ['/feedback', 'Send feedback'],

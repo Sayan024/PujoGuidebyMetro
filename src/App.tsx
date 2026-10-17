@@ -8,7 +8,6 @@ import { SearchDialog } from '@/components/SearchBar/SearchDialog';
 import { ErrorBoundary, IntroLoader, PageSkeleton, Toaster } from '@/components/ui/Feedback';
 import { ParkingModal } from '@/components/Parking/ParkingModal';
 import { FeedbackModal } from '@/components/Feedback/FeedbackModal';
-import { PoliceMapModal } from '@/components/PoliceMap/PoliceMapModal';
 import { PageOrnament } from '@/components/ui/PageOrnament';
 import { SoundToggle } from '@/components/ui/SoundToggle';
 import { useBackgroundSound } from '@/lib/sound';
@@ -18,7 +17,6 @@ import Home from '@/pages/Home';
 // Every route except the landing page is its own chunk.
 const ExplorerPage = lazy(() => import('@/pages/Explorer'));
 const MapPage = lazy(() => import('@/pages/Map'));
-const ThemesPage = lazy(() => import('@/pages/Themes'));
 const RoutesPage = lazy(() => import('@/pages/Routes'));
 const FavoritesPage = lazy(() => import('@/pages/Favorites'));
 const PandalDetail = lazy(() => import('@/pages/PandalDetail'));
@@ -57,7 +55,6 @@ function Shell() {
               <Route path="/" element={<Home />} />
               <Route path="/explore" element={<ExplorerPage />} />
               <Route path="/map" element={<MapPage />} />
-              <Route path="/themes" element={<ThemesPage />} />
               <Route path="/routes" element={<RoutesPage />} />
               <Route path="/favorites" element={<FavoritesPage />} />
               <Route path="/pandal/:id" element={<PandalDetail />} />
@@ -78,7 +75,6 @@ function Shell() {
       <SearchDialog />
       <ParkingModal />
       <FeedbackModal />
-      <PoliceMapModal />
       <Toaster />
     </>
   );

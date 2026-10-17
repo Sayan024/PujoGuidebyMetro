@@ -30,10 +30,10 @@
 
 | Page | URL | What it does |
 |---|---|---|
-| Home | / | Overview, calendar, advisory, explorer preview, map, themes |
+| Home | / | Overview, calendar, advisory, explorer preview, map, award shortlist |
 | Pandal Explorer | /explore | Search and filter all pandals. Accepts `?line=<line id>`, `?station=<station id>`, `?q=<text>` |
 | Pujo Map | /map | Street map, network map and 3D view. Accepts `?station=<station id>` or `?pandal=<pandal id>` |
-| Themes | /themes | Theme categories. Accepts `?theme=<category id>` |
+| Routes | /routes | Five walking routes, each starting at a Metro station and opening as one Google Maps route |
 | My Puja List | /favorites | The visitor's saved pandals and a day planner (stored only in their browser) |
 | Pandal | /pandal/<pandal id> | One pandal |
 | Station | /station/<station id> | One Metro station and the pandals near it |
