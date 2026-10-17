@@ -2,7 +2,7 @@
 
 > A guide to Durga Puja pandals and Bonedi Bari (old family) pujas in Kolkata, India, organised by the Kolkata Metro station you walk from. This file is the complete dataset behind the web app, written for AI assistants.
 
-- Coverage: 390 pandals near 47 Metro stations on 5 lines
+- Coverage: 391 pandals near 47 Metro stations on 5 lines
 - Festival: Durga Puja 2026 (Bengali year 1433), Kolkata, West Bengal
 - Created by: Sayan Banerjee
 - Generated: 2026-10-17 from the app's own data files
@@ -17,9 +17,9 @@
 
 ## What is uncertain — say so when it matters
 
-- **Themes:** only 96 of 390 pandals have a theme on record. "—" in the Theme column means not announced or not known, not "no theme".
+- **Themes:** only 102 of 391 pandals have a theme on record. "—" in the Theme column means not announced or not known, not "no theme".
 - **Photos:** the app has a real photograph for 31 pandals. The rest show an illustrated cover.
-- **Notes:** 260 pandals have notes from the compiler; the others have none.
+- **Notes:** 262 pandals have notes from the compiler; the others have none.
 - **Map positions:** Metro stations are at approximately real coordinates. Pandal markers are placed at the listed distance from the station on an arbitrary bearing, so they are not surveyed addresses. Do not quote pandal coordinates or give turn-by-turn directions from this file.
 - **Station coordinates and station lists** were compiled by hand and are not from an official Metro Railway source.
 - **Travel advisory and crowd levels** are indicative, based on previous years.
@@ -80,7 +80,7 @@ The "Open Now" filter treats 14–21 October 2026 (Chaturthi to Dashami, India t
 | Blue Line | blue | Dakshineswar ↔ Shahid Khudiram | 224 | 23 of 25 |
 | Green Line | green | Howrah Maidan ↔ Sector V | 82 | 10 of 12 |
 | Purple Line | purple | Joka ↔ Majerhat | 51 | 6 of 7 |
-| Orange Line | orange | Satyajit Ray ↔ Beleghata | 29 | 6 of 8 |
+| Orange Line | orange | Satyajit Ray ↔ Beleghata | 30 | 6 of 8 |
 | Yellow Line | yellow | Noapara ↔ Jai Hind (Airport) | 4 | 2 of 4 |
 
 Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green). The Purple and Orange lines have no Metro link to the rest of the network here; the day planner suggests a cab or bus between them.
@@ -89,10 +89,10 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 
 | Category | Pandals |
 |---|---|
-| Heritage Kolkata | 309 |
+| Heritage Kolkata | 308 |
 | Traditional Bonedi Bari | 29 |
 | Contemporary Installation | 22 |
-| Art & Innovation | 12 |
+| Art & Innovation | 14 |
 | Climate & Environment | 8 |
 | Mythology | 7 |
 | Social Awareness | 2 |
@@ -127,7 +127,7 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 | Kasba Bosepukur Sitala Mandir | Chup (Silence) | VIP Bazar | orange |
 | Ahiritola Sarbojanin | Maitri Madhuri Anweshane (Searching for Sweet Friendship) | Shobhabazar Sutanuti | blue |
 | Behala Notun Dal | Baro Mashe Tero Parbon (Twelve months, thirteen festivals) | Behala Bazar | purple |
-| Rajdanga Naba Uday Sangha | Shodhan | Hemanta Mukhopadhyay | orange |
+| Rajdanga Naba Uday Sangha | Shodhan (Purification) | Hemanta Mukhopadhyay | orange |
 | Liluah Agrani Sangha | Prakriti o Matrika (Nature & Motherhood) | Howrah | green |
 | Allen Park Durga Puja (Kolkata Sanatani Sangha) | Shiva Leela: Tandav o Laya | Park Street | blue |
 | Santragachi Sporting Club | Abhaya Murti o Palli Bangla | Howrah Maidan | green |
@@ -135,11 +135,12 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 | Uddipani (Park Circus Sarbojanin Durgotsab) | Sampriti O Barta (Harmony & Social Message) | Sealdah | green |
 | Thakurpukur SB Park | Koliyari (Colliery) | Thakurpukur | purple |
 | Behala Friends | Shuddhikaran (Purification) | Behala Bazar | purple |
+| Behala Club | Tel: The Market of Faith | Taratala | purple |
 | Debdaru Fatak Sarbojanin Durgotsab | Matri Rupena Samsthita (Goddess of Life) | Behala Bazar | purple |
 | Hartaki Bagan Sarbojanin Durgotsab | Sabeki Shonar Protima O Shanti | Girish Park | blue |
 | Tala Barowari | Barowarir Durgabari | Belgachia | blue |
 | Telengabagan | Tilottamar Alinder Iti Kotha | Belgachia | blue |
-| Dum Dum Park Bharat Chakra | Antarjami | Belgachia | blue |
+| Dum Dum Park Bharat Chakra | Bonger Roth Kotha (The Story of Bengal's Chariots) | Belgachia | blue |
 | Dum Dum Park Tarun Sangha | Banijye Basate Lakshmi | Belgachia | blue |
 | Lake Town Adhibasi Brinda | Bengal folk handloom heritage | Belgachia | blue |
 | Hatibagan Nabin Pally | Hasikhushi Para | Shyambazar | blue |
@@ -197,9 +198,14 @@ Interchanges in this dataset: Noapara (blue / yellow); Esplanade (blue / green).
 | Shyampukur Sanghatirtha | Shobhabazarer Aitihyo O Shilpo (Heritage of Sovabazar) | Shobhabazar Sutanuti | blue |
 | Alpha Athletic Association | Simlar Otit O Bartaman (Past & Present of Simla) | Girish Park | blue |
 | Tekiapara Sarbojanin Durgotsab Committee | Maniktalar Sanhati O Pujo | Girish Park | blue |
+| Santoshpur Avenue South Club | Nirmaan Binirmaan (Construction-Deconstruction) | Satyajit Ray | orange |
 | Kendua Shanti Sangha - Patuli | Aishwaryi | Kavi Nazrul | blue |
 | Shimla Vivekananda Sporting Club | Door of Mithila | Girish Park | blue |
 | Dakshindari Youth | Ashwamedher Ghora (The Horse of Ashwamedha) | Belgachia | blue |
+| Salt Lake FD Block | Nakshi Konar Math | City Centre | green |
+| Behala Youngmen's Association | Chhuti (Holiday) | Taratala | purple |
+| Rajdanga Amra Kajon Kalyan Samity | Utsarito Aalo (Radiated Light) | Hemanta Mukhopadhyay | orange |
+| Yuba Sangha (Nagerbazar) | Ek Pukur Bhalobasa (A Pond Full of Love) | Dum Dum Cantonment | yellow |
 
 ## All pandals, by line and station
 
@@ -278,7 +284,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 | Sreebhumi Sporting Club | 2.1 km | 23 min | Hawa Mahal | 2026 Theme, VIP Pass, Popular, Ride (auto) | day | 96 | sreebhumi-sporting-club |
 | Dakshindari Youth | 3.0 km | 33 min | Ashwamedher Ghora (The Horse of Ashwamedha) | — | day | 70 | dakshindari-youth |
 | Tetultala Netaji Sporting Club | 3.0 km | 33 min | — | Ride (auto) | day | 70 | tetultala-netaji-sporting-club |
-| Dum Dum Park Bharat Chakra | 3.3 km | 36 min | Antarjami | 2026 Theme, Popular, Ride (auto) | day | 85 | dum-dum-park-bharat-chakra |
+| Dum Dum Park Bharat Chakra | 3.3 km | 36 min | Bonger Roth Kotha (The Story of Bengal's Chariots) | 2026 Theme, Popular, Ride (auto) | day | 85 | dum-dum-park-bharat-chakra |
 | Dum Dum Park Tarun Sangha | 3.3 km | 36 min | Banijye Basate Lakshmi | 2026 Theme, Popular, Ride (auto) | day | 85 | dum-dum-park-tarun-sangha |
 | Dum Dum Park Sarbojanin | 3.6 km | 40 min | — | Ride (auto) | day | 86 | dum-dum-park-sarbojanin |
 | Dum Dum Park Yubak Brinda | 3.7 km | 41 min | — | Ride (auto) | day | 84 | dum-dum-park-yubak-brinda |
@@ -296,7 +302,7 @@ Stations in order: Dakshineswar → Baranagar → Noapara → Dum Dum → Belgac
 - **Lake Town Association:** Near Sreebhumi
 - **Laketown Vivekananda Park:** Neighbourhood puja in Lake Town, part of the Dum Dum & Lake Town cluster.
 - **Sreebhumi Sporting Club:** 953-window replica; traditional idol; 2-hour queues. Also an auto from Central Park (Green Line)
-- **Dum Dum Park Bharat Chakra:** Old chariots of Bengal — Guptipara, Mahesh
+- **Dum Dum Park Bharat Chakra:** Bengal's chariot traditions and wooden craftsmanship. On the Asian Paints Sharad Shamman shortlist
 - **Dum Dum Park Tarun Sangha:** Bengal's historic river trade, with boats and docks (also called Beniakatha)
 
 #### Shyambazar — 22 pandals · station id `shyambazar`
@@ -843,7 +849,7 @@ Stations in order: Howrah Maidan → Howrah → Mahakaran → Esplanade → Seal
 | Salt Lake DB Block | 400 m | 4 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-db-block |
 | Laboni Estate | 600 m | 7 min | — | — | day | 70 | laboni-estate |
 | Salt Lake CB Block | 600 m | 7 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-cb-block |
-| Salt Lake FD Block | 700 m | 8 min | — | Petpujo | 24h | 70 | salt-lake-fd-block |
+| Salt Lake FD Block | 700 m | 8 min | Nakshi Konar Math | Petpujo | 24h | 70 | salt-lake-fd-block |
 | Salt Lake CA Block | 900 m | 10 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-ca-block |
 | Salt Lake BB Block | 1.0 km | 11 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-bb-block |
 | Salt Lake BC Block | 1.0 km | 11 min | — | Salt Lake Sector I, Salt Lake | day | 64 | salt-lake-bc-block |
@@ -859,7 +865,7 @@ Stations in order: Howrah Maidan → Howrah → Mahakaran → Esplanade → Seal
 - **Salt Lake DB Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Laboni Estate:** Check exact gate on Google Maps
 - **Salt Lake CB Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
-- **Salt Lake FD Block:** Theme: Rainbow Kaleidoscope (colour maze with rotating prisms). Salt Lake's biggest crowd. Food nearby: Bhojohori Manna (Salt Lake branch, short cab) for bhetki cutlet, topse fry
+- **Salt Lake FD Block:** Gond, Madhubani, Pattachitra and Bengali embroidery folk arts together. On the Asian Paints Sharad Shamman shortlist
 - **Salt Lake CA Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Salt Lake BB Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
 - **Salt Lake BC Block:** Neighbourhood puja in Salt Lake Sector I, part of the Salt Lake Sector I cluster.
@@ -1026,9 +1032,9 @@ Stations in order: Joka → Thakurpukur → Sakher Bazar → Behala Chowrasta �
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Behala 29 Palli | 300 m | 4 min | — | Taratala, Behala, Est 1934, Historic Para | 24h | 86 | behala-29-palli |
-| Behala Young | 600 m | 7 min | — | — | 24h | 70 | behala-young |
+| Behala Youngmen's Association | 600 m | 7 min | Chhuti (Holiday) | — | 24h | 70 | behala-young |
 | Aikya Sammilani | 700 m | 8 min | — | — | 24h | 70 | aikya-sammilani |
-| Behala Club | 800 m | 9 min | — | — | day | 86 | behala-club |
+| Behala Club | 800 m | 9 min | Tel: The Market of Faith | — | day | 86 | behala-club |
 | Nandana Yuba Sangha | 1.0 km | 11 min | — | — | day | 70 | nandana-yuba-sangha |
 | Naskarpur Sarbojanin | 1.0 km | 11 min | — | — | day | 70 | naskarpur-sarbojanin |
 | Netaji Sangha | 1.2 km | 13 min | — | — | day | 70 | netaji-sangha |
@@ -1037,7 +1043,8 @@ Stations in order: Joka → Thakurpukur → Sakher Bazar → Behala Chowrasta �
 | Parnashree Palli | 2.7 km | 30 min | — | Ride (auto) | day | 70 | parnashree-palli |
 
 - **Behala 29 Palli:** Founded in 1934 on SN Roy Road, Sahapur near Taratala Metro. One of Behala's oldest community pujas, maintaining unbroken 90+ years of devotional barowari legacy.
-- **Behala Club:** Theme: Tel (oil), after Haraprasad Shastri's satire. Artist: Pradip Das. On the Adani preview list
+- **Behala Youngmen's Association:** A "cloud factory" where children play freely and imagine without machines. On the Asian Paints Sharad Shamman shortlist
+- **Behala Club:** Oil as faith, commerce, power and geopolitics, with a satirical edge. On the Asian Paints Sharad Shamman shortlist
 - **Jogajatri Club:** Neighbourhood puja in New Alipore, part of the Tollygunge & New Alipore cluster.
 
 #### Majerhat — 5 pandals · station id `majerhat`
@@ -1062,13 +1069,14 @@ No pandals are listed for: Joka.
 
 Stations in order: Satyajit Ray → Jyotirindra Nandi → Kavi Sukanta → Hemanta Mukhopadhyay → VIP Bazar → Ritwik Ghatak → Barun Sengupta → Beleghata.
 
-#### Satyajit Ray (Hiland Park) — 9 pandals · station id `satyajit-ray`
+#### Satyajit Ray (Hiland Park) — 10 pandals · station id `satyajit-ray`
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Purba Rajpur | 700 m | 8 min | — | — | day | 70 | purba-rajpur |
 | Rabindra Pally Sarbojanin | 1.3 km | 14 min | — | — | day | 70 | rabindra-pally-sarbojanin |
 | Avenue Pally Mangal | 1.4 km | 15 min | — | — | day | 70 | avenue-pally-mangal |
+| Santoshpur Avenue South Club | 1.4 km | 15 min | Nirmaan Binirmaan (Construction-Deconstruction) | Santoshpur, South Kolkata | day | 82 | santoshpur-avenue-south-club |
 | Santoshpur Lake Pally | 1.6 km | 18 min | Tandav | 2026 Theme, Popular | day | 85 | santoshpur-lake-pally |
 | Santoshpur Bibekananda Sangha | 1.7 km | 19 min | — | Kasba & Santoshpur, South Kolkata | day | 64 | santoshpur-bibekananda-sangha |
 | Green Avenue Sarbojanin | 2.0 km | 22 min | — | Kasba & Santoshpur, South Kolkata | day | 64 | green-avenue-sarbojanin |
@@ -1076,6 +1084,7 @@ Stations in order: Satyajit Ray → Jyotirindra Nandi → Kavi Sukanta → Heman
 | Santoshpur Trikon Park | 2.2 km | 24 min | — | Ride (auto) | day | 86 | santoshpur-trikon-park |
 | Santoshpur Agragami | 2.3 km | 25 min | — | Kasba & Santoshpur, South Kolkata, Ride (auto) | day | 64 | santoshpur-agragami |
 
+- **Santoshpur Avenue South Club:** Cycles of ruin and rebuilding. On the Asian Paints Sharad Shamman shortlist
 - **Santoshpur Lake Pally:** Shiva's cosmic dance; 69th year
 - **Santoshpur Bibekananda Sangha:** Neighbourhood puja in Santoshpur, part of the Kasba & Santoshpur cluster.
 - **Green Avenue Sarbojanin:** Neighbourhood puja in Santoshpur, part of the Kasba & Santoshpur cluster.
@@ -1109,13 +1118,13 @@ Stations in order: Satyajit Ray → Jyotirindra Nandi → Kavi Sukanta → Heman
 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
-| Rajdanga Amra Kajon Kalyan Samity | 1.0 km | 11 min | — | — | 24h | 70 | rajdanga-amra-kajon-kalyan-samity |
-| Rajdanga Naba Uday Sangha | 1.3 km | 14 min | Shodhan | — | 24h | 88 | rajdanga-naba-uday-sangha |
+| Rajdanga Amra Kajon Kalyan Samity | 1.0 km | 11 min | Utsarito Aalo (Radiated Light) | — | 24h | 70 | rajdanga-amra-kajon-kalyan-samity |
+| Rajdanga Naba Uday Sangha | 1.3 km | 14 min | Shodhan (Purification) | — | 24h | 88 | rajdanga-naba-uday-sangha |
 | VIP Nagar Sarbojanin | 1.3 km | 14 min | — | — | day | 70 | vip-nagar-sarbojanin |
 | Rajdanga Tribarna Sangha | 1.5 km | 17 min | — | Kasba & Santoshpur, South Kolkata | day | 64 | rajdanga-tribarna-sangha |
 
-- **Rajdanga Amra Kajon Kalyan Samity:** Artist: Purnendu Dey. On the Adani preview list
-- **Rajdanga Naba Uday Sangha:** Artist: Debasis Barui. The cost of environmental destruction. On the Adani preview list
+- **Rajdanga Amra Kajon Kalyan Samity:** A tribute to the painter Gaganendranath Tagore. On the Asian Paints Sharad Shamman shortlist
+- **Rajdanga Naba Uday Sangha:** A future of deforestation and artificial oxygen, urging conservation. On the Adani preview list and the Asian Paints Sharad Shamman shortlist
 - **Rajdanga Tribarna Sangha:** Neighbourhood puja in Rajdanga, Kasba, part of the Kasba & Santoshpur cluster.
 
 #### VIP Bazar — 5 pandals · station id `vip-bazar`
@@ -1151,11 +1160,11 @@ Stations in order: Noapara → Dum Dum Cantonment → Jessore Road → Jai Hind 
 | Pandal | Distance | Walk | Theme | Tags | Hours | Pop. | id |
 |---|---|---|---|---|---|---|---|
 | Motijheel Sarbojanin | 1.9 km | 21 min | — | Dum Dum & Lake Town, North Kolkata | day | 64 | motijheel-sarbojanin |
-| Nagerbazar Yuba Sangha | 2.0 km | 22 min | — | — | day | 70 | nagerbazar-yuba-sangha |
+| Yuba Sangha (Nagerbazar) | 2.0 km | 22 min | Ek Pukur Bhalobasa (A Pond Full of Love) | — | day | 70 | nagerbazar-yuba-sangha |
 | Arjunpur Amra Sabai Club | 2.9 km | 32 min | — | Ride (auto) | day | 70 | arjunpur-amra-sabai-club |
 
 - **Motijheel Sarbojanin:** Neighbourhood puja in Motijheel, Dum Dum, part of the Dum Dum & Lake Town cluster.
-- **Nagerbazar Yuba Sangha:** Artist: Bhabatosh Sutar. On the Adani preview list
+- **Yuba Sangha (Nagerbazar):** Bengal's disappearing neighbourhood ponds, with the Telipukur pond as a floating canvas. On the Asian Paints Sharad Shamman shortlist
 
 #### Jessore Road — 1 pandal · station id `jessore-road`
 

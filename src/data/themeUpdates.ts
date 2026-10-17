@@ -78,8 +78,9 @@ export const THEME_UPDATES: Record<string, Update> = {
     description: '77th year. A small site that consistently does more with less than pandals five times its size',
   },
   'rajdanga-naba-uday-sangha': {
-    theme: 'Shodhan',
-    description: 'Artist: Debasis Barui. The cost of environmental destruction. On the Adani preview list',
+    theme: 'Shodhan (Purification)',
+    artist: 'Debasis Barui; idol by Saikat Giri',
+    description: 'A future of deforestation and artificial oxygen, urging conservation. On the Adani preview list and the Asian Paints Sharad Shamman shortlist',
     category: 'Climate & Environment',
   },
   'hindusthan-club': { artist: 'Shibsankar Das (mandap)' },
@@ -95,7 +96,11 @@ export const THEME_UPDATES: Record<string, Update> = {
     category: 'Social Awareness',
   },
   'behala-friends': { theme: 'Shuddhikaran (Purification)', description: 'Pandal built from iron sheets' },
-  'behala-club': { artist: 'Pradip Das; idol by Pintu Shikdar' },
+  'behala-club': {
+    theme: 'Tel: The Market of Faith',
+    artist: 'Pradip Das; idol by Pintu Sikder',
+    description: "Oil as faith, commerce, power and geopolitics, with a satirical edge. On the Asian Paints Sharad Shamman shortlist",
+  },
   'kidderpore-25-pally': { theme: 'Paricharan', artist: 'Bimal Samanta' },
   // North and central Kolkata
   'ahiritola-sarbojanin': {
@@ -123,10 +128,10 @@ export const THEME_UPDATES: Record<string, Update> = {
     description: 'Durga as protector of the universe, with the Vishwarupa of Vishnu. Chetla; auto advised from the Metro',
   },
   'kendua-shanti-sangha-patuli': { theme: 'Aishwaryi', description: '53rd year. A caged woman whose hair becomes a ladder: a critique of the oppression of women. Patuli' },
-  'chaltabagan-lohapatty': { artist: 'Aditi Chakraborty' },
+  'chaltabagan-lohapatty': { artist: 'Aditi Chakraborty; idol by Pallab Jana' },
   'kashi-bose-lane': { artist: 'Anirban Das' },
   'south-city-mall': { artist: 'Subhankar Dutta', description: "The mall's first-ever Durga Puja, built on its own front on Prince Anwar Shah Road" },
-  'samaj-sebi-sangha': { artist: 'Artists from the Government College of Art and Craft' },
+  'samaj-sebi-sangha': { artist: 'Biswanath De; idol by Arighna Saha' },
   'golden-arrow-club': { description: 'Neighbourhood puja on Sardar Sankar Road, Kalighat, part of the Kalighat & Rashbehari cluster.' },
   'naktala-pally-unnayan-samiti': { name: 'Pally Unnayan Samiti (Paschim Putiary)' },
 
@@ -153,6 +158,42 @@ export const THEME_UPDATES: Record<string, Update> = {
   'keshtopur-prafulla-kanan': { theme: '', artist: NO_ARTIST },
   'nirvik-sangha-baguiati': { theme: '', artist: NO_ARTIST },
   'behala-29-palli': { theme: '', artist: NO_ARTIST },
+
+  // Asian Paints Sharad Shamman 2026 shortlist (sharadshamman.asianpaints.com), October 2026
+  'behala-young': {
+    name: "Behala Youngmen's Association",
+    theme: 'Chhuti (Holiday)',
+    artist: 'Sanatan Dinda',
+    category: 'Art & Innovation',
+    description: 'A "cloud factory" where children play freely and imagine without machines. On the Asian Paints Sharad Shamman shortlist',
+  },
+  'dum-dum-park-bharat-chakra': {
+    theme: "Bonger Roth Kotha (The Story of Bengal's Chariots)",
+    artist: 'Manash Das; idol by Saikat Basu',
+    description: "Bengal's chariot traditions and wooden craftsmanship. On the Asian Paints Sharad Shamman shortlist",
+  },
+  'salt-lake-fd-block': {
+    theme: 'Nakshi Konar Math',
+    artist: 'Prasanta Pal; idol by Tapan Majhi',
+    category: 'Art & Innovation',
+    description: 'Gond, Madhubani, Pattachitra and Bengali embroidery folk arts together. On the Asian Paints Sharad Shamman shortlist',
+  },
+  'rajdanga-amra-kajon-kalyan-samity': {
+    theme: 'Utsarito Aalo (Radiated Light)',
+    artist: 'Purnendu Dey',
+    description: 'A tribute to the painter Gaganendranath Tagore. On the Asian Paints Sharad Shamman shortlist',
+  },
+  'nagerbazar-yuba-sangha': {
+    name: 'Yuba Sangha (Nagerbazar)',
+    theme: 'Ek Pukur Bhalobasa (A Pond Full of Love)',
+    artist: 'Bhabatosh Sutar',
+    description: "Bengal's disappearing neighbourhood ponds, with the Telipukur pond as a floating canvas. On the Asian Paints Sharad Shamman shortlist",
+  },
+  'santoshpur-avenue-south-club': {
+    theme: 'Nirmaan Binirmaan (Construction-Deconstruction)',
+    artist: 'Susanta Shibani Paul',
+    description: 'Cycles of ruin and rebuilding. On the Asian Paints Sharad Shamman shortlist',
+  },
 };
 
 export function applyThemeUpdate(p: Pandal): Pandal {

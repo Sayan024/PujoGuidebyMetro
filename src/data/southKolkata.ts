@@ -195,6 +195,8 @@ export const SOUTH_KOLKATA_ADDITIONS: Pandal[] = [
   newPandal('netaji-jatiya-sebadal-ranikuthi', 'Ranikuthi Netaji Jatiya Sebadal', 22.48334, 88.35464, 'Ranikuthi', 'Ranikuthi puja on the road from Tollygunge towards Garia, near Netaji (Kudghat) Metro.'),
   // Garia
   newPandal('garia-pancha-durga', 'Garia Pancha Durga', 22.46154, 88.3783, 'Garia', 'Kamdhari Road, Garia, near Garia Naba Durga at the southern end of the route.'),
+  // Santoshpur (on the Asian Paints Sharad Shamman shortlist; the club's own plot is not mapped, so this is Santoshpur Avenue)
+  newPandal('santoshpur-avenue-south-club', 'Santoshpur Avenue South Club', 22.49163, 88.38485, 'Santoshpur', 'Santoshpur Avenue puja, part of the Santoshpur cluster with Lake Pally and Trikon Park.', { popularity: 82 }),
   // Park Street
   newPandal(
     'allen-park-park-street',

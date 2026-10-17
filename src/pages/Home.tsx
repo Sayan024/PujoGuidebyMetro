@@ -9,7 +9,7 @@ import { PujoMap } from '@/components/MetroMap/PujoMap';
 import { MetroDiscovery } from '@/components/MetroSelector/MetroDiscovery';
 import { PujaCalendar } from '@/components/PujaCalendar/PujaCalendar';
 import { TravelAdvisory } from '@/components/TravelAdvisory/TravelAdvisory';
-import { PoliceMapSection } from '@/components/PoliceMap/PoliceMapSection';
+import { SharadShammanSection } from '@/components/Awards/SharadShammanSection';
 import { ThemeGallery } from '@/components/ThemeGallery/ThemeGallery';
 import { Reveal, SectionHeading } from '@/components/ui/primitives';
 import { TOTAL_PANDALS } from '@/data';
@@ -127,8 +127,8 @@ export default function Home() {
       {/* 8. Interactive Trishul Map */}
       <MapChapter />
 
-      {/* 9. Official Kolkata Police Puja Guide Map */}
-      <PoliceMapSection />
+      {/* 9. Asian Paints Sharad Shamman 2026 shortlist */}
+      <SharadShammanSection />
 
       {/* 10. 2026 Theme Gallery */}
       <section id="themes" aria-labelledby="themes-title" className="shell pt-24 md:pt-36">
