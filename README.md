@@ -6,10 +6,12 @@ Created entirely by **[Sayan Banerjee](https://github.com/Sayan024)**.
 
 ## What it is
 
-- **394 pandals** (including Kolkata major pandals, Howrah & Liluah, and traditional community paras) across **39 Metro stations** on five lines, each with walking distance, exact Trishul coordinates, and verified car/bike parking.
-- A line → station → pandal **explorer** with instant search, filters and sorting.
+- **394 pandals** (including Kolkata major pandals, Howrah & Liluah, and traditional community paras) across **47 Metro stations** on five lines, each with walking distance, exact Trishul coordinates, and verified car/bike parking.
+- A line → station → pandal **explorer** with instant search, filters and sorting; each station lists its most popular pandals first.
 - A **Pujo map**: street map, schematic network map and a 3D overview.
-- A **theme gallery**, the 2026 **puja calendar** and a day-by-day **travel advisory**.
+- Five **pandal-hopping routes** that open as one Google Maps route, with a QR code to share.
+- The 2026 **puja calendar**, a day-by-day **travel advisory** with the special Metro timetable by line, and **bus routes** to each area.
+- The Asian Paints Sharad Shamman 2026 **shortlist**.
 - **My Puja List** with a day planner that orders stations, Metro rides and walks.
 - An **AI assistant** that answers only from the guide's own data.
 - Light and dark themes, mobile-first layout, and reduced-motion support.

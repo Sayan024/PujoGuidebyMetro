@@ -143,8 +143,6 @@ for (const id of LINE_ORDER) {
 
 export const STATION_LIST: Station[] = Object.values(STATIONS);
 
-export const lineColorVar = (id: MetroLineId) => `var(--${id}-line)`;
-
 /** Position of a station in the network, used for "sort by station". */
 export function stationRank(stationId: string, line: MetroLineId): number {
   const li = LINE_ORDER.indexOf(line);

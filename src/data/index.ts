@@ -79,11 +79,4 @@ export const LINE_COUNTS = Object.fromEntries(
 export const TOTAL_PANDALS = PANDALS.length;
 export const STATIONS_WITH_PANDALS = PANDALS_BY_STATION.size;
 export const BONEDI_COUNT = PANDALS.filter((p) => p.category === 'Traditional Bonedi Bari').length;
-export const HOWRAH_PANDALS_COUNT = PANDALS.filter(
-  (p) =>
-    (p.locality && /howrah|liluah|shibpur|santragachi|belur|bally/i.test(p.locality)) ||
-    p.stationId === 'howrah' ||
-    p.stationId === 'howrah-maidan',
-).length;
-export const COMMUNITY_PARAS_COUNT = COMMUNITY_PARAS.length;
 

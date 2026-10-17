@@ -1,4 +1,4 @@
-import { LINE_BY_ID, METRO_LINES, STATIONS, stationRank } from '@/data/metroLines';
+import { LINE_BY_ID, STATIONS, stationRank } from '@/data/metroLines';
 import type { MetroLineId, Pandal } from '@/data/types';
 import { haversineKm, themeLabel } from './utils';
 
@@ -217,6 +217,3 @@ export function buildDayPlan(pandals: Pandal[], startMinutes: number): DayPlan {
     endsAt: t,
   };
 }
-
-export const lineOfStation = (stationId: string): MetroLineId =>
-  STATIONS[stationId]?.lines[0] ?? METRO_LINES[0].id;
