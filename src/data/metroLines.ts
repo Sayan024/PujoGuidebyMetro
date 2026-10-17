@@ -19,7 +19,7 @@ const BLUE: Row[] = [
   ['maidan', 'Maidan', 22.549, 88.3485],
   ['rabindra-sadan', 'Rabindra Sadan', 22.5412, 88.3473],
   ['netaji-bhavan', 'Netaji Bhavan', 22.5339, 88.3462, 'Bhowanipore'],
-  ['jatin-das-park', 'Jatin Das Park', 22.5265, 88.3462, 'Hazra'],
+  ['jatin-das-park', 'Jatin Das Park', 22.5242, 88.3465, 'Hazra'],
   ['kalighat', 'Kalighat', 22.5175, 88.3458],
   ['rabindra-sarovar', 'Rabindra Sarovar', 22.507, 88.3457],
   ['mahanayak-uttam-kumar', 'Mahanayak Uttam Kumar', 22.4945, 88.3452, 'Tollygunge'],
@@ -57,20 +57,20 @@ const PURPLE: Row[] = [
   ['thakurpukur', 'Thakurpukur', 22.464, 88.307],
   ['sakher-bazar', 'Sakher Bazar', 22.476, 88.31],
   ['behala-chowrasta', 'Behala Chowrasta', 22.487, 88.313],
-  ['behala-bazar', 'Behala Bazar', 22.4975, 88.318],
-  ['taratala', 'Taratala', 22.509, 88.322],
+  ['behala-bazar', 'Behala Bazar', 22.4988, 88.3174],
+  ['taratala', 'Taratala', 22.5077, 88.3204],
   ['majerhat', 'Majerhat', 22.52, 88.324],
 ];
 
 const ORANGE: Row[] = [
-  ['satyajit-ray', 'Satyajit Ray', 22.483, 88.399, 'Hiland Park'],
-  ['jyotirindra-nandi', 'Jyotirindra Nandi', 22.493, 88.399, 'Mukundapur'],
-  ['kavi-sukanta', 'Kavi Sukanta', 22.503, 88.399, 'Kalikapur'],
-  ['hemanta-mukhopadhyay', 'Hemanta Mukhopadhyay', 22.5135, 88.401, 'Ruby'],
-  ['vip-bazar', 'VIP Bazar', 22.525, 88.399],
-  ['ritwik-ghatak', 'Ritwik Ghatak', 22.536, 88.3985],
-  ['barun-sengupta', 'Barun Sengupta', 22.545, 88.3975, 'Science City'],
-  ['beleghata', 'Beleghata', 22.556, 88.399],
+  ['satyajit-ray', 'Satyajit Ray', 22.4847, 88.3926, 'Hiland Park'],
+  ['jyotirindra-nandi', 'Jyotirindra Nandi', 22.4956, 88.3985, 'Mukundapur'],
+  ['kavi-sukanta', 'Kavi Sukanta', 22.5053, 88.401, 'Kalikapur'],
+  ['hemanta-mukhopadhyay', 'Hemanta Mukhopadhyay', 22.5149, 88.4014, 'Ruby'],
+  ['vip-bazar', 'VIP Bazar', 22.5247, 88.3962],
+  ['ritwik-ghatak', 'Ritwik Ghatak', 22.533, 88.3964],
+  ['barun-sengupta', 'Barun Sengupta', 22.5438, 88.3993, 'Science City'],
+  ['beleghata', 'Beleghata', 22.5507, 88.404],
 ];
 
 const ROWS: Record<MetroLineId, Row[]> = {
